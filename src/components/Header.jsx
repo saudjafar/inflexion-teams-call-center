@@ -4,6 +4,7 @@ import DownArrow from '../assets/svgs/down-arrow.svg'
 
 import '../styles/Header.scss'
 import inflexionLogo from '../assets/svgs/inflexion-header-logo.svg'
+
 const Header = () => {
 
     const navBarItems = ['Service', 'The Process', 'Pricing', 'Resources', 'About'];
@@ -24,7 +25,7 @@ const Header = () => {
                     </div>
                     <div className='desktop-navbar-container' style={{ display: 'flex', gap: '2.5rem' }}>
                         {navBarItems.map(item => (
-                            <Dropdown key={item} overlay={<Menu items={menuItems} />}>
+                            <Dropdown disabled={item === 'About' || item === 'Pricing'} key={item} overlay={<Menu items={menuItems} />}>
                                 <span style={{ background: 'none', border: 'none', display: 'flex', gap: '0.75rem', cursor: 'pointer' }}>
                                     {item} {(item !== 'About' && item !== 'Pricing') && <img src={DownArrow} alt='down-arrow' />}
                                 </span>

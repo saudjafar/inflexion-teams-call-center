@@ -10,7 +10,9 @@ const Feature2 = () => {
         {
             key: '1',
             label: <button className='tab-btn'>AI/Chat</button>,
-            children: <div style={{ marginTop: '3.75rem', display: 'flex' }}><img src={tab1Icons} /></div>,
+            children: <div style={{
+                marginTop: '3.75rem', display: 'flex'
+            }}> <img src={tab1Icons} style={{ maxWidth: '100%', height: 'auto' }} /></div >,
         },
         {
             key: '2',
