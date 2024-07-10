@@ -1,0 +1,84 @@
+.grid-elementt {
+    & {
+        display: flex;
+        flex-direction: column;
+        gap: 3.75rem;
+        background: #fff;
+        min-height: 15.08rem;
+        padding: 2.19rem;
+        padding-top: 2.81rem;
+    }
+
+    .grid-text {
+        & {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .grid-headline {
+            color: #2350F1;
+            font-family: "DM Sans";
+            font-size: 1.575rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.96875rem;
+            /* 125% */
+        }
+
+        .grid-subtext {
+            color: rgba(20, 37, 104, 0.70);
+            font-family: "DM Sans";
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.225rem;
+            /* 140% */
+        }
+    }
+}
+
+.grid-elementt-last {
+    & {
+        display: flex;
+        flex-direction: column;
+        gap: 1.37rem;
+        background: #fff;
+        min-height: 15.08rem;
+        // height: 17.08rem;
+        padding: 2.19rem;
+        padding-top: 2.81rem;
+        background: #000;
+        color: #fff;
+    }
+
+    .grid-headline {
+        color: #FFF;
+        font-family: "DM Sans";
+        font-size: 1.575rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.96875rem;
+        /* 125% */
+        // padding-bottom: 2.61rem;
+
+    }
+
+    .lets-talk-cta {
+        margin-top: 2.61rem;
+        border: none;
+        display: flex;
+        padding: 1rem 1.875rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.1875rem;
+        background: #FFF;
+        color: #000;
+        text-align: center;
+        font-family: "DM Sans";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 1000;
+        cursor: pointer;
+    }
+}

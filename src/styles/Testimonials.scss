@@ -1,0 +1,124 @@
+.testimonials-section {
+    & {
+        max-width: 82.75rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        padding-top: 9.25rem;
+        color: black;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        gap: 3.75rem;
+
+        .testimonals-header {
+            font-family: "DM Sans";
+            font-size: 4.375rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 4.375rem;
+            /* 100% */
+            letter-spacing: -0.0875rem;
+            margin: 0;
+        }
+
+        .testimonial-cards-container {
+            & {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: space-between;
+            }
+
+            .testimonial-card {
+                & {
+                    flex: 1 1 calc(33% - 1rem);
+                    /* Adjust width as needed, e.g., 33% for three cards in a row */
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 100%;
+                    padding: 0.5rem;
+                    // align-items: center;
+                }
+
+                .card-img-container {
+                    margin-bottom: 1.5rem;
+                    opacity: 0.75;
+                }
+
+                .card-text-container {
+                    & {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.75rem;
+                        height: 21.705rem;
+                    }
+
+                    .card-heading {
+                        margin: 0;
+                        color: #0A1953;
+                        font-family: "DM Sans";
+                        font-size: 1.575rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 1.96875rem;
+                        /* 125% */
+                    }
+
+                    .card-subtext {
+                        margin: 0;
+                        color: rgba(20, 37, 104, 0.70);
+                        font-family: "DM Sans";
+                        font-size: 1.225rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1.8375rem;
+                        // margin-bottom: 1rem;
+                        max-width: 25ch;
+                        /* 150% */
+
+                    }
+
+                }
+
+                .user-details-container {
+                    & {
+                        display: flex;
+                        gap: 1rem;
+                    }
+
+                    .user-img {
+                        border-radius: 2rem;
+                        object-fit: cover;
+                    }
+
+                    .user-text {
+                        display: flex;
+                        flex-direction: column;
+                        font-family: "DM Sans";
+                        font-size: 0.8125rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1.21875rem;
+
+                        /* 150% */
+                        .name {
+                            color: #0A1953;
+                        }
+
+                        .designation {
+                            color: rgba(10, 25, 83, 0.45);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-section .testimonials .testimonial-cards-container .testimonial-card {
+        flex: 1 1 100%;
+    }
+}

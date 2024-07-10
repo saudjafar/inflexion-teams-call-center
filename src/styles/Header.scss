@@ -1,0 +1,61 @@
+.header-section {
+    & {
+        background: #000;
+        color: #fff;
+        font-family: 'DM Sans', sans-serif;
+        padding: 0 2rem;
+    }
+
+    .header-container {
+        & {
+            max-width: 88rem;
+            margin: 0 auto;
+            padding: 3rem 0rem;
+            font-family: 'DM Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left {
+            & {
+                display: flex;
+                align-items: center;
+                gap: 6rem;
+            }
+
+            .logo-container {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                .logo-text {
+                    font-size: 1.16481rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: -0.06988rem;
+                }
+            }
+        }
+
+        .right {
+            .lets-talk-cta {
+                border: none;
+                display: flex;
+                padding: 1rem 1.875rem;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.1875rem;
+                background: #FFF;
+                color: #000;
+                text-align: center;
+                font-family: "DM Sans";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 1000;
+                cursor: pointer;
+            }
+        }
+    }
+}

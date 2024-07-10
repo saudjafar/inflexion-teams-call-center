@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Footer from './components/Footer';
+import Feature1 from './components/Feature1';
+import Testimonials from './components/Testimonials';
+import Services from './components/Services';
+import Feature2 from './components/Feature2';
+import Feature3 from './components/Feature3';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <HeroSection />
+      <Feature1 />
+      <Testimonials />
+      <Services />
+      <Feature2 />
+      <Feature3 />
+      <Footer />
     </div>
   );
 }

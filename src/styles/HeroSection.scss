@@ -1,0 +1,79 @@
+.hero-section-container {
+    & {
+        display: flex;
+        flex-direction: column;
+        background: #000;
+        color: #fff;
+        padding: 0 2rem;
+        padding-top: 7rem;
+    }
+
+    .hero-section {
+        & {
+            max-width: 88rem;
+            display: flex;
+            margin: 0 auto;
+            gap: 10.75rem;
+            justify-content: space-between;
+            padding-bottom: 6rem;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 2.25rem;
+            flex: 1 1 0;
+
+            .headline {
+                margin: 0;
+                padding-top: 2.25rem;
+                text-align: left;
+                color: #FFF;
+                font-family: "DM Sans";
+                font-size: 4.375rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 4.375rem;
+                /* 100% */
+                letter-spacing: -0.0875rem;
+                // margin-bottom: 2.25rem;
+            }
+
+            .sub-headline {
+                text-align: left;
+                color: #FFF;
+                font-family: "DM Sans";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.5rem;
+                /* 150% */
+                // margin-bottom: 3.1rem;
+            }
+
+            .lets-talk-cta {
+                border: none;
+                display: flex;
+                padding: 1rem 1.875rem;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.1875rem;
+                background: #FFF;
+                color: #000;
+                text-align: center;
+                font-family: "DM Sans";
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 1000;
+                cursor: pointer;
+                max-width: 9.2rem;
+            }
+        }
+
+        .right {}
+    }
+
+    .companies-carousel-container {
+        padding-bottom: 5.75rem;
+    }
+}

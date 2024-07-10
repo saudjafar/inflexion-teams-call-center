@@ -1,0 +1,53 @@
+.services-section {
+    & {
+        max-width: 82.75rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        padding-top: 12.4rem;
+    }
+
+    .services {
+        & {
+            display: flex;
+            flex-direction: column;
+            gap: 6.5rem;
+        }
+
+        .services-header {
+            & {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+
+
+            .headline {
+                margin: 0;
+                color: #000;
+                font-family: "DM Sans";
+                font-size: 4.375rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 4.375rem;
+                /* 100% */
+                letter-spacing: -0.0875rem;
+            }
+
+            .subtext {
+                color: rgba(20, 37, 104, 0.70);
+                font-family: "DM Sans";
+                font-size: 1.225rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.8375rem;
+                /* 150% */
+                max-width: 30ch;
+            }
+        }
+
+        .services-grid .grid-element {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

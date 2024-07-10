@@ -1,0 +1,87 @@
+.footer-section {
+    & {
+        margin-top: 5rem;
+        padding: 5rem 2rem;
+        background: #fff;
+        font-family: 'DM Sans';
+    }
+
+    .footer {
+        & {
+            max-width: 78.75rem;
+            margin: 0 auto;
+        }
+
+        .line-1 {
+            & {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2.5rem;
+            }
+
+            .logo-container {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+
+                .logo-text {
+                    // font-family: "Helvetica Neue", sans-serif;
+                    font-size: 1.71075rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%;
+                    letter-spacing: -0.10263rem;
+                }
+            }
+
+            .links-container {
+                display: flex;
+                gap: 5.25rem;
+
+                span {
+                    color: #0A1953;
+                    font-family: "DM Sans";
+                    font-size: 1.125rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.575rem;
+                    /* 140% */
+                }
+            }
+        }
+
+        .line-2 {
+            color: rgba(20, 37, 104, 0.70);
+            font-family: "DM Sans";
+            font-size: 1.225rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.8375rem;
+            /* 150% */
+            max-width: 28ch;
+            margin-bottom: 3.35rem;
+        }
+
+        .line-3 {
+            display: flex;
+            justify-content: space-between;
+
+            .copyright-text {
+                color: rgba(20, 37, 104, 0.70);
+                font-family: "DM Sans";
+                font-size: 0.875rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.225rem;
+                /* 140% */
+            }
+
+            .social-icon-links {
+                display: flex;
+                gap: 2.25rem;
+                padding-right: 0.75rem;
+            }
+        }
+    }
+}
