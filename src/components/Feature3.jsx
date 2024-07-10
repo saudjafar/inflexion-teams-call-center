@@ -1,5 +1,8 @@
 import React from 'react'
 import '../styles/Features.scss';
+import attritionGraph from '../assets/svgs/attrition-graph.svg';
+import smiley from '../assets/svgs/smiley.svg';
+import arrowRight from '../assets/svgs/arrow-right.svg';
 const Feature3 = () => {
     return (
         <section className='feature-3-section'>
@@ -18,7 +21,21 @@ const Feature3 = () => {
             </div>
 
             <div className='agent-features-2'>
-
+                <div className='left'>
+                    <div className='header'>Retention That Defies Industry Norms</div>
+                    <div className='subtext'>Talent churn can derail projects and drain resources – we've cracked the code. Experience the peace of mind that comes with a stable, committed team. Our talent retention rate of 95%+ is unparalleled. We guarantee consistent quality and accelerated project timelines.</div>
+                    <button className='learn-more-cta'>Learn More <img src={arrowRight} /></button>
+                </div>
+                <div className='right'>
+                    <img src={attritionGraph} />
+                    <img src={smiley} style={{ position: 'relative', top: '-5.5rem' }} />
+                    <div className='header'>
+                        {`<5% Attrition Rate`}
+                    </div>
+                    <div className='subtext'>
+                        vs. 38% Industry Average
+                    </div>
+                </div>
             </div>
         </section>
     )
