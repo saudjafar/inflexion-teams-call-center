@@ -10,6 +10,7 @@ import Services from './components/Services';
 import Feature2 from './components/Feature2';
 import Feature3 from './components/Feature3';
 import Feature4 from './components/Feature4';
+import Insights from './components/Insights';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Services />
       <Feature2 />
       <Feature3 />
-
+      <Insights />
       <Feature4 />
       <Footer />
     </div>
