@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/HeroSection.scss';
-import HeroImgMasked from '../assets/imgs/hero-section-masked.png'
+import '../../styles/LP1/HeroSection.scss';
+import HeroImgMasked from '../../assets/imgs/hero-section-masked.png'
 import LogoSlider from './LogoSlider';
 const HeroSection = () => {
     return (

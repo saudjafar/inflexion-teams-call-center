@@ -1,13 +1,13 @@
 import React from 'react'
-import '../styles/Services.scss';
+import '../../styles/LP1/Services.scss';
 import { Row, Col } from 'antd';
 import GridElement from './GridElement';
-import iconConnect from '../assets/svgs/icon-connect.svg';
-import iconEarn from '../assets/svgs/icon-earn.svg';
-import iconPrivacy from '../assets/svgs/icon-privacy.svg';
-import iconGlobal from '../assets/svgs/icon-global.svg';
-import iconIntegration from '../assets/svgs/icon-integrations.svg';
-import iconSupport from '../assets/svgs/Support.svg';
+import iconConnect from '../../assets/svgs/icon-connect.svg';
+import iconEarn from '../../assets/svgs/icon-earn.svg';
+import iconPrivacy from '../../assets/svgs/icon-privacy.svg';
+import iconGlobal from '../../assets/svgs/icon-global.svg';
+import iconIntegration from '../../assets/svgs/icon-integrations.svg';
+import iconSupport from '../../assets/svgs/Support.svg';
 
 
 const Services = () => {
@@ -33,7 +33,6 @@ const Services = () => {
         <GridElement imgSrc={iconIntegration} headline={headlines[3]} subtext={subtexts[3]} />,
         <GridElement imgSrc={iconPrivacy} headline={headlines[4]} subtext={subtexts[4]} />,
         <GridElement isLast={true} imgSrc={iconSupport} headline={headlines[5]} subtext={subtexts[0]} />
-
     ];
     return (
         <section className='services-section'>

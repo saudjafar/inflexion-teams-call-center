@@ -1,0 +1,96 @@
+.hero-section-container {
+    & {
+        position: relative;
+        padding-top: 8.86rem;
+        padding-bottom: 28.5rem;
+        margin-bottom: 10rem;
+    }
+
+    .header-container {
+        & {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // max-width: fit-content;
+            // margin: 0 auto;
+        }
+
+        .line {
+            margin: 0;
+            color: #FFF;
+            text-align: center;
+            font-family: "DM Sans";
+            font-size: 5.94725rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 4.99569rem;
+            /* 84% */
+            letter-spacing: -0.17844rem;
+            margin-bottom: 0.84rem;
+        }
+
+
+        .line-2 {
+            color: #5DE9FF;
+        }
+    }
+
+    .sub-headline-container {
+        & {
+            margin: 0 auto;
+        }
+
+        p {
+            max-width: 33rem;
+            margin: 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.78);
+            font-family: "DM Sans";
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.8375rem;
+            /* 150% */
+        }
+    }
+
+    .get-started-cta {
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        color: #000;
+        text-align: center;
+        font-family: "DM Sans";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5rem;
+        /* 150% */
+        width: 12.83rem;
+        border-radius: 0.25rem;
+        background: #FFF;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06);
+        display: flex;
+        padding: 1.25rem 2.375rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.60444rem;
+    }
+
+    .hero-img-container {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 19.1rem;
+        z-index: 0;
+
+        .img-left {
+            margin-left: -2rem;
+        }
+
+        .img-right {
+            margin-right: -0.4rem;
+        }
+    }
+}

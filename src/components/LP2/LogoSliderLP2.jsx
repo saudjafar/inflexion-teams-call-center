@@ -1,13 +1,13 @@
 import React from 'react';
 import Slider from "react-slick";
-import logo1 from '../assets/svgs/2036.svg';
-import logo2 from '../assets/svgs/2038.svg';
-import logo3 from '../assets/svgs/2039.svg';
-import logo4 from '../assets/svgs/2040.svg';
-import logo5 from '../assets/svgs/2041.svg';
-import logo6 from '../assets/svgs/2042.svg';
+import logo1 from '../../assets/svgs/inc-grey.svg';
+import logo2 from '../../assets/svgs/cw-grey.svg';
+import logo3 from '../../assets/svgs/nunbk-grey.svg';
+import logo4 from '../../assets/svgs/assetsbank-grey.svg';
+import logo5 from '../../assets/svgs/nrok-grey.svg';
+import logo6 from '../../assets/svgs/green-grey.svg';
 
-const LogoSlider = () => {
+const LogoSliderLP2 = () => {
     const logos = [
         logo1, logo2, logo3, logo4, logo5, logo6
     ]
@@ -43,7 +43,7 @@ const LogoSlider = () => {
     };
 
     return (
-        <div className="logo-slider" style={{ cursor: 'pointer', maxWidth: '78rem', margin: '0 auto' }}>
+        <div className="logo-slider" style={{ cursor: 'pointer', maxWidth: '108rem', margin: '0 auto', padding: '12rem 2rem 11rem' }}>
             <Slider {...settings}>
                 {logos.concat(logos).map((logo, index) => (
                     <div className="logo-slide" key={index}>
@@ -56,4 +56,4 @@ const LogoSlider = () => {
 };
 
 
-export default LogoSlider;
+export default LogoSliderLP2;

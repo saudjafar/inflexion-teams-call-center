@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/GridElement.scss';
+import '../../styles/LP1/GridElement.scss';
 const GridElement = ({ imgSrc, headline, subtext, isLast = false }) => {
     return (
         !isLast ? (

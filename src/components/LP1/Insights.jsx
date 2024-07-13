@@ -1,10 +1,10 @@
 import React from 'react'
-import '../styles/Insights.scss';
+import '../../styles/LP1/Insights.scss';
 import { Card } from 'antd';
-import blog1 from '../assets/imgs/blog1.jpg';
-import blog2 from '../assets/imgs/blog2.png';
-import blog3 from '../assets/imgs/blog3.jpg';
-import blog4 from '../assets/imgs/blog4.jpg';
+import blog1 from '../../assets/imgs/blog1.jpg';
+import blog2 from '../../assets/imgs/blog2.png';
+import blog3 from '../../assets/imgs/blog3.jpg';
+import blog4 from '../../assets/imgs/blog4.jpg';
 const Insights = () => {
     const { Meta } = Card;
 

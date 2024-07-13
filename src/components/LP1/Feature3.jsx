@@ -1,8 +1,8 @@
 import React from 'react'
-import '../styles/Features.scss';
-import attritionGraph from '../assets/svgs/attrition-graph.svg';
-import smiley from '../assets/svgs/smiley.svg';
-import arrowRight from '../assets/svgs/arrow-right.svg';
+import '../../styles/LP1/Features.scss';
+import attritionGraph from '../../assets/svgs/attrition-graph.svg';
+import smiley from '../../assets/svgs/smiley.svg';
+import arrowRight from '../../assets/svgs/arrow-right.svg';
 const Feature3 = () => {
     return (
         <section className='feature-3-section'>

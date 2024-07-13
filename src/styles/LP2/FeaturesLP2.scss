@@ -1,0 +1,262 @@
+.feature-1-LP2-section {
+    & {
+        max-width: 82.5rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        color: #000;
+
+    }
+
+    .header-text-container {
+        & {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            font-family: "DM Sans";
+            align-items: center;
+        }
+
+        .header {
+            margin: 0;
+            color: #000;
+            text-align: center;
+            font-size: 4.375rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 5.625rem;
+            /* 128.571% */
+            letter-spacing: -0.0875rem;
+            max-width: 15ch;
+        }
+
+        .sub-headline {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.70);
+            font-size: 1.225rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.8375rem;
+            /* 150% */
+
+        }
+    }
+
+    .feature-1-LP2-cards-container {
+        & {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.85rem;
+            justify-content: space-between;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            & {
+                flex: 1 1 calc(33% - 1rem);
+                /* Adjust width as needed, e.g., 33% for three cards in a row */
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                padding: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .card-img-container {
+                margin-bottom: 1.5rem;
+                display: flex;
+            }
+
+            .card-text-container {
+                & {
+                    min-height: 13.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: "DM Sans";
+                }
+
+                .card-heading {
+                    margin: 0;
+                    color: #000;
+                    font-size: 2.25rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 2.625rem;
+                    max-width: 50ch;
+                    min-height: 7.875rem;
+                    /* 116.667% */
+                }
+
+                .card-subtext {
+                    color: rgba(0, 0, 0, 0.70);
+                    font-size: 1.225rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.8375rem;
+                    /* 150% */
+                }
+
+            }
+        }
+    }
+}
+
+
+.feature-2-LP2-section {
+    & {
+        max-width: 82.5rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        color: #000;
+        padding-top: 11.56rem;
+        display: flex;
+    }
+
+    .left {
+        background: #000;
+        padding: 11.08rem 4.11rem;
+        flex: 1 0;
+    }
+
+    .right {
+        & {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            padding: 11.25rem 6.88rem 0;
+            flex: 1 0;
+        }
+
+        .headline {
+            margin: 0;
+            color: #000;
+            font-family: "DM Sans";
+            font-size: 2.8875rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3.17625rem;
+            /* 110% */
+        }
+
+        .sub-headline {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.70);
+            font-family: "DM Sans";
+            font-size: 1.225rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.8375rem;
+            /* 150% */
+        }
+
+        .get-started-cta {
+            cursor: pointer;
+            border-radius: 0.1875rem;
+            max-width: 13rem;
+            border: none;
+            // margin-top: 3rem;
+            background: #000;
+            display: flex;
+            padding: 1.25rem 2.81rem;
+            justify-content: center;
+            align-items: center;
+            gap: 0.60444rem;
+            color: #FFF;
+            text-align: center;
+            font-family: "DM Sans";
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.5rem;
+            /* 150% */
+        }
+    }
+}
+
+.feature-3-LP2-section {
+    & {
+        max-width: 100.75rem;
+        margin: 0 auto;
+        padding: 11.56rem 2rem 10.5rem;
+        color: #000;
+        display: flex;
+    }
+
+    .cards-container {
+        & {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.25rem;
+            // justify-content: space-between;
+        }
+
+        .card .ant-card-body {
+            padding: 0;
+        }
+
+        .card {
+            & {
+                align-items: center;
+                flex: 1 1 calc(33% - 1rem);
+                /* Adjust width as needed, e.g., 33% for three cards in a row */
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                // padding: 0.5rem;
+                // align-items: center;
+                max-width: fit-content;
+            }
+
+            .card-image {
+                max-width: 100%;
+                height: auto;
+
+            }
+
+            .card-text-container {
+                & {
+                    margin-top: 3.7rem;
+                    padding-bottom: 3.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                    align-items: center;
+                    text-align: center;
+                    // height: 21.705rem;
+                }
+
+                .card-heading {
+                    margin: 0;
+                    color: #0A1953;
+                    font-family: "DM Sans";
+                    font-size: 1.575rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 1.96875rem;
+                    /* 125% */
+                }
+
+                .card-subtext {
+                    margin: 0;
+                    font-family: "DM Sans";
+                    max-width: 25.99ch;
+                    color: rgba(0, 0, 0, 0.70);
+                    text-align: center;
+                    font-size: 1.225rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.8375rem;
+                    /* 150% */
+
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-3-LP2-section .cards-container .card {
+        flex: 1 1 100%;
+    }
+}

@@ -21,6 +21,7 @@
             }
 
             .logo-container {
+                cursor: pointer;
                 display: flex;
                 align-items: flex-start;
                 gap: 0.5rem;
@@ -39,6 +40,7 @@
                 display: flex;
                 gap: 5.25rem;
 
+
                 span {
                     color: #0A1953;
                     font-family: "DM Sans";
@@ -47,12 +49,13 @@
                     font-weight: 500;
                     line-height: 1.575rem;
                     /* 140% */
+                    cursor: pointer;
                 }
             }
         }
 
         .line-2 {
-            color: rgba(20, 37, 104, 0.70);
+            color: rgba(0, 0, 0, 0.70);
             font-family: "DM Sans";
             font-size: 1.225rem;
             font-style: normal;
@@ -78,9 +81,15 @@
             }
 
             .social-icon-links {
-                display: flex;
-                gap: 2.25rem;
-                padding-right: 0.75rem;
+                & {
+                    display: flex;
+                    gap: 2.25rem;
+                    padding-right: 0.75rem;
+                }
+
+                img {
+                    cursor: pointer;
+                }
             }
         }
     }

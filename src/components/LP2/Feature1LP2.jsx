@@ -1,18 +1,23 @@
 import React from 'react'
-import '../styles/Features.scss';
+import '../../styles/LP2/FeaturesLP2.scss';
 import { Card } from 'antd';
-import iconGlobal from '../assets/svgs/icon-global.svg';
-import iconPrivacy from '../assets/svgs/icon-privacy.svg';
-import iconSecurity from '../assets/svgs/icon-security.svg';
+import iconGlobal from '../../assets/svgs/icon-global.svg';
+import iconPrivacy from '../../assets/svgs/icon-privacy.svg';
+import iconSecurity from '../../assets/svgs/icon-security.svg';
 
-const Feature1 = () => {
+
+const Feature1LP2 = () => {
     return (
-        <section className='feature-1-section'>
-            <div className='headline-subheadline-container'>
-                <h1 className='headline'>Seamlessly Extend Your Team’s Capabilities</h1>
-                <p className='sub-headline'>Get the precise skills you need, right when you need them. </p>
+        <section className='feature-1-LP2-section'>
+            <div className='header-text-container'>
+                <h1 className='header'>
+                    Seamlessly Extend Your Team’s Capabilities
+                </h1>
+                <p className='sub-headline'>
+                    Get the precise skills you need, right when you need them.
+                </p>
             </div>
-            <div className='feature-cards-container'>
+            <div className='feature-1-LP2-cards-container'>
                 <Card
                     hoverable
                     className="feature-card"
@@ -33,7 +38,7 @@ const Feature1 = () => {
                         <img src={iconPrivacy} />
                     </div>
                     <div className='card-text-container'>
-                        <h2 className='card-heading'>Scale without limits.</h2>
+                        <h2 className='card-heading'>Scale without <br /> limits.</h2>
                         <p className='card-subtext'>Scale your team up or down effortlessly, from a single specialist to an entire department. We're here when you need us.</p>
                     </div>
                 </Card>
@@ -54,4 +59,4 @@ const Feature1 = () => {
     )
 }
 
-export default Feature1
+export default Feature1LP2

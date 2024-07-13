@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/Features.scss';
+import '../../styles/LP1/Features.scss';
 import { Tabs } from 'antd';
-import tab1Icons from '../assets/svgs/tab1-icons.svg'
+import tab1Icons from '../../assets/svgs/tab1-icons.svg'
 const Feature2 = () => {
     const onChange = (key) => {
         console.log(key);
