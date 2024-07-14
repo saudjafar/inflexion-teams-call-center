@@ -1,3 +1,10 @@
+.header-section-white {
+    & {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}
+
 .header-section {
     & {
         background: #000;
@@ -56,6 +63,11 @@
                 font-style: normal;
                 font-weight: 1000;
                 cursor: pointer;
+            }
+
+            .cta-white {
+                background: #000 !important;
+                color: #fff !important;
             }
         }
     }

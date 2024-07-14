@@ -1,0 +1,28 @@
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="13" height="13" fill="#EFEFEF"/>
+<g id="Features #06 [Desktop] - Customer Support" clip-path="url(#clip0_0_1)">
+<rect width="1920" height="3067" transform="translate(-1064 -47.7444)" fill="#F5F5F5"/>
+<g id="Hero">
+<rect width="1920" height="982" transform="translate(-1064 -47.7444)" fill="white"/>
+</g>
+<g id="Header / Desktop">
+<g id="Navigation">
+<g id="div.main-navbar">
+<g id="div.dropdown">
+<g id="Button" opacity="0.35" clip-path="url(#clip1_0_1)">
+<path id="Vector" d="M8.41211 3.77124L5.16602 7.01733L1.9082 3.77124L0.830078 4.84937L5.1543 9.39624L9.49023 4.84937L8.41211 3.77124Z" fill="black"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1920" height="3067" fill="white" transform="translate(-1064 -47.7444)"/>
+</clipPath>
+<clipPath id="clip1_0_1">
+<rect width="12" height="12" fill="white" transform="matrix(1 0 0 -1 0.830078 12.2556)"/>
+</clipPath>
+</defs>
+</svg>
