@@ -84,7 +84,7 @@ const Feature1LP3 = () => {
                     ))}
                 </div>
 
-                <button className='book-a-call-cta'>
+                <button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
                     Book a Call <img src={arrowRight} />
                 </button>
 

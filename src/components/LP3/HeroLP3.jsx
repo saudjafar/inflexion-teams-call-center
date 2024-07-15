@@ -21,7 +21,7 @@ const HeroLP3 = () => {
                         We help you build, train, and manage premium customer support teams that deliver 7-star service. Equipped with cutting-edge AI we provide unparalleled CX at a fraction of the cost of onshore hires.
                     </span>
 
-                    <Button className='request-cta'>Request A Quote</Button>
+                    <Button className='request-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Request A Quote</Button>
 
                 </div>
                 <div className='right'>
