@@ -5,6 +5,7 @@ import { Button } from 'antd';
 import stackSVG from '../../assets/svgs/LP3-stack.svg'
 import LogoSliderLP3 from './LogoSliderLP3';
 import gridSVG from '../../assets/svgs/LP3-grid.svg'
+import LogoSlider from '../LP1/LogoSlider';
 const HeroLP3 = () => {
     return (
         <section className='hero-LP3-section'>
@@ -29,12 +30,12 @@ const HeroLP3 = () => {
                 </div>
             </div>
 
-            <div className='companies-carousel-slider'>
-                <h1 className='carousel-header'>We’ve hired talent from</h1>
-                <LogoSliderLP3 />
-                <div className='LP3-gridImg-container'>
-                    <img src={gridSVG} />
-                </div>
+            <h1 className='carousel-header'>We’ve hired talent from</h1>
+
+            <LogoSliderLP3 />
+
+            <div className='LP3-gridImg-container'>
+                <img src={gridSVG} />
             </div>
 
         </section>

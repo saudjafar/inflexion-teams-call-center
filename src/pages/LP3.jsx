@@ -9,6 +9,7 @@ import Feature4LP3 from '../components/LP3/Feature4LP3';
 import Feature5LP3 from '../components/LP3/Feature5LP3';
 import Feature6LP3 from '../components/LP3/Feature6LP3';
 import Feature7LP3 from '../components/LP3/Feature7LP3';
+import Feature8LP3 from '../components/LP3/Feature8LP3';
 
 
 import FooterLP3 from '../components/LP3/FooterLP3';
@@ -25,6 +26,7 @@ const LP3 = () => {
             <Feature5LP3 />
             <Feature6LP3 />
             <Feature7LP3 />
+            <Feature8LP3 />
             <FooterLP3 />
         </section>
     )

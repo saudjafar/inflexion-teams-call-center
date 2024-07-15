@@ -89,26 +89,24 @@
         }
     }
 
-    .companies-carousel-slider {
-        & {
-            padding-top: 7.4rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4.75rem;
-            // padding-top: 3.6rem 2.5rem 0;
-        }
+    .carousel-header {
+        margin: 7.4rem auto 4.75rem;
+        // margin-top: 7.4rem;
 
-        .carousel-header {
-            margin: 0;
-            color: #BDBDBD;
-            font-size: 1.5rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: 0.03125rem;
-            text-transform: capitalize;
-        }
+        max-width: fit-content;
+        color: #BDBDBD;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.03125rem;
+        text-transform: capitalize;
+    }
 
+
+    .LP3-gridImg-container {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
     }
 }
