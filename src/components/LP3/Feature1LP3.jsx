@@ -4,13 +4,14 @@ import iconHandshake from '../../assets/svgs/Frame.svg';
 import iconAI from '../../assets/svgs/Group 48095540.svg';
 import iconOutsource from '../../assets/svgs/Frame-1.svg';
 import { Card } from 'antd';
+import arrowRight from '../../assets/svgs/arrow-right-2.svg'
 const Feature1LP3 = () => {
 
     const cardsData = [
         {
             imgSrc: iconOutsource,
-            header: 'Premium Outsourcing',
-            subHeader: 'Get access to exceptional talent trained on cutting-edge AI technology.',
+            header: "Premium Outsourcing",
+            subHeader: "Get access to exceptional talent trained on cutting-edge AI technology.",
             points: ['End-to-end managed customer support',
                 'Extensively trained and vetted agents',
                 'AI-augmented customer service',
@@ -20,7 +21,7 @@ const Feature1LP3 = () => {
         {
             imgSrc: iconAI,
             header: 'AI-Powered Customer Exp',
-            subHeader: 'Cutting-edge AI technology to enhance your CX team\'s capabilities.',
+            subHeader: <>Cutting-edge AI technology to <br /> enhance your CX team\'s capabilities.</>,
             points: ['Real-time agent assistance',
                 'AI-driven knowledge base integration',
                 'Sentiment Analysis and intelligent routing',
@@ -42,11 +43,18 @@ const Feature1LP3 = () => {
     const CardElement = ({ imgSrc, header, subHeader, points }) => {
         return (
             <Card className='card'>
-                <ul>
-                    {points?.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
-                </ul>
+                <div className='card-upper'>
+                    <img className='upper-img' src={imgSrc} alt={header} width={56} />
+                    <h2 className='header'>{header}</h2>
+                    <p className='sub-headline'>{subHeader}</p>
+                </div>
+                <div className='card-lower'>
+                    <ul>
+                        {points.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
             </Card>
         );
     };
@@ -65,7 +73,7 @@ const Feature1LP3 = () => {
                 </div>
 
                 <div className='feature-1-cards-container'>
-                    {cardsData.map((index, card) => (
+                    {cardsData.map((card, index) => (
                         <CardElement
                             key={index}
                             imgSrc={card.imgSrc}
@@ -74,6 +82,16 @@ const Feature1LP3 = () => {
                             points={card.points}
                         />
                     ))}
+                </div>
+
+                <button className='book-a-call-cta'>
+                    Book a Call <img src={arrowRight} />
+                </button>
+
+                <div className='hr-line'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2" viewBox="0 0 1242 2" fill="none">
+                        <path d="M0 1L1242 1.00011" stroke="#CDCDCD" />
+                    </svg>
                 </div>
             </div>
 

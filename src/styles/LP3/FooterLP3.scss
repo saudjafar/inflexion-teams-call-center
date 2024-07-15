@@ -1,0 +1,45 @@
+.LP3-footer-section {
+    padding: 3.4rem 2rem 2.4rem;
+
+    .LP3-footer {
+        & {
+
+            flex-direction: column;
+            display: flex;
+            gap: 7rem;
+            max-width: 108.75rem;
+            margin: 0 auto;
+        }
+
+        .text-container {
+            & {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .left span,
+            .right span {
+                color: #928C97;
+                font-size: 0.875rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.5rem;
+                // text-transform: uppercase;
+            }
+
+            .left,
+            .right {
+                display: flex;
+                gap: 2.4rem;
+            }
+        }
+
+        .watermark-container {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
