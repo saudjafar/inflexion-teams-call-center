@@ -10,6 +10,7 @@ import DataManagement from './pages/DataManagement';
 import ContentModeration from './pages/ContentModeration';
 import BackOffice from './pages/BackOffice';
 import HomePage from './pages/HomePage';
+import LP3 from './pages/LP3';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/lp1" element={<LP1 />} />
           <Route path="/lp2" element={<LP2 />} />
+          <Route path="/lp3" element={<LP3 />} />
           <Route path="/customer-support" element={<CustomerSupport />} />
           <Route path="/technical-support" element={<TechnicalSupport />} />
           <Route path="/data-management" element={<DataManagement />} />

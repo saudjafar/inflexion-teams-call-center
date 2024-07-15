@@ -8,6 +8,8 @@ const HomePage = () => {
             <ol style={{ listStyleType: 'decimal', paddingLeft: '20px' }}>
                 <li><Link to="/lp1" style={{ textDecoration: 'none', color: '#007bff' }}>LP1</Link></li>
                 <li><Link to="/lp2" style={{ textDecoration: 'none', color: '#007bff' }}>LP2</Link></li>
+                <li><Link to="/lp3" style={{ textDecoration: 'none', color: '#007bff' }}>LP3</Link></li>
+
                 <li><Link to="/customer-support" style={{ textDecoration: 'none', color: '#007bff' }}>Customer Support</Link></li>
                 <li><Link to="/technical-support" style={{ textDecoration: 'none', color: '#007bff' }}>Technical Support</Link></li>
                 <li><Link to="/data-management" style={{ textDecoration: 'none', color: '#007bff' }}>Data Management</Link></li>

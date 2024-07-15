@@ -1,0 +1,114 @@
+.hero-LP3-section {
+    & {
+        border-radius: 1.0625rem;
+        background: #030303;
+        padding: 4rem 0;
+    }
+
+    .hero-LP3 {
+        & {
+            display: flex;
+            justify-content: space-between;
+            // max-width: 90rem;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .left {
+            & {
+                margin-top: 4.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+                padding-left: 6rem;
+                flex: 1 0;
+                position: relative;
+                z-index: 2;
+            }
+
+            .pre-header {
+                color: #969696;
+                // font-family: "Helvetica Neue";
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.03125rem;
+                text-transform: uppercase;
+            }
+
+            .header {
+                margin: 0;
+                color: #FFF;
+                // font-family: "Helvetica Now Display";
+                font-size: 5rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 5.625rem;
+                /* 112.5% */
+                letter-spacing: -0.05rem;
+                max-width: 16ch;
+            }
+
+            .sub-headline {
+                color: #CECECE;
+                // font-family: "Helvetica Neue";
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.875rem;
+                /* 150% */
+                max-width: 55ch;
+            }
+
+            .request-cta {
+                max-width: 13.8rem;
+                border: none;
+                margin-top: 2.5rem;
+                display: flex;
+                padding: 1.5625rem 1.625rem;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625rem;
+                border-radius: 2.5rem;
+                background: #2A71FA;
+                color: #FFF;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+        }
+
+        .right {
+            & {
+                flex: 1 0;
+                max-width: fit-content;
+            }
+        }
+    }
+
+    .companies-carousel-slider {
+        & {
+            padding-top: 7.4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4.75rem;
+            padding-top: 3.6rem 2.5rem 0;
+        }
+
+        .carousel-header {
+            margin: 0;
+            color: #BDBDBD;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.03125rem;
+            text-transform: capitalize;
+        }
+
+    }
+}
