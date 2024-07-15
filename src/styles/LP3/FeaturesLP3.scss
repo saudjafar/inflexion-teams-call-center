@@ -1017,5 +1017,47 @@
             letter-spacing: 0.0625rem;
             text-transform: capitalize;
         }
+
+        .input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #696969;
+            padding-bottom: 0.5rem;
+            max-width: 52.5rem;
+            /* Optional, for better alignment */
+        }
+
+        .custom-input {
+            flex: 1;
+            background: #000;
+            border: none;
+            // border-bottom: 1px solid #696969;
+            /* Add bottom border */
+            padding: 1.5rem 0rem;
+            color: #696969;
+            font-size: 3.125rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            outline: none;
+            /* Remove the default outline */
+        }
+
+        .custom-input::placeholder {
+            color: #696969;
+            font-size: 3.125rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .input-arrow {
+            position: absolute;
+            right: 0;
+            bottom: 1.5rem;
+
+        }
+
     }
 }
