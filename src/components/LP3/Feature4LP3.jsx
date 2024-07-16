@@ -3,6 +3,9 @@ import '../../styles/LP3/FeaturesLP3.scss';
 import checkmark from '../../assets/svgs/checkmark-lp3.svg';
 import F4LP3SVG from '../../assets/svgs/F4LP3.svg';
 import arrowRight from '../../assets/svgs/arrow-black-F4LP3.svg';
+import arrowRightWhite from '../../assets/svgs/arrow-white.svg'
+import { Button } from 'antd';
+
 const Feature4LP3 = () => {
     return (
         <section className='feature-4-LP3-section'>
@@ -27,9 +30,9 @@ const Feature4LP3 = () => {
                         <span>Scale Customer <br />Support</span>
                     </div>
                 </div>
-                <button className='why-us-cta'>
-                    See Why Us <img src={arrowRight} />
-                </button>
+                <Button className='why-us-cta'>
+                    See Why Us <img className='arrow-icon' src={arrowRight} /><img className='arrow-icon-hover' src={arrowRightWhite} />
+                </Button>
             </div>
         </section>
     )

@@ -1,0 +1,20 @@
+/* Assuming you use a separate CSS file */
+.swiper {
+    width: 100%;
+    /* Set the swiper container's width */
+    overflow: hidden;
+    /* Prevents overflow from slides */
+}
+
+.swiper-slide {
+    display: flex;
+    /* Ensures content is centered */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    width: 100%;
+    /* Each slide should be full width */
+    height: 300px;
+    /* Fixed height for each slide */
+}

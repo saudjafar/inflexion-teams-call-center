@@ -161,7 +161,7 @@
             margin-top: 5.5rem;
 
             display: flex;
-            padding: 1.25rem 2.25rem;
+            padding: 2.25rem 2.25rem;
             justify-content: center;
             align-items: center;
             gap: 0.625rem;
@@ -175,6 +175,28 @@
             line-height: normal;
             text-transform: capitalize;
             cursor: pointer;
+
+        }
+
+        .book-a-call-cta .arrow-icon {
+            transition: opacity 0.3s ease;
+        }
+
+        .book-a-call-cta:hover .arrow-icon {
+            display: none;
+        }
+
+        .book-a-call-cta .arrow-icon-hover {
+            display: none;
+        }
+
+        .book-a-call-cta:hover .arrow-icon-hover {
+            display: inline;
+        }
+
+        .book-a-call-cta:hover {
+            background: #010101;
+            color: #FFF;
         }
 
         .hr-line {
@@ -239,7 +261,8 @@
 
         .LP3F2-svgs-container {
             & {
-                padding: 0 6rem 15rem;
+                padding: 0 2rem 15rem;
+                // padding-left: 0;
                 display: flex;
                 gap: 3.88rem
             }
@@ -451,7 +474,7 @@
                 display: flex;
                 flex-direction: column;
                 box-shadow: none;
-                background: #000;
+                background: #030303;
                 color: #FFF;
 
                 .ant-card-body {
@@ -620,7 +643,7 @@
             background: #FFF;
             display: flex;
             min-width: 13.0625rem;
-            padding: 1.25rem 2.25rem;
+            padding: 2.25rem 2.25rem;
             justify-content: center;
             align-items: center;
             gap: 0.625rem;
@@ -630,6 +653,28 @@
             font-weight: 600;
             line-height: normal;
             text-transform: capitalize;
+        }
+
+        .why-us-cta .arrow-icon {
+            transition: opacity 0.3s ease;
+        }
+
+        .why-us-cta:hover .arrow-icon {
+            display: none;
+        }
+
+        .why-us-cta .arrow-icon-hover {
+            display: none;
+        }
+
+        .why-us-cta:hover .arrow-icon-hover {
+            display: inline;
+        }
+
+        .why-us-cta:hover {
+            background: #010101;
+            color: #FFF;
+            border: 1px solid #000;
         }
     }
 
@@ -753,11 +798,12 @@
             }
 
             .how-we-work-cta {
+                box-shadow: none;
                 margin-top: 0.75rem;
                 border: 0;
                 display: flex;
                 max-width: 18rem;
-                padding: 1.25rem 2.25rem;
+                padding: 2.25rem 2.25rem;
                 justify-content: center;
                 align-items: center;
                 gap: 0.625rem;
@@ -770,6 +816,30 @@
                 font-weight: 500;
                 line-height: normal;
                 text-transform: capitalize;
+            }
+
+            .how-we-work-cta:hover {
+                box-shadow: none;
+                background: white;
+                color: #2A71FA;
+                border: 1px solid #2A71FA;
+
+            }
+
+            .how-we-work-cta .arrow-icon {
+                transition: opacity 0.3s ease;
+            }
+
+            .how-we-work-cta:hover .arrow-icon {
+                display: none;
+            }
+
+            .how-we-work-cta .arrow-icon-hover {
+                display: none;
+            }
+
+            .how-we-work-cta:hover .arrow-icon-hover {
+                display: inline;
             }
         }
     }
@@ -903,7 +973,7 @@
             border: none;
             display: flex;
             width: 14rem;
-            padding: 1.25rem 2.25rem;
+            padding: 2.25rem 2.25rem;
             justify-content: center;
             align-items: center;
             gap: 0.625rem;
@@ -917,6 +987,26 @@
             background: #FFF;
         }
 
+        .book-a-call-cta .arrow-icon {
+            transition: opacity 0.3s ease;
+        }
+
+        .book-a-call-cta:hover .arrow-icon {
+            display: none;
+        }
+
+        .book-a-call-cta .arrow-icon-hover {
+            display: none;
+        }
+
+        .book-a-call-cta:hover .arrow-icon-hover {
+            display: inline;
+        }
+
+        .book-a-call-cta:hover {
+            background: #010101;
+            color: #FFF;
+        }
     }
 }
 
@@ -970,7 +1060,7 @@
                 border: none;
                 display: flex;
                 width: 24rem;
-                padding: 1.25rem 2.25rem;
+                padding: 2.25rem 2.25rem;
                 justify-content: center;
                 align-items: center;
                 gap: 0.625rem;
@@ -982,6 +1072,31 @@
                 font-weight: 400;
                 line-height: normal;
                 text-transform: capitalize;
+            }
+
+
+            .schedule-call-cta:hover {
+                box-shadow: none;
+                background: white;
+                color: #2A71FA;
+                border: 1px solid #2A71FA;
+
+            }
+
+            .schedule-call-cta .arrow-icon {
+                transition: opacity 0.3s ease;
+            }
+
+            .schedule-call-cta:hover .arrow-icon {
+                display: none;
+            }
+
+            .schedule-call-cta .arrow-icon-hover {
+                display: none;
+            }
+
+            .schedule-call-cta:hover .arrow-icon-hover {
+                display: inline;
             }
         }
     }
@@ -1026,11 +1141,14 @@
             padding-bottom: 0.5rem;
             max-width: 52.5rem;
             /* Optional, for better alignment */
+            background: #030303;
+
         }
 
         .custom-input {
             flex: 1;
-            background: #000;
+            // background: #000;
+            background: #030303;
             border: none;
             // border-bottom: 1px solid #696969;
             /* Add bottom border */
@@ -1050,6 +1168,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            background: #030303;
         }
 
         .input-arrow {

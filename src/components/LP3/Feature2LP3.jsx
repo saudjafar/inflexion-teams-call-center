@@ -5,6 +5,8 @@ import LP3F2H2 from '../../assets/svgs/LP3F2H2.svg';
 import LP3F2H3 from '../../assets/svgs/LP3F2H3.svg';
 import LP3F2CustCard from '../../assets/svgs/LP3F2CustCard.svg';
 import LP3F2World from '../../assets/svgs/LP3F2World.svg';
+import CollapsibleCards from './CollapsibleCards';
+// import 'antd/dist/antd.css';
 
 const Feature2LP3 = () => {
     return (
@@ -20,10 +22,11 @@ const Feature2LP3 = () => {
                 </div>
                 <div className='LP3F2-svgs-container'>
                     <div className='left'>
-                        <img src={LP3F2H1} />
+                        {/* <img src={LP3F2H1} />
                         <img src={LP3F2H2} />
-                        <img src={LP3F2H3} />
+                        <img src={LP3F2H3} /> */}
 
+                        <CollapsibleCards />
                     </div>
                     <div className='right'>
                         <img className='img-1' src={LP3F2CustCard} width={277} height={254} />

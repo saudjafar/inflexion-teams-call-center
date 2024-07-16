@@ -3,8 +3,10 @@ import '../../styles/LP3/FeaturesLP3.scss';
 import iconHandshake from '../../assets/svgs/Frame.svg';
 import iconAI from '../../assets/svgs/Group 48095540.svg';
 import iconOutsource from '../../assets/svgs/Frame-1.svg';
-import { Card } from 'antd';
+import { Button, Card } from 'antd';
 import arrowRight from '../../assets/svgs/arrow-right-2.svg'
+import arrowRightWhite from '../../assets/svgs/arrow-white.svg'
+
 const Feature1LP3 = () => {
 
     const cardsData = [
@@ -84,9 +86,9 @@ const Feature1LP3 = () => {
                     ))}
                 </div>
 
-                <button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
-                    Book a Call <img src={arrowRight} />
-                </button>
+                <Button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
+                    Book a Call <img className='arrow-icon' src={arrowRight} /><img className='arrow-icon-hover' src={arrowRightWhite} />
+                </Button>
 
                 <div className='hr-line'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2" viewBox="0 0 1242 2" fill="none">

@@ -6,6 +6,7 @@ import stackSVG from '../../assets/svgs/LP3-stack.svg'
 import LogoSliderLP3 from './LogoSliderLP3';
 import gridSVG from '../../assets/svgs/LP3-grid.svg'
 import LogoSlider from '../LP1/LogoSlider';
+import HeroSlider from './HeroSlider';
 const HeroLP3 = () => {
     return (
         <section className='hero-LP3-section'>
@@ -26,6 +27,7 @@ const HeroLP3 = () => {
 
                 </div>
                 <div className='right'>
+                    {/* <HeroSlider /> */}
                     <img src={stackSVG} />
                 </div>
             </div>

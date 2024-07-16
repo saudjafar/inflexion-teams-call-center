@@ -1,7 +1,9 @@
 import React from 'react'
 import '../../styles/LP3/FeaturesLP3.scss';
-import arrowWhite from '../../assets/svgs/arrow-white.svg'
+import arrowWhite from '../../assets/svgs/arrow-white.svg';
+import arrowRightBlue from '../../assets/svgs/arrow-blue.svg';
 import lines from '../../assets/svgs/lines-F7LP3.svg'
+import { Button } from 'antd';
 const Feature7LP3 = () => {
     return (
         <section className='feature-7-LP3-section'>
@@ -9,9 +11,10 @@ const Feature7LP3 = () => {
             <div className='feature-7-LP3'>
                 <div className='header-container'>
                     <h1 className='header'>Make exceptional customer service your selling <br /> point, while cutting costs by up to 70%.</h1>
-                    <button className='schedule-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
-                        Schedule a consultation call <img src={arrowWhite} />
-                    </button>
+                    <Button className='schedule-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
+                        Schedule a consultation call <img src={arrowWhite} className='arrow-icon' /><img src={arrowRightBlue} className='arrow-icon-hover' />
+                    </Button>
+
                 </div>
             </div>
         </section>

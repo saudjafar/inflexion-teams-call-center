@@ -9,17 +9,19 @@ import logo5 from '../../assets/svgs/taskus_logo.svg.svg';
 
 const LogoSliderLP3 = () => {
     const logos = [
-        logo1, logo2, logo3, logo4, logo5
+        logo1, logo2, logo3, logo4, logo5, logo1, logo2, logo3, logo4, logo5
     ]
     const settings = {
         infinite: true,
-        speed: 5000,
+        speed: 9000,
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
         arrows: false,
         cssEase: 'linear',
+        // draggable: false,
+        pointerEvents: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -48,7 +50,7 @@ const LogoSliderLP3 = () => {
         margin: '0 auto',
         position: 'relative',
         overflow: 'hidden',
-        backgroundColor: 'black'
+        backgroundColor: '#030303',
     };
 
     const fadeEffectStyle = {
@@ -78,7 +80,9 @@ const LogoSliderLP3 = () => {
             <Slider {...settings}>
                 {logos.concat(logos).map((logo, index) => (
                     <div className="logo-slide" key={index}>
-                        <img src={logo} alt={`Logo ${index}`} />
+                        <div className='logo-img-container' style={{ display: 'flex', height: '44px', alignItems: 'center' }}>
+                            <img src={logo} alt={`Logo ${index}`} />
+                        </div>
                     </div>
                 ))}
             </Slider>

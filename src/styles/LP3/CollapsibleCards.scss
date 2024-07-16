@@ -1,0 +1,77 @@
+.collapse-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 38rem;
+
+    .ant-collapse-item {
+        border-radius: 2rem; // Applies rounded borders to the entire item
+        overflow: hidden; // Ensures that child elements do not overflow the rounded corners
+
+        &.ant-collapse-item-active {
+            .ant-collapse-header {
+                .collapse-header-container {
+                    background: #030303;
+                    color: #F0F0F0;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0; // Remove bottom radius when active
+
+                    .collapse-heading {
+                        color: inherit;
+                    }
+                }
+            }
+
+            .ant-collapse-content {
+                .ant-collapse-content-box {
+                    background: #030303;
+                    color: #F0F0F0;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0; // Flatten top borders when active
+                }
+            }
+        }
+
+        .ant-collapse-header {
+            padding: 0;
+            cursor: pointer;
+            // transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+
+            .collapse-header-container {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                background: #F0F0F0;
+                border-radius: 2rem; // Rounded corners on all sides when inactive
+                padding: 2.75rem 2rem;
+                color: #030303;
+
+                .collapse-heading {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    line-height: 1.7185rem;
+                    letter-spacing: 0.04rem;
+                    text-transform: capitalize;
+                    color: inherit;
+                }
+            }
+        }
+
+        .ant-collapse-content {
+            padding: 0;
+
+            .ant-collapse-content-box {
+                background: #030303;
+                color: #F0F0F0;
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 2rem;
+                padding: 2.72rem 2rem;
+                border-radius: 1.75rem;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0; // Always flat top borders to match design specs
+                // transition: background-color 0.1s ease, color 0.1s ease, border-radius 0.1s ease;
+            }
+        }
+    }
+}

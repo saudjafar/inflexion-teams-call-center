@@ -7,7 +7,9 @@ import iconBadge from '../../assets/svgs/icon-badge.svg';
 import iconClock from '../../assets/svgs/icon-clock.svg';
 import iconPPT from '../../assets/svgs/icon-ppt.svg';
 import arrowBlack from '../../assets/svgs/arrow-black-F4LP3.svg';
-import { Card } from 'antd';
+import arrowRightWhite from '../../assets/svgs/arrow-white.svg';
+
+import { Button, Card } from 'antd';
 const Feature6LP3 = () => {
     const F6LP3CardData = [
         {
@@ -74,9 +76,9 @@ const Feature6LP3 = () => {
                     ))}
                 </div>
                 <div style={{ margin: '0 auto' }}>
-                    <button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
-                        Book a Call <img src={arrowBlack} />
-                    </button>
+                    <Button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
+                        Book a Call <img className='arrow-icon' src={arrowBlack} /><img className='arrow-icon-hover' src={arrowRightWhite} />
+                    </Button>
                 </div>
             </div>
         </section>
