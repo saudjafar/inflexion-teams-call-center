@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, Element } from 'react-scroll';
+import React, { useEffect } from 'react';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import '../styles/HowItWorks/OurProcessScrollMenu.scss';
 import scrollImg1 from '../assets/imgs/process1.png';
 import scrollImg2 from '../assets/imgs/process2.png';
@@ -54,9 +54,20 @@ const data = [
 ];
 
 const OurProcessScrollMenu = () => {
+    useEffect(() => {
+        Events.scrollEvent.register('begin', function () { });
+        Events.scrollEvent.register('end', function () { });
+        scrollSpy.update();
+
+        return () => {
+            Events.scrollEvent.remove('begin');
+            Events.scrollEvent.remove('end');
+        };
+    }, []);
+
     return (
-        <div style={{ display: 'flex', minHeight: '100vh' }}>
-            <div style={{ width: '20%', color: '#fff' }}>
+        <div style={{ display: 'flex', height: '70vh', gap: '12.75rem', maxWidth: '130rem' }}>
+            <div className='scroll-links-container'>
                 {data.map(item => (
                     <Link
                         className='scroll-link'
@@ -64,25 +75,29 @@ const OurProcessScrollMenu = () => {
                         to={item.id}
                         spy={true}
                         smooth={true}
-                        duration={500}
-                        style={{ padding: '10px', display: 'block', cursor: 'pointer' }}
+                        duration={750}
+                        containerId="panel-right-container"
+                        offset={-7}
+
+
                     >
-                        <span>{item.id}</span>
-                        <span>{item.title}</span>
+                        <div className='index-container'><span className='index'>{item.id}</span></div>
+                        <span className='title'>{item.title}</span>
                     </Link>
                 ))}
             </div>
-            <div style={{ width: '80%', overflowY: 'auto', color: 'white' }}>
+            <div className='panel-right-container' id="panel-right-container">
                 {data.map(item => (
-                    <Element key={item.id} name={item.id} style={{ padding: '0px 20px 20px' }}>
-                        <h2 style={{ margin: '0' }}>{item.titleCard}</h2>
-                        <p>{item.subtext}</p>
-                        <img src={item.imgSrc} alt={item.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                    <Element className='panel-right' key={item.id} name={item.id}>
+                        <h2 className='header'>{item.titleCard}</h2>
+                        <p className='sub-text'>{item.subtext}</p>
+                        <img className='panel-img' src={item.imgSrc} alt={item.title} />
                     </Element>
                 ))}
             </div>
-        </div>
+        </div >
     );
 };
+
 
 export default OurProcessScrollMenu;
