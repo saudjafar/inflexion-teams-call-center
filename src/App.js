@@ -11,6 +11,7 @@ import ContentModeration from './pages/ContentModeration';
 import BackOffice from './pages/BackOffice';
 import HomePage from './pages/HomePage';
 import LP3 from './pages/LP3';
+import HowItWorks from './pages/HowItWorks';
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/data-management" element={<DataManagement />} />
           <Route path="/content-moderation" element={<ContentModeration />} />
           <Route path="/back-office" element={<BackOffice />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
 
         </Routes>
       </div>

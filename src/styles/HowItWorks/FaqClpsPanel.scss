@@ -1,0 +1,35 @@
+.faq-collapse-container {
+    & {
+        padding: 8rem;
+        padding-top: 4rem;
+        border-radius: 2.625rem;
+        // border: 1px solid rgba(245, 245, 245, 0.40);
+        background: #FFF;
+    }
+
+    .ant-collapse-item {
+        min-width: 60rem;
+    }
+
+    .ant-collapse-item .ant-collapse-header {
+        padding: 3.5rem 1rem;
+    }
+
+    .ant-collapse-item .ant-collapse-header .ant-collapse-header-text {
+        color: #0B0B0B;
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2.5rem;
+        /* 142.857% */
+    }
+
+
+    .faq-collapse-card {
+        & {}
+    }
+}
+
+.ant-collapse .ant-collapse-item .ant-collapse-content {
+    border-top: none !important;
+}
