@@ -1,0 +1,220 @@
+.hire-support-section {
+    & {
+        padding: 5rem 2rem;
+        display: flex;
+    }
+
+    .get-started-section {
+        & {
+            border-radius: 2rem;
+            border: 1px solid #393939;
+            background: #2A71FA;
+            color: white;
+            width: 100%;
+
+        }
+
+        .get-started {
+            & {
+                margin: 0 auto;
+                padding: 8.19rem 6rem 10.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 7rem;
+                max-width: 80rem;
+            }
+
+            .header {
+                color: #FFF;
+                font-size: 4rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 4.75rem;
+                /* 118.75% */
+                text-transform: capitalize;
+                max-width: 55rem;
+                text-align: center;
+            }
+
+            .get-started-details {
+                & {
+                    display: flex;
+                    gap: 2.3rem;
+                    justify-content: center;
+                }
+
+                .details-text {
+                    & {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2.2rem;
+                        min-width: 50%;
+                    }
+
+
+                    .text {
+                        padding: 2.6875rem 1.8125rem;
+                        border-radius: 1.6875rem;
+                        background: rgba(255, 255, 255, 0.15);
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .text-1 {
+                        & {
+                            gap: 3rem;
+                            position: relative;
+                        }
+
+                        .heading {
+                            margin: 0;
+                            color: #FFF;
+                            font-size: 2.25rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 2.875rem;
+                            /* 127.778% */
+                            text-transform: capitalize;
+                            max-width: 30ch;
+                        }
+
+                        .sub-text {
+                            margin: 0;
+                            color: #FFF;
+                            font-size: 1.25rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 2rem;
+                            /* 160% */
+                            text-transform: capitalize;
+                            max-width: 45ch;
+
+                        }
+                    }
+
+                    .text-2 {
+                        & {
+                            gap: 2rem;
+                        }
+
+                        .heading {
+                            margin: 0;
+                            color: #FFF;
+                            font-size: 1.6875rem;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 4.75rem;
+                            /* 281.481% */
+                            text-transform: capitalize;
+                        }
+
+                        .list-container {
+                            & {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1.5rem;
+
+                            }
+
+                            .list-item {
+                                display: flex;
+                                align-items: center;
+                                gap: 1.75rem;
+                                color: #FFF;
+                                font-size: 1.25rem;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 2.125rem;
+                                /* 170% */
+                                max-width: 45ch;
+                            }
+                        }
+                    }
+                }
+
+                .popup-cta-container {
+                    & {
+                        border-radius: 1.9375rem;
+                        border: 1px solid rgba(245, 245, 245, 0.40);
+                        background: #FFF;
+                        padding: 3.5rem;
+                        color: #0B0B0B;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                    .heading {
+                        color: #0B0B0B;
+                        margin: 0;
+                        // margin-top: rem;
+                        font-size: 3.5rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 4.75rem;
+                        /* 135.714% */
+                        text-transform: capitalize;
+                    }
+
+                    .outsource-img-container {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3rem;
+                    }
+
+                    .outsource-img-text {
+                        color: #3E3E3E;
+                        font-size: 1.5rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 125%;
+                        margin: 0;
+
+                    }
+
+                    .start-cta {
+                        display: flex;
+                        padding: 1.75625rem 1.625rem;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.625rem;
+                        border-radius: 2.5rem;
+                        background: #030303;
+                        color: #FFF;
+                        font-size: 1.5rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        border: 1px solid #030303;
+                    }
+
+                    .start-cta:hover {
+                        background: #FFF;
+                        color: #030303;
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+}
+
+.ant-modal-mask {
+    background: rgba(37, 37, 37, 0.50);
+    backdrop-filter: blur(17px);
+}
+
+.ant-modal .ant-modal-content {
+    border-radius: 2rem;
+    padding: 0;
+
+}
+
+.ant-modal-root .ant-modal-centered .ant-modal {
+    width: 80rem !important;
+
+}

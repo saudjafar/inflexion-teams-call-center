@@ -16,6 +16,7 @@ const HomePage = () => {
                 <li><Link to="/content-moderation" style={{ textDecoration: 'none', color: '#007bff' }}>Content Moderation</Link></li>
                 <li><Link to="/back-office" style={{ textDecoration: 'none', color: '#007bff' }}>Back Office</Link></li>
                 <li><Link to="/how-it-works" style={{ textDecoration: 'none', color: '#007bff' }}>How it Works</Link></li>
+                <li><Link to="/hire-support" style={{ textDecoration: 'none', color: '#007bff' }}>Hire Support</Link></li>
 
             </ol>
         </div>

@@ -12,6 +12,7 @@ import BackOffice from './pages/BackOffice';
 import HomePage from './pages/HomePage';
 import LP3 from './pages/LP3';
 import HowItWorks from './pages/HowItWorks';
+import HireSupport from './pages/HireSupport';
 function App() {
   return (
     <Router>
@@ -27,6 +28,8 @@ function App() {
           <Route path="/content-moderation" element={<ContentModeration />} />
           <Route path="/back-office" element={<BackOffice />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/hire-support" element={<HireSupport />} />
+
 
         </Routes>
       </div>
