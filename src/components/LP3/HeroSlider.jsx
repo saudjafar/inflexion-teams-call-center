@@ -14,17 +14,14 @@ import sliderImg4 from '../../assets/imgs/hero-slider4.png';
 
 // Styled Components
 const Container = styled.div`
-  max-width: 112rem;
   padding: 0 2rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: center;  
   position: relative;
-left: -5rem;
-top: 6rem;
+    
 `;
 
 const Heading = styled.h2`
