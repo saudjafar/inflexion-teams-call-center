@@ -24,7 +24,7 @@ const Container = styled.div`
   height: 100vh;
   position: relative;
 left: -5rem;
-top: 1rem;
+top: 6rem;
 `;
 
 const Heading = styled.h2`
@@ -71,7 +71,6 @@ const SwiperComponent = () => {
                     </SwiperSlide>
                 ))}
             </StyledSwiper>
-            <Heading>Effect Cards</Heading>
         </Container>
     );
 };
