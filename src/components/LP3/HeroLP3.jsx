@@ -27,8 +27,8 @@ const HeroLP3 = () => {
 
                 </div>
                 <div className='right'>
-                    {/* <HeroSlider /> */}
-                    <img src={stackSVG} />
+                    <HeroSlider />
+                    {/* <img src={stackSVG} /> */}
                 </div>
             </div>
 

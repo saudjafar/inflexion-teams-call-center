@@ -77,7 +77,7 @@ const OurProcessScrollMenu = () => {
                         smooth={true}
                         duration={750}
                         containerId="panel-right-container"
-
+                        offset={-7}
 
 
                     >
