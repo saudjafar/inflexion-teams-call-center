@@ -24,7 +24,7 @@ const Container = styled.div`
   height: 100vh;
   position: relative;
 left: -5rem;
-top: 5rem;
+top: 1rem;
 `;
 
 const Heading = styled.h2`
