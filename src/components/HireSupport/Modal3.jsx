@@ -55,9 +55,9 @@ const Modal3 = ({ nextPage, previousPage }) => {
                         Submit <img src={arrowWhite} className='arrow-icon' /><img src={arrowRightBlue} className='arrow-icon-hover' />
                     </Button>
 
-                    <Button className='back-cta' onClick={previousPage}>
+                    {/* <Button className='back-cta' onClick={previousPage}>
                         Back
-                    </Button>
+                    </Button> */}
                 </div>
             </div>
         </div>

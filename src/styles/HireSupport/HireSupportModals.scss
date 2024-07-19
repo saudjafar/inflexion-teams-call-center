@@ -304,10 +304,10 @@
             .select-container {
                 width: 100%;
                 color: #9A9A9A;
-
+                height: 3.5rem;
 
                 .ant-select-selector {
-                    padding: 1rem;
+                    // padding: 1rem;
                     border-radius: 0.8125rem;
                     border: 1px solid #CACACA;
                     font-size: 1.25rem;
@@ -532,12 +532,13 @@
             background: #2A71FA;
             color: #fff;
             width: 45%;
-            padding: 2rem 3rem;
+            padding: 3rem;
             border-top-left-radius: 2rem;
             border-bottom-left-radius: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 5.1725rem;
+            gap: 5rem;
+            justify-content: space-around;
         }
 
         .l-1 {
@@ -651,7 +652,7 @@
         & {
             color: #0b0b0b;
             width: 58%;
-            padding: 4rem 6rem 0rem;
+            padding: 3rem 6rem 3rem;
         }
 
         .page-no {
@@ -754,7 +755,7 @@
             }
 
             .begin-cta {
-                margin-top: 3.25rem;
+                margin-top: 2.65rem;
                 width: 100%;
                 border-radius: 2.5rem;
                 background: #2A71FA;
@@ -821,7 +822,7 @@
             border-bottom-left-radius: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 6rem;
+            gap: 5.05rem;
         }
 
         .l-1 {
@@ -905,7 +906,7 @@
     .modal5-right {
         & {
             color: #0b0b0b;
-            width: 50%;
+            width: 58%;
             padding: 5rem 6rem 0rem;
             display: flex;
             flex-direction: column;
