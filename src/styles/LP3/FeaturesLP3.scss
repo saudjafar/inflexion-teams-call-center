@@ -3,10 +3,10 @@
         border-radius: 2rem;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        background: #FFF !important;
+        // background: #FFF !important;
 
         /* M3/Elevation Light/1 */
-        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        // box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
         padding-top: 6.25rem;
         display: flex;
         flex-direction: column;
@@ -17,6 +17,7 @@
         & {
 
             margin: 0 auto;
+            padding-bottom: 6rem;
         }
 
         .header-container {
@@ -202,14 +203,15 @@
         .hr-line {
             margin: 0 auto;
             margin-top: 9rem;
-            padding-bottom: 6rem;
         }
     }
 }
 
 .feature-2-LP3-section {
     & {
-        background: #FFF !important;
+        // background: #FFF !important;
+        // border-radius: 2rem;
+        // margin-top: 1rem;
         border-bottom-left-radius: 2rem;
         border-bottom-right-radius: 2rem;
     }
@@ -687,7 +689,7 @@
         border: none;
         margin-top: 1.75rem;
         // background: #272727;
-        padding: 8.5rem 6rem 7.06rem;
+        padding: 8.5rem 6rem;
         position: relative;
     }
 

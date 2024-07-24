@@ -10,6 +10,7 @@ import iconMail from '../../assets/svgs/icon-mail-lp3.svg';
 import iconMessage from '../../assets/svgs/icon-message-lp3.svg';
 import arrowBlue from '../../assets/svgs/arrow-blue.svg';
 import { Card } from 'antd';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Feature3LP3 = () => {
 
@@ -65,49 +66,46 @@ const Feature3LP3 = () => {
                     <img src={F3L} />
                     <img src={F3R} />
                 </div>
-                <div className='header-container'>
 
-                    <h1 className='header'>
-                        Outsource Your <span style={{ color: '#2A71FA' }}>Customer Support</span> Across Functions
-                    </h1>
-                    <p className='sub-header'>
-                        We build premium customer support teams for any CX function, leveraging cutting-edge AI technology and extensively trained agents to deliver exceptional service.
-                    </p>
-                </div>
-                <div className='feature-3-cards-container'>
-                    <div className='feature-3-row feature-3-row-top'>
-                        {F3LP3CardData.slice(0, 3).map((card, index) => (
-                            <F3LP3Card
-                                key={index}
-                                imgSrc={card.imgSrc}
-                                header={card.header}
-                                subtext={card.subtext}
-                            />
-                        ))}
+                <ScrollAnimation animateIn='fadeInUp' animateOnce={true} >
+                    <div className='header-container'>
+
+                        <h1 className='header'>
+                            Outsource Your <span style={{ color: '#2A71FA' }}>Customer Support</span> Across Functions
+                        </h1>
+                        <p className='sub-header'>
+                            We build premium customer support teams for any CX function, leveraging cutting-edge AI technology and extensively trained agents to deliver exceptional service.
+                        </p>
                     </div>
-                    <hr className='feature-3-divider' />
-                    <div className='feature-3-row feature-3-row-bottom'>
-                        {F3LP3CardData.slice(3).map((card, index) => (
-                            <F3LP3Card
-                                key={index}
-                                imgSrc={card.imgSrc}
-                                header={card.header}
-                                subtext={card.subtext}
-                            />
-                        ))}
+                </ScrollAnimation>
+                <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
+                    <div className='feature-3-cards-container'>
+                        <div className='feature-3-row feature-3-row-top'>
+                            {F3LP3CardData.slice(0, 3).map((card, index) => (
+                                <F3LP3Card
+                                    key={index}
+                                    imgSrc={card.imgSrc}
+                                    header={card.header}
+                                    subtext={card.subtext}
+                                />
+                            ))}
+                        </div>
+                        <hr className='feature-3-divider' />
+                        <div className='feature-3-row feature-3-row-bottom'>
+                            {F3LP3CardData.slice(3).map((card, index) => (
+                                <F3LP3Card
+                                    key={index}
+                                    imgSrc={card.imgSrc}
+                                    header={card.header}
+                                    subtext={card.subtext}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-                {/* <div className='feature-3-cards-container'>
-                    {F3LP3CardData.map((card, index) => (
-                        <F3LP3Card
-                            key={index}
-                            imgSrc={card.imgSrc}
-                            header={card.header}
-                            subtext={card.subtext}
-                        />
-                    ))}
-                </div> */}
+                </ScrollAnimation>
+
             </div>
+
         </section>
     )
 }

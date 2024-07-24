@@ -13,6 +13,7 @@ import HomePage from './pages/HomePage';
 import LP3 from './pages/LP3';
 import HowItWorks from './pages/HowItWorks';
 import HireSupport from './pages/HireSupport';
+
 function App() {
   return (
     <Router>
@@ -29,8 +30,6 @@ function App() {
           <Route path="/back-office" element={<BackOffice />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/hire-support" element={<HireSupport />} />
-
-
         </Routes>
       </div>
     </Router>

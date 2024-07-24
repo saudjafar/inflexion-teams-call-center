@@ -66,7 +66,8 @@ const OurProcessScrollMenu = () => {
     }, []);
 
     return (
-        <div style={{ display: 'flex', gap: '12.75rem', maxWidth: '130rem', height: '600.25px' }}>
+        // gap: '12.75rem' in below div
+        <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '130rem', height: '600.25px' }}>
             <div className='scroll-links-container'>
                 {data.map(item => (
                     <Link

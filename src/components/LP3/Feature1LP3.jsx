@@ -65,6 +65,7 @@ const Feature1LP3 = () => {
     return (
         <section className='feature-1-LP3-section'>
             <div className='feature-1-LP3'>
+
                 <div className='header-container'>
                     <span className='pre-header'>
                         REVOLUTIONIZING CUSTOMER SUPPORT
@@ -90,10 +91,7 @@ const Feature1LP3 = () => {
                     Book a Call <img className='arrow-icon' src={arrowRight} /><img className='arrow-icon-hover' src={arrowRightWhite} />
                 </Button>
 
-                <div className='hr-line'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2" viewBox="0 0 1242 2" fill="none">
-                        <path d="M0 1L1242 1.00011" stroke="#CDCDCD" />
-                    </svg>
+                <div className='hr-line' style={{ width: '100%', height: '2px', borderBottom: '1px solid #CDCDCD' }}>
                 </div>
             </div>
 

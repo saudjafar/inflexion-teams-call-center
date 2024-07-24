@@ -15,11 +15,13 @@
                     color: #F0F0F0;
                     border-bottom-left-radius: 0;
                     border-bottom-right-radius: 0; // Remove bottom radius when active
+                    // transition: all ease-in-out 0.3ms;
 
                     .collapse-heading {
                         color: inherit;
                     }
                 }
+
             }
 
             .ant-collapse-content {
@@ -45,6 +47,7 @@
                 border-radius: 2rem; // Rounded corners on all sides when inactive
                 padding: 2.75rem 2rem;
                 color: #030303;
+                // transition: all ease-in-out 0.3ms;
 
                 .collapse-heading {
                     font-size: 2rem;
