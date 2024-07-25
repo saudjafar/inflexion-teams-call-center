@@ -80,7 +80,7 @@ const LogoSliderLP3 = () => {
             <Slider {...settings}>
                 {logos.concat(logos).map((logo, index) => (
                     <div className="logo-slide" key={index}>
-                        <div className='logo-img-container' style={{ display: 'flex', height: '44px', alignItems: 'center' }}>
+                        <div className='logo-img-container' style={{ padding: '0.5rem 1rem', width: '186px', display: 'flex', height: '44px', alignItems: 'center', justifyContent: 'center', border: '1px solid #cdcdcd', borderRadius: '2rem' }}>
                             <img src={logo} alt={`Logo ${index}`} />
                         </div>
                     </div>

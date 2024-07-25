@@ -33,7 +33,7 @@ const Feature3LP3 = () => {
         {
             imgSrc: iconGlobe,
             header: 'Social Media Support',
-            subtext: 'Engage with customers &address concerns on various social media platforms.',
+            subtext: 'Engage with customers & address concerns on various social media platforms.',
         },
         {
             imgSrc: iconHeadphone,
@@ -80,6 +80,8 @@ const Feature3LP3 = () => {
                 </ScrollAnimation>
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
                     <div className='feature-3-cards-container'>
+                        {/* <ScrollAnimation animateIn="fadeInUp" initiallyVisible={false} animateOnce={true}> */}
+
                         <div className='feature-3-row feature-3-row-top'>
                             {F3LP3CardData.slice(0, 3).map((card, index) => (
                                 <F3LP3Card
@@ -91,6 +93,9 @@ const Feature3LP3 = () => {
                             ))}
                         </div>
                         <hr className='feature-3-divider' />
+                        {/* </ScrollAnimation> */}
+
+                        {/* <ScrollAnimation animateIn="fadeInUp" initiallyVisible={false} animateOnce={true}> */}
                         <div className='feature-3-row feature-3-row-bottom'>
                             {F3LP3CardData.slice(3).map((card, index) => (
                                 <F3LP3Card
@@ -101,6 +106,7 @@ const Feature3LP3 = () => {
                                 />
                             ))}
                         </div>
+                        {/* </ScrollAnimation> */}
                     </div>
                 </ScrollAnimation>
 

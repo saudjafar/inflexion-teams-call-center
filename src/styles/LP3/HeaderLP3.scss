@@ -8,7 +8,7 @@
         background: #141414;
         position: relative;
         z-index: 100;
-
+        font-family: 'Helvetica Neue';
     }
 
     .header-LP3 {
@@ -41,18 +41,19 @@
         .quote-cta {
             border: none;
             display: flex;
-            padding: 1.125rem 1.625rem;
+            padding: 1.5rem 1.625rem;
             justify-content: center;
             align-items: center;
             gap: 0.625rem;
             border-radius: 2.5rem;
             background: #2A71FA;
             color: #FFF;
-            // font-family: "Helvetica Neue";
+            font-family: "Helvetica Neue";
             font-size: 1.125rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+            text-transform: none;
         }
     }
 }

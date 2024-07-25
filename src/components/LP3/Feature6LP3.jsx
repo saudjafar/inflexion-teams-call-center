@@ -45,7 +45,7 @@ const Feature6LP3 = () => {
     ]
     const F6LP3Card = ({ imgSrc, header, subtext }) => {
         return (
-            <Card className='card' hoverable style={{ border: 'none' }}>
+            <Card className='card' style={{ border: 'none' }}>
                 <div className='card-content'>
                     <img src={imgSrc} alt={header} className='card-image' />
                     <h2 className='card-header'>{header}</h2>
@@ -77,7 +77,7 @@ const Feature6LP3 = () => {
                 </div>
                 <div style={{ margin: '0 auto' }}>
                     <Button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
-                        Book a Call <img className='arrow-icon' src={arrowBlack} /><img className='arrow-icon-hover' src={arrowRightWhite} />
+                        Book a Call <img className='arrow-icon' src={arrowBlack} style={{ marginTop: '3px' }} /><img className='arrow-icon-hover' src={arrowRightWhite} style={{ marginTop: '3px' }} />
                     </Button>
                 </div>
             </div>

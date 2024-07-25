@@ -10,6 +10,7 @@ import sliderImg1 from '../../assets/imgs/hero-slider1.png';
 import sliderImg2 from '../../assets/imgs/hero-slider2.png';
 import sliderImg3 from '../../assets/imgs/hero-slider3.png';
 import sliderImg4 from '../../assets/imgs/hero-slider4.png';
+import sliderImg5 from '../../assets/imgs/hero-slider5.png';
 
 
 // Styled Components
@@ -47,29 +48,30 @@ const StyledSwiper = styled(Swiper)`
 
 // React Component
 const SwiperComponent = () => {
-    const images = [sliderImg1, sliderImg2, sliderImg3, sliderImg4];
+  const images = [sliderImg1, sliderImg2, sliderImg3, sliderImg4, sliderImg5];
 
-    return (
-        <Container className="swiper-parent-container">
-            <StyledSwiper
-                modules={[EffectCards, Autoplay]}
-                effect="cards"
-                grabCursor={true}
-                centeredSlides={true}
-                loop={true}
-                autoplay={{
-                    delay: 2500,  // Delay between transitions (in ms). Adjust as needed.
-                    disableOnInteraction: false  // Continue autoplay after interaction.
-                }}
-            >
-                {images.map((imgSrc, index) => (
-                    <SwiperSlide key={index}>
-                        <img src={imgSrc} alt={`Slide Image ${index + 1}`} />
-                    </SwiperSlide>
-                ))}
-            </StyledSwiper>
-        </Container>
-    );
+  return (
+    <Container className="swiper-parent-container">
+      <StyledSwiper
+        modules={[EffectCards, Autoplay]}
+        effect="cards"
+
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 2500,  // Delay between transitions (in ms). Adjust as needed.
+          disableOnInteraction: false  // Continue autoplay after interaction.
+        }}
+      >
+        {images.map((imgSrc, index) => (
+          <SwiperSlide key={index}>
+            <img src={imgSrc} alt={`Slide Image ${index + 1}`} width={450} height={677} />
+          </SwiperSlide>
+        ))}
+      </StyledSwiper>
+    </Container>
+  );
 };
 
 export default SwiperComponent;

@@ -3,6 +3,7 @@
         border-radius: 1.0625rem;
         background: #030303;
         padding: 4rem 0;
+
     }
 
     .hero-LP3 {
@@ -12,6 +13,9 @@
             // max-width: 90rem;
             margin: 0 auto;
             position: relative;
+            // overflow: hidden;
+            // overflow-y: auto;
+
         }
 
         .left {
@@ -28,10 +32,10 @@
 
             .pre-header {
                 color: #969696;
-                // font-family: "Helvetica Neue";
+                font-family: "Helvetica Neue";
                 font-size: 1.25rem;
                 font-style: normal;
-                font-weight: 400;
+                // font-weight: 400;
                 line-height: normal;
                 letter-spacing: 0.03125rem;
                 text-transform: uppercase;
@@ -40,19 +44,19 @@
             .header {
                 margin: 0;
                 color: #FFF;
-                // font-family: "Helvetica Now Display";
+                font-family: "Helvetica Now Display";
                 font-size: 5rem;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 5.625rem;
                 /* 112.5% */
                 letter-spacing: -0.05rem;
-                max-width: 16ch;
+                max-width: 15ch;
             }
 
             .sub-headline {
                 color: #CECECE;
-                // font-family: "Helvetica Neue";
+                font-family: "Helvetica Neue";
                 font-size: 1.25rem;
                 font-style: normal;
                 font-weight: 400;
@@ -62,6 +66,7 @@
             }
 
             .request-cta {
+                font-family: 'Helvetica Neue';
                 max-width: 13.8rem;
                 border: none;
                 margin-top: 2.5rem;

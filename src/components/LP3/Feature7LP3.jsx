@@ -7,10 +7,10 @@ import { Button } from 'antd';
 const Feature7LP3 = () => {
     return (
         <section className='feature-7-LP3-section'>
-            <img className='lines-img' src={lines} width={1890} />
+            <img className='lines-img' src={lines} width={1920} />
             <div className='feature-7-LP3'>
                 <div className='header-container'>
-                    <h1 className='header'>Make exceptional customer service your selling <br /> point, while cutting costs by up to 70%.</h1>
+                    <h1 className='header'>Make exceptional customer service your selling point, while cutting costs by up to 70%.</h1>
                     <Button className='schedule-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
                         Schedule a consultation call <img src={arrowWhite} className='arrow-icon' /><img src={arrowRightBlue} className='arrow-icon-hover' />
                     </Button>

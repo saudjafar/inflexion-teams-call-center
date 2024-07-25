@@ -5,31 +5,29 @@
     max-width: 38rem;
 
     .ant-collapse-item {
-        border-radius: 2rem; // Applies rounded borders to the entire item
-        overflow: hidden; // Ensures that child elements do not overflow the rounded corners
+        border-radius: 2rem;
+        overflow: hidden;
 
         &.ant-collapse-item-active {
             .ant-collapse-header {
                 .collapse-header-container {
                     background: #030303;
                     color: #F0F0F0;
-                    border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0; // Remove bottom radius when active
-                    // transition: all ease-in-out 0.3ms;
+                    border-bottom-left-radius: 0 !important;
+                    border-bottom-right-radius: 0 !important;
 
                     .collapse-heading {
                         color: inherit;
                     }
                 }
-
             }
 
             .ant-collapse-content {
                 .ant-collapse-content-box {
                     background: #030303;
                     color: #F0F0F0;
-                    border-top-left-radius: 0;
-                    border-top-right-radius: 0; // Flatten top borders when active
+                    border-top-left-radius: 0 !important;
+                    border-top-right-radius: 0 !important;
                 }
             }
         }
@@ -37,17 +35,16 @@
         .ant-collapse-header {
             padding: 0;
             cursor: pointer;
-            // transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
 
             .collapse-header-container {
                 display: flex;
                 align-items: center;
                 gap: 2rem;
                 background: #F0F0F0;
-                border-radius: 2rem; // Rounded corners on all sides when inactive
+                border-radius: 2rem;
                 padding: 2.75rem 2rem;
                 color: #030303;
-                // transition: all ease-in-out 0.3ms;
+                transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
 
                 .collapse-heading {
                     font-size: 2rem;
@@ -65,15 +62,18 @@
 
             .ant-collapse-content-box {
                 background: #030303;
-                color: #F0F0F0;
                 font-size: 1.25rem;
                 font-weight: 400;
                 line-height: 2rem;
-                padding: 2.72rem 2rem;
+                padding: 3.5rem 2rem;
+                padding-top: 1rem;
+                padding-left: 3rem;
                 border-radius: 1.75rem;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0; // Always flat top borders to match design specs
-                // transition: background-color 0.1s ease, color 0.1s ease, border-radius 0.1s ease;
+                transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+                .collapse-subtext {
+                    color: #CECECE;
+                }
             }
         }
     }

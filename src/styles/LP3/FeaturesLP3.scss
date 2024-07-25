@@ -15,7 +15,6 @@
 
     .feature-1-LP3 {
         & {
-
             margin: 0 auto;
             padding-bottom: 6rem;
         }
@@ -27,11 +26,12 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 3.75rem;
+                font-family: "Helvetica Neue";
+
             }
 
             .pre-header {
                 color: #393939;
-                // font-family: "Helvetica Neue";
                 font-size: 1.25rem;
                 font-style: normal;
                 font-weight: 400;
@@ -41,6 +41,7 @@
             }
 
             .header {
+                font-family: 'Helvetica Now Display';
                 margin: 0;
                 color: #141414;
                 text-align: center;
@@ -50,60 +51,163 @@
                 line-height: 5rem;
                 /* 125% */
                 text-transform: capitalize;
-                max-width: 26ch;
+                max-width: 22ch;
             }
         }
 
 
-        .feature-1-cards-container {
-            & {
-                max-width: 80rem;
-                padding-top: 8.5rem;
-                display: flex;
-                // flex-wrap: wrap;
-                gap: 2rem;
-                align-items: center;
-                justify-content: center;
-                // margin: 0 auto;
+        // .feature-1-cards-container {
+        //     & {
+        //         max-width: 86.2rem;
+        //         padding-top: 8.5rem;
+        //         display: flex;
+        //         // flex-wrap: wrap;
+        //         gap: 2rem;
+        //         align-items: center;
+        //         justify-content: center;
+        //         // margin: 0 auto;
 
-            }
+        //     }
+
+        //     .card {
+        //         .ant-card-body {
+        //             padding: 0;
+        //             // border: none !important;
+        //             min-width: 24.75rem;
+
+        //         }
+
+        //         & {
+        //             background: #F7F7F7;
+
+        //             align-items: center;
+        //             // flex: 1 0;
+        //             flex: 1 1 calc(33% - 1rem);
+        //             width: 33%;
+        //             /* Adjust width as needed, e.g., 33% for three cards in a row */
+        //             display: flex;
+        //             flex-direction: column;
+        //             max-width: 100%;
+        //             // padding: 0.5rem;
+        //             // align-items: center;
+        //             max-width: fit-content;
+        //             border-radius: 1.75rem;
+        //             border: none;
+        //             // border: 1px solid #CBCBCB;
+
+        //         }
+
+        //         .card-upper {
+        //             & {
+        //                 position: relative;
+        //                 z-index: 2;
+        //                 padding: 3.25rem 1.88rem 2.75rem;
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 gap: 2.5rem;
+        //                 border-radius: 1.75rem;
+        //                 border: 1px solid #D9D9D9;
+        //                 background: #FFF;
+        //                 // min-height: 20.31rem;
+        //             }
+
+        //             .upper-img {
+        //                 margin-bottom: 0.25rem;
+        //             }
+
+        //             .header {
+        //                 margin: 0;
+        //                 color: #1B1B1B;
+        //                 font-size: 2.25rem;
+        //                 font-style: normal;
+        //                 font-family: 'Helvetica Now Display';
+        //                 font-weight: 700;
+        //                 line-height: 2.8125rem;
+        //                 /* 125% */
+        //                 max-width: 15ch;
+        //             }
+
+        //             .sub-headline {
+        //                 font-family: "Helvetica Now Display";
+        //                 margin: 0;
+        //                 color: #878787;
+        //                 font-size: 1.225rem;
+        //                 font-style: normal;
+        //                 font-weight: 500;
+        //                 line-height: 2rem;
+        //                 /* 180% */
+        //                 max-width: 28ch;
+
+        //             }
+
+        //         }
+
+        //         .card-lower {
+        //             & {
+        //                 margin-top: -2.5rem;
+        //                 position: relative;
+        //                 z-index: 1;
+        //                 border-radius: 1.5rem;
+        //                 border: 1px solid #CBCBCB;
+        //                 background: #F7F7F7;
+        //                 padding-top: 5rem;
+        //                 padding-left: 1.3rem;
+        //                 padding-right: 0.75rem;
+        //                 padding-bottom: 3rem;
+        //             }
+
+        //             ul {
+        //                 font-family: 'Helvetica Now Display';
+        //                 // list-style-type: square;
+        //                 margin: 0;
+        //                 color: #303030;
+        //                 font-size: 1.125rem;
+        //                 font-style: normal;
+        //                 font-weight: 500;
+        //                 line-height: 2rem;
+        //                 /* 177.778% */
+        //                 letter-spacing: 0.0225rem;
+
+        //                 li {
+        //                     width: 28ch;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        .feature-1-cards-container {
+            max-width: 86.2rem;
+            padding-top: 8.5rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
 
             .card {
+                background: #F7F7F7;
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                border-radius: 1.75rem;
+                border: none;
+                flex: 1; // Ensures equal width for each card
+                cursor: auto;
+
                 .ant-card-body {
                     padding: 0;
-                    // border: none !important;
                     min-width: 24.75rem;
-
-                }
-
-                & {
-                    background: #F7F7F7;
-
-                    align-items: center;
-                    flex: 1 1 calc(33% - 1rem);
-                    /* Adjust width as needed, e.g., 33% for three cards in a row */
-                    display: flex;
-                    flex-direction: column;
-                    max-width: 100%;
-                    // padding: 0.5rem;
-                    // align-items: center;
-                    max-width: fit-content;
-                    border-radius: 1.75rem;
-                    border: 1px solid #CBCBCB;
-
                 }
 
                 .card-upper {
-                    & {
-                        padding: 3.25rem 0.88rem 2.75rem 1.88rem;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 2.5rem;
-                        border-radius: 1.75rem;
-                        border: 1px solid #D9D9D9;
-                        background: #FFF;
-                        min-height: 20.31rem;
-                    }
+                    position: relative;
+                    z-index: 2;
+                    padding: 3.25rem 1.88rem 2.75rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    border-radius: 1.75rem;
+                    border: 1px solid #D9D9D9;
+                    background: #FFF;
 
                     .upper-img {
                         margin-bottom: 0.25rem;
@@ -114,44 +218,49 @@
                         color: #1B1B1B;
                         font-size: 2.25rem;
                         font-style: normal;
+                        font-family: 'Helvetica Now Display';
                         font-weight: 700;
                         line-height: 2.8125rem;
-                        /* 125% */
+                        max-width: 15ch;
                     }
 
                     .sub-headline {
+                        font-family: "Helvetica Now Display";
                         margin: 0;
                         color: #878787;
                         font-size: 1.225rem;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 2rem;
-                        /* 180% */
-                        // max-width: 35ch;
+                        max-width: 28ch;
                     }
-
                 }
 
                 .card-lower {
-                    & {
-                        border-radius: 1.5rem;
-                        border-bottom: 1px solid #CBCBCB;
-                        background: #F7F7F7;
-                        padding-top: 2.5rem;
-                        padding-left: 1.3rem;
-                        padding-right: 0.75rem;
-                        padding-bottom: 3rem;
-                    }
+                    margin-top: -2.5rem;
+                    position: relative;
+                    z-index: 1;
+                    border-radius: 1.5rem;
+                    border: 1px solid #CBCBCB;
+                    background: #F7F7F7;
+                    padding-top: 5rem;
+                    padding-left: 1.3rem;
+                    padding-right: 0.75rem;
+                    padding-bottom: 3rem;
 
                     ul {
+                        font-family: 'Helvetica Now Display';
                         margin: 0;
                         color: #303030;
                         font-size: 1.125rem;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 2rem;
-                        /* 177.778% */
                         letter-spacing: 0.0225rem;
+
+                        li {
+                            width: 28ch;
+                        }
                     }
                 }
             }
@@ -160,7 +269,7 @@
         .book-a-call-cta {
             margin: 0 auto;
             margin-top: 5.5rem;
-
+            font-family: 'Helvetica Neue';
             display: flex;
             padding: 2.25rem 2.25rem;
             justify-content: center;
@@ -168,7 +277,7 @@
             gap: 0.625rem;
             border-radius: 2.5rem;
             border: 1px solid #000;
-            background: #FFF;
+            background: #F2F2F2;
             color: #010101;
             font-size: 1.2rem;
             font-style: normal;
@@ -179,8 +288,12 @@
 
         }
 
+        .book-a-call-cta:hover {
+            border: 1px solid black;
+        }
+
         .book-a-call-cta .arrow-icon {
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease-in-out;
         }
 
         .book-a-call-cta:hover .arrow-icon {
@@ -235,6 +348,7 @@
             }
 
             .header {
+                font-family: 'Helvetica Now Display';
                 margin: 0;
                 color: #242424;
                 text-align: center;
@@ -248,6 +362,8 @@
             }
 
             .sub-header {
+                font-family: 'Helvetica Now Display';
+
                 margin: 0;
                 color: #393939;
                 text-align: center;
@@ -334,6 +450,8 @@
             .header {
                 margin: 0;
                 color: #D5D5D5;
+                font-family: "Helvetica Now Display";
+
                 text-align: center;
                 font-size: 4rem;
                 font-style: normal;
@@ -348,6 +466,7 @@
                 margin: 0;
                 color: #FFF;
                 text-align: center;
+                font-family: "Helvetica Now Display";
                 font-size: 1.25rem;
                 font-style: normal;
                 font-weight: 500;
@@ -357,83 +476,6 @@
                 max-width: 50rem;
             }
         }
-
-        // .feature-3-cards-container {
-        //     & {
-        //         display: flex;
-        //         flex-wrap: wrap;
-        //         gap: 3.38rem;
-        //         max-width: 78.2rem;
-        //         margin: 0 auto;
-        //         justify-content: center;
-        //     }
-
-        //     .card {
-        //         & {
-        //             flex: 1 1 calc(33.333% - 2.38rem);
-        //             /* 3 cards per row */
-        //             display: flex;
-        //             flex-direction: column;
-        //             // align-items: center;
-        //             // justify-content: center;
-        //             // text-align: center;
-        //             box-shadow: none;
-        //             background: #000;
-        //             color: #FFF;
-        //             /* Remove any shadow if present */
-        //         }
-
-        //         .card-content {
-        //             // padding: 1rem;
-        //             display: flex;
-        //             flex-direction: column;
-        //             gap: 2.38rem;
-        //         }
-
-        //         .card-image {
-        //             width: 50px;
-        //             height: 50px;
-        //             margin-bottom: 2.38rem;
-        //         }
-
-        //         .card-header {
-        //             margin: 0;
-        //             color: #FFF;
-        //             font-size: 2rem;
-        //             font-style: normal;
-        //             font-weight: 700;
-        //             line-height: 1.89194rem;
-        //             /* 94.598% */
-        //             text-transform: capitalize;
-        //         }
-
-        //         .card-subtext {
-        //             margin: 0;
-        //             color: #CECECE;
-        //             font-size: 1.25rem;
-        //             font-style: normal;
-        //             font-weight: 500;
-        //             line-height: 1.67975rem;
-        //             /* 134.378% */
-        //             letter-spacing: 0.025rem;
-        //             text-transform: capitalize;
-        //             max-width: 28ch;
-        //         }
-
-        //         .explore-cta {
-        //             color: #2A71FA;
-        //             font-size: 1.5rem;
-        //             font-style: normal;
-        //             font-weight: 500;
-        //             line-height: normal;
-        //             display: flex;
-        //             gap: 0.7rem;
-        //             align-items: center;
-        //         }
-        //     }
-
-
-        // }
 
         .feature-3-cards-container {
             display: flex;
@@ -478,6 +520,7 @@
                 box-shadow: none;
                 background: #030303;
                 color: #FFF;
+                cursor: auto;
 
                 .ant-card-body {
                     padding: 0;
@@ -500,6 +543,8 @@
                     margin: 0;
                     color: #FFF;
                     font-size: 2rem;
+                    font-family: "Helvetica Now Display";
+
                     font-style: normal;
                     font-weight: 700;
                     line-height: 1.89194rem;
@@ -510,12 +555,14 @@
                     margin: 0;
                     color: #CECECE;
                     font-size: 1.25rem;
+                    font-family: "Helvetica Now Display";
+
                     font-style: normal;
                     font-weight: 500;
                     line-height: 1.67975rem;
                     letter-spacing: 0.025rem;
-                    text-transform: capitalize;
-                    max-width: 28ch;
+                    // text-transform: capitalize;
+                    max-width: 22ch;
                 }
 
                 .explore-cta {
@@ -527,6 +574,15 @@
                     display: flex;
                     gap: 0.7rem;
                     align-items: center;
+                    font-family: "Helvetica Neue";
+                    max-width: fit-content;
+                    transition: opacity ease-in-out 0.15s;
+                    cursor: pointer;
+
+                }
+
+                .explore-cta:hover {
+                    opacity: 0.75;
                 }
             }
         }
@@ -571,6 +627,7 @@
             }
 
             .pre-header {
+                font-family: "Helvetica Neue";
                 margin: 0;
                 color: rgba(255, 255, 255, 0.70);
                 font-size: 1.5rem;
@@ -584,6 +641,8 @@
                 margin: 0;
                 color: #D5D5D5;
                 text-align: center;
+                font-family: "Helvetica Now Display";
+
                 font-size: 4rem;
                 font-style: normal;
                 font-weight: 700;
@@ -594,8 +653,10 @@
 
             .subtext {
                 margin: 0;
-                color: #FFF;
+                color: #cecece;
                 text-align: center;
+                font-family: "Helvetica Now Display";
+
                 font-size: 1.25rem;
                 font-style: normal;
                 font-weight: 500;
@@ -630,7 +691,8 @@
                     text-align: center;
                     font-size: 1.5rem;
                     font-style: normal;
-                    font-weight: 600;
+                    font-family: "Helvetica Now Display";
+                    font-weight: 500;
                     line-height: 2rem;
                     /* 133.333% */
                     letter-spacing: 0.03rem;
@@ -640,9 +702,11 @@
         }
 
         .why-us-cta {
+            background: #F2F2F2;
+            border: 1px solid #010101;
             cursor: pointer;
+            // border: none;
             border-radius: 2.5rem;
-            background: #FFF;
             display: flex;
             min-width: 13.0625rem;
             padding: 2.25rem 2.25rem;
@@ -655,28 +719,35 @@
             font-weight: 600;
             line-height: normal;
             text-transform: capitalize;
+            font-family: 'Helvetica Neue';
         }
 
         .why-us-cta .arrow-icon {
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease-in-out;
+            opacity: 1;
         }
 
         .why-us-cta:hover .arrow-icon {
             display: none;
+            opacity: 0;
         }
 
         .why-us-cta .arrow-icon-hover {
+            transition: opacity 0.3s ease-in-out;
+
             display: none;
+            opacity: 0;
         }
 
         .why-us-cta:hover .arrow-icon-hover {
             display: inline;
+            opacity: 1;
         }
 
         .why-us-cta:hover {
+            border: 1px solid #010101;
             background: #010101;
             color: #FFF;
-            border: 1px solid #000;
         }
     }
 
@@ -726,6 +797,9 @@
                     line-height: 4.75rem;
                     /* 126.667% */
                     text-transform: capitalize;
+                    font-family: "Helvetica Now Display";
+                    max-width: 20ch;
+
                 }
 
                 .subtext {
@@ -739,6 +813,8 @@
                     /* 175% */
                     letter-spacing: 0.025rem;
                     max-width: 35rem;
+                    font-family: "Helvetica Now Display";
+
                 }
             }
 
@@ -773,6 +849,8 @@
                 font-weight: 500;
                 line-height: normal;
                 text-transform: uppercase;
+                font-family: "Helvetica Neue";
+
             }
 
             .header {
@@ -784,6 +862,8 @@
                 line-height: 2rem;
                 /* 50% */
                 letter-spacing: 0.08rem;
+                font-family: "Helvetica Now Display";
+
             }
 
             .subtext {
@@ -792,14 +872,17 @@
                 text-align: center;
                 font-size: 1.25rem;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 2rem;
                 /* 160% */
                 letter-spacing: 0.025rem;
-                max-width: 60rem;
+                max-width: 58rem;
+                font-family: "Helvetica Now Display";
+
             }
 
             .how-we-work-cta {
+                font-family: 'Helvetica Neue';
                 box-shadow: none;
                 margin-top: 0.75rem;
                 border: 0;
@@ -818,13 +901,13 @@
                 font-weight: 500;
                 line-height: normal;
                 text-transform: capitalize;
+                border: 1px solid #2A71FA;
             }
 
             .how-we-work-cta:hover {
                 box-shadow: none;
                 background: white;
                 color: #2A71FA;
-                border: 1px solid #2A71FA;
 
             }
 
@@ -866,16 +949,21 @@
 
         .header-container {
             & {
+                margin: 0 auto;
                 display: flex;
                 flex-direction: column;
                 gap: 3rem;
+                width: 100%;
+                max-width: 86.2rem;
+
             }
 
             .pre-header {
+                font-family: "Helvetica Neue";
+
                 color: rgba(255, 255, 255, 0.70);
                 font-size: 1.5rem;
                 font-style: normal;
-                font-weight: 400;
                 line-height: normal;
                 text-transform: uppercase;
             }
@@ -888,6 +976,8 @@
                 font-weight: 700;
                 line-height: 4.75rem;
                 /* 118.75% */
+                font-family: "Helvetica Now Display";
+
             }
         }
 
@@ -941,7 +1031,9 @@
                     line-height: 2.5rem;
                     /* 125% */
                     text-transform: capitalize;
-                    max-width: 17ch;
+                    max-width: 15ch;
+                    font-family: "Helvetica Now Display";
+
                 }
 
                 .card-subtext {
@@ -949,11 +1041,13 @@
                     color: #767676;
                     font-size: 1.25rem;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: 500;
                     line-height: 2rem;
                     /* 160% */
                     // text-transform: uppercase;
                     max-width: 30ch;
+                    font-family: "Helvetica Now Display";
+
                 }
 
                 .explore-cta {
@@ -1026,8 +1120,8 @@
     .lines-img {
         // scale: 1.2;
         position: absolute;
-        top: -6.5rem;
-        left: 0.5rem;
+        top: -2.5rem;
+        // left: 0.5rem;
         // transform: rotate(2.5deg);
         overflow: hidden;
         max-width: 100%;
@@ -1049,12 +1143,14 @@
                 margin: 0;
                 color: #0B0B0B;
                 text-align: center;
-                font-size: 2.625rem;
+                font-size: 3rem;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 3.75rem;
                 /* 142.857% */
                 letter-spacing: 0.0525rem;
+                max-width: 25ch;
+                font-family: 'Helvetica Now Display';
             }
 
             .schedule-call-cta {
@@ -1071,9 +1167,10 @@
                 color: #FFF;
                 font-size: 1.25rem;
                 font-style: normal;
-                font-weight: 400;
                 line-height: normal;
                 text-transform: capitalize;
+                font-family: 'Helvetica Neue';
+                border: 1px solid #2A71FA;
             }
 
 
@@ -1081,7 +1178,6 @@
                 box-shadow: none;
                 background: white;
                 color: #2A71FA;
-                border: 1px solid #2A71FA;
 
             }
 
@@ -1131,11 +1227,12 @@
             color: #FFF;
             font-size: 1.25rem;
             font-style: normal;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 2.1875rem;
             /* 175% */
             letter-spacing: 0.0625rem;
             text-transform: capitalize;
+            font-family: 'Helvetica Now Display';
         }
 
         .input-container {
@@ -1147,6 +1244,12 @@
             max-width: 52.5rem;
             /* Optional, for better alignment */
             background: #030303;
+
+            input {
+                font-family: 'Helvetica Now Display';
+                font-weight: 400;
+
+            }
 
         }
 

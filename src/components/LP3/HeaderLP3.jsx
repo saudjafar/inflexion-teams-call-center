@@ -12,7 +12,7 @@ const HeaderLP3 = () => {
                     <span className='navbar-item'>How it works</span>
                     <span className='navbar-item'>Blog</span>
                 </div>
-                <Button className='quote-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Get A Quote</Button>
+                <Button className='quote-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Get a Quote</Button>
             </div>
         </section>
     )
