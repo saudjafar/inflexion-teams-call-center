@@ -278,7 +278,7 @@ const HowItWorks = () => {
         const handleScroll = () => {
             const footer = document.querySelector('.footer');
             const scrollPosition = window.scrollY + window.innerHeight;
-            const threshold = document.documentElement.scrollHeight * 0.9; // 90% scroll
+            const threshold = document.documentElement.scrollHeight * 0.80; // 80% scroll
 
             if (scrollPosition >= threshold) {
                 footer.classList.add('show');
