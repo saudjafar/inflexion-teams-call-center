@@ -8,8 +8,10 @@ import iconClock from '../../assets/svgs/icon-clock.svg';
 import iconPPT from '../../assets/svgs/icon-ppt.svg';
 import arrowBlack from '../../assets/svgs/arrow-black-F4LP3.svg';
 import arrowRightWhite from '../../assets/svgs/arrow-white.svg';
-
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css"
 import { Button, Card } from 'antd';
+
 const Feature6LP3 = () => {
     const F6LP3CardData = [
         {
@@ -54,33 +56,37 @@ const Feature6LP3 = () => {
             </Card>
         );
     };
+
     return (
         <section className='feature-6-LP3-section'>
-            <div className='feature-6-LP3'>
-                <div className='header-container'>
-                    <span className='pre-header'>
-                        Global Talent With AI
-                    </span>
-                    <h1 className='header'>
-                        Premium Customer Support <br /> for Any Company Size
-                    </h1>
+            <ScrollAnimation animateIn="fadeIn slideInUp" initiallyVisible={false} animateOnce={true}>
+
+                <div className='feature-6-LP3'>
+                    <div className='header-container'>
+                        <span className='pre-header'>
+                            Global Talent With AI
+                        </span>
+                        <h1 className='header'>
+                            Premium Customer Support <br /> for Any Company Size
+                        </h1>
+                    </div>
+                    <div className='feature-6-cards-container'>
+                        {F6LP3CardData.map((card, index) => (
+                            <F6LP3Card
+                                key={index}
+                                imgSrc={card.imgSrc}
+                                header={card.header}
+                                subtext={card.subtext}
+                            />
+                        ))}
+                    </div>
+                    <div style={{ margin: '0 auto' }}>
+                        <Button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
+                            Book a Call <img className='arrow-icon' src={arrowBlack} style={{ marginTop: '3px' }} /><img className='arrow-icon-hover' src={arrowRightWhite} style={{ marginTop: '3px' }} />
+                        </Button>
+                    </div>
                 </div>
-                <div className='feature-6-cards-container'>
-                    {F6LP3CardData.map((card, index) => (
-                        <F6LP3Card
-                            key={index}
-                            imgSrc={card.imgSrc}
-                            header={card.header}
-                            subtext={card.subtext}
-                        />
-                    ))}
-                </div>
-                <div style={{ margin: '0 auto' }}>
-                    <Button className='book-a-call-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
-                        Book a Call <img className='arrow-icon' src={arrowBlack} style={{ marginTop: '3px' }} /><img className='arrow-icon-hover' src={arrowRightWhite} style={{ marginTop: '3px' }} />
-                    </Button>
-                </div>
-            </div>
+            </ScrollAnimation>
         </section>
     )
 }

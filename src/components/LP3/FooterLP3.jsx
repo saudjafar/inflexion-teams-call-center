@@ -7,7 +7,7 @@ const FooterLP3 = () => {
             <div className='LP3-footer'>
                 <div className='text-container'>
                     <div className='left'>
-                        <span>© 2024 Inflexion.AI</span>
+                        <span style={{ cursor: 'auto' }}>© 2024 Inflexion.AI</span>
                         <span>Terms of Use</span>
                         <span>Privacy Policy</span>
 

@@ -1,8 +1,5 @@
 import React from 'react';
 import '../../styles/LP3/FeaturesLP3.scss';
-import LP3F2H1 from '../../assets/svgs/LP3F2H1.svg';
-import LP3F2H2 from '../../assets/svgs/LP3F2H2.svg';
-import LP3F2H3 from '../../assets/svgs/LP3F2H3.svg';
 import LP3F2CustCard from '../../assets/svgs/LP3F2CustCard.svg';
 import LP3F2World from '../../assets/svgs/LP3F2World.svg';
 import CollapsibleCards from './CollapsibleCards';
@@ -14,7 +11,19 @@ const Feature2LP3 = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.2,
+        // rootMargin: '20% 0px'
     });
+    const { ref2, inView2 } = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+        // rootMargin: '20% 0px'
+    });
+
+    React.useEffect(() => {
+        if (inView2) {
+            controls.start('visible');
+        }
+    }, [controls, inView2]);
 
     React.useEffect(() => {
         if (inView) {
@@ -59,7 +68,7 @@ const Feature2LP3 = () => {
                 </motion.div>
                 {/* </div> */}
                 <motion.div
-                    ref={ref}
+                    ref={ref2}
                     initial="hidden"
                     animate={controls}
                     variants={containerVariants}

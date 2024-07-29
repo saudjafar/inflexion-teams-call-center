@@ -1,126 +1,122 @@
-.how-it-works-section {
+.hero-how-it-works-section {
     & {
+        border-radius: 1.0625rem;
         background: #030303;
-
+        padding: 4rem 0;
+        padding-top: 6rem;
     }
 
-    .hero-how-it-works-section {
+    .hero-how-it-works {
         & {
-            border-radius: 1.0625rem;
-            background: #030303;
-            padding: 4rem 0;
-        }
-
-        .hero-how-it-works {
-            & {
-                display: flex;
-                justify-content: space-between;
-                // max-width: 90rem;
-                margin: 0 auto;
-                position: relative;
-            }
-
-            .left {
-                & {
-                    margin-top: 4.5rem;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2.5rem;
-                    padding-left: 6rem;
-                    flex: 1 0;
-                    position: relative;
-                    z-index: 2;
-                }
-
-                .pre-header {
-                    color: #969696;
-                    // font-family: "Helvetica Neue";
-                    font-size: 1.25rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    letter-spacing: 0.03125rem;
-                    text-transform: uppercase;
-                }
-
-                .header {
-                    margin: 0;
-                    color: #FFF;
-                    // font-family: "Helvetica Now Display";
-                    font-size: 5rem;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 5.625rem;
-                    /* 112.5% */
-                    letter-spacing: -0.05rem;
-                    max-width: 18ch;
-                }
-
-                .sub-headline {
-                    color: #CECECE;
-                    // font-family: "Helvetica Neue";
-                    font-size: 1.3rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 150%;
-                    /* 150% */
-                    max-width: 65ch;
-                }
-
-                .get-started-cta {
-                    max-width: 13.8rem;
-                    border: none;
-                    margin-top: 2.5rem;
-                    display: flex;
-                    padding: 1.625rem 1.625rem;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 0.625rem;
-                    border-radius: 2.5rem;
-                    background: #2A71FA;
-                    color: #FFF;
-                    font-size: 1.25rem;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                    text-transform: capitalize;
-                }
-
-                .get-started-cta:hover {
-                    background: #dfdfdf;
-                    color: #2A71FA;
-                }
-            }
-
-            .right {
-                & {
-                    flex: 1 0;
-                    max-width: fit-content;
-                    margin-right: 3rem;
-                }
-            }
-        }
-
-        .carousel-header {
-            margin: 7.4rem auto 4.75rem;
-            // margin-top: 7.4rem;
-
-            max-width: fit-content;
-            color: #BDBDBD;
-            font-size: 1.5rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: 0.03125rem;
-            text-transform: capitalize;
-        }
-
-
-        .how-it-works-gridImg-container {
-            margin-top: 1rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            // max-width: 90rem;
+            margin: 0 auto;
+            position: relative;
         }
+
+        .left {
+            & {
+                margin-top: 4.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+                padding-left: 6rem;
+                flex: 1 0;
+                position: relative;
+                z-index: 2;
+            }
+
+            .pre-header {
+                color: #969696;
+                font-family: "Helvetica Neue Light";
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.03125rem;
+                text-transform: uppercase;
+            }
+
+            .header {
+                margin: 0;
+                color: #FFF;
+                font-family: "Helvetica Now Display";
+                font-size: 4.375rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 5.625rem;
+                /* 112.5% */
+                letter-spacing: -0.05rem;
+                max-width: 18ch;
+            }
+
+            .sub-headline {
+                color: #CECECE;
+                font-family: "Helvetica Neue Light";
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                /* 150% */
+                max-width: 56ch;
+            }
+
+            .get-started-cta {
+                max-width: 13.8rem;
+                border: none;
+                margin-top: 2.5rem;
+                display: flex;
+                padding: 1.825rem 1.25rem;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625rem;
+                border-radius: 2.5rem;
+                background: #2A71FA;
+                color: #FFF;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: capitalize;
+                font-family: "Helvetica Neue";
+
+            }
+
+            .get-started-cta:hover {
+                background: #dfdfdf;
+                color: #2A71FA;
+            }
+        }
+
+        .right {
+            & {
+                flex: 1 0;
+                max-width: fit-content;
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    .carousel-header {
+        margin: 7.4rem auto 4.75rem;
+        // margin-top: 7.4rem;
+
+        max-width: fit-content;
+        color: #BDBDBD;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.03125rem;
+        text-transform: capitalize;
+    }
+
+
+    .how-it-works-gridImg-container {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -177,6 +173,8 @@
                 line-height: normal;
                 letter-spacing: 0.03125rem;
                 text-transform: uppercase;
+                font-family: "Helvetica Neue Light";
+
             }
 
             .header {
@@ -188,11 +186,14 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: 4.0625rem;
+                font-family: 'Helvetica Now Display';
                 /* 114.035% */
+                max-width: 15ch;
             }
 
             .sub-header {
                 margin: 0;
+                margin-top: -0.5rem;
                 color: #8B8B8B;
                 text-align: center;
                 font-size: 1.25rem;
@@ -200,7 +201,9 @@
                 font-weight: 500;
                 line-height: 2.3125rem;
                 /* 185% */
-                max-width: 85ch;
+                max-width: 70ch;
+                font-family: 'Helvetica Now Display';
+
             }
         }
 
@@ -233,6 +236,7 @@
                     line-height: normal;
                     letter-spacing: 0.03125rem;
                     text-transform: uppercase;
+                    font-family: 'Helvetica Neue';
                 }
 
                 .header {
@@ -244,6 +248,7 @@
                     line-height: 2.8125rem;
                     /* 125% */
                     max-width: 18ch;
+                    font-family: 'Helvetica Now Display';
                 }
 
                 .sub-text {
@@ -257,6 +262,8 @@
                     line-height: 2.3125rem;
                     /* 185% */
                     max-width: 45ch;
+                    font-family: 'Helvetica Now Display';
+
                 }
             }
         }
@@ -302,7 +309,7 @@
                 align-items: center;
                 text-align: center;
                 position: relative;
-                padding-bottom: 13.75rem;
+                padding-bottom: 9.25rem;
             }
 
 
@@ -317,6 +324,7 @@
                 line-height: 4.75rem;
                 /* 118.75% */
                 text-transform: capitalize;
+                font-family: 'Helvetica Now Display';
             }
 
             .sub-text {
@@ -328,6 +336,7 @@
                 line-height: 2rem;
                 /* 160% */
                 letter-spacing: 0.025rem;
+                font-family: 'Helvetica Now Display';
             }
         }
     }
@@ -343,6 +352,8 @@
         border-radius: 2rem;
         border: 1px solid #393939;
         background: #2A71FA;
+        position: relative;
+        z-index: 3;
     }
 
     .faqs-container {
@@ -368,6 +379,7 @@
                 font-weight: 400;
                 line-height: normal;
                 text-transform: uppercase;
+                font-family: 'Helvetica Neue Light';
             }
 
             .header {
@@ -379,6 +391,7 @@
                 line-height: 4.75rem;
                 /* 118.75% */
                 text-transform: capitalize;
+                font-family: 'Helvetica Now Display';
             }
         }
 
@@ -388,4 +401,22 @@
             }
         }
     }
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #030303;
+    color: white;
+    z-index: 1;
+    /* Initially behind the content */
+    display: none;
+    /* Initially hidden */
+}
+
+.footer.show {
+    display: block;
+    /* Show the footer when the class 'show' is added */
 }

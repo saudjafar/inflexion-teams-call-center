@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/HireSupport/HireSupport.scss'
 import FooterLP3 from '../components/LP3/FooterLP3'
 import freeTagIcon from '../assets/svgs/free-tag.svg'
@@ -24,12 +24,40 @@ import blue01 from '../assets/svgs/01-blue.svg';
 import blue02 from '../assets/svgs/02-blue.svg';
 import blue03 from '../assets/svgs/03-blue.svg';
 
-import f2Img1 from '../assets/imgs/Rectangle 34624922.png';
-import f2Img2 from '../assets/imgs/Rectangle 34624923.png';
-import f2Img3 from '../assets/imgs/Rectangle 34624924.png';
+import f2Img1 from '../assets/imgs/Group 1820550705.png';
+import f2Img2 from '../assets/imgs/Group 1820550703.png';
+import f2Img3 from '../assets/imgs/Group 1820550712.png';
+
+import ScrollToTop from "react-scroll-to-top";
+import arrowTop from '../assets/svgs/arrow-top.svg'
+import ModalCloseIcon from '../assets/svgs/modal-close-icon.svg'
+
+import ScrollAnimation from 'react-animate-on-scroll';
+import { motion } from 'framer-motion';
+import "animate.css/animate.compat.css"
 
 
 const HireSupport = () => {
+
+    const leftAnimation = {
+        hidden: { opacity: 0, y: 100 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.4 },
+        },
+    };
+
+    const rightAnimation = {
+        hidden: { opacity: 0, y: 100 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6 },
+        },
+    };
+
+
     const [openModal, setOpenModal] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 5;
@@ -75,26 +103,46 @@ const HireSupport = () => {
         {
             line1: '4M+',
             color: '#FEEA82',
-            line2: 'Global Talent Pool',
+            line2: 'Global talent pool',
         },
         {
             line1: '70%+',
             color: '#21D273',
-            line2: 'Average Cost Savings',
+            line2: 'Average cost savings',
         },
         {
             line1: '20+',
             color: '#B68DFC',
 
-            line2: 'Years Of Combined AI Expertise',
+            line2: <>Years of Combined <br />AI expertise</>,
         },
         {
             line1: '50+',
             color: '#70DCF3',
 
-            line2: 'Years Of Combined BPO Expertise',
+            line2: <>Years of combined <br />BPO expertise</>,
         },
     ]
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const footer = document.querySelector('.footer');
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const threshold = document.documentElement.scrollHeight * 0.9; // 90% scroll
+
+            if (scrollPosition >= threshold) {
+                footer.classList.add('show');
+            } else {
+                footer.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div style={{ background: '#030303' }}>
@@ -103,7 +151,12 @@ const HireSupport = () => {
                 <section className='hire-support-hero'>
                     <div className='hero-hire-support'>
                         <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', zIndex: '1' }} />
-                        <div className='left'>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants={leftAnimation}
+                            className='left'
+                        >
                             <span className='pre-header'>
                                 Transform your CX with AI-powered offshore talent
                             </span>
@@ -113,7 +166,6 @@ const HireSupport = () => {
                             <span className='sub-headline'>
                                 Elevate your brand while reducing costs by up to 70%. Money back guaranteed.
                             </span>
-
                             <div className='what-you-recieve'>
                                 <span className='text'>Here's what you'll receive:</span>
                                 <ul className='list-container'>
@@ -131,23 +183,33 @@ const HireSupport = () => {
                                     </li>
                                 </ul>
                             </div>
+                            <Button
+                                className='get-started-cta'
+                                onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
+                                Book Your Free Trial
+                            </Button>
+                        </motion.div>
 
-                            <Button className='get-started-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Book Your Free Trial</Button>
-
-                        </div>
-                        <div className='right'>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants={rightAnimation}
+                            className='right'
+                        >
                             {/* <HeroSlider /> */}
                             <img src={heroImg} />
+                        </motion.div>
+                    </div>
+
+                    <>
+                        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+                            <h1 className='carousel-header'>We’ve hired talent from</h1>
+                            <LogoSliderLP3 />
+                        </ScrollAnimation>
+                        <div className='how-it-works-gridImg-container'>
+                            <img src={gridSVG} />
                         </div>
-                    </div>
-
-                    <h1 className='carousel-header'>We’ve hired talent from</h1>
-
-                    <LogoSliderLP3 />
-
-                    <div className='how-it-works-gridImg-container'>
-                        <img src={gridSVG} />
-                    </div>
+                    </>
 
                 </section>
             </section>
@@ -197,12 +259,14 @@ const HireSupport = () => {
                                         <img src={f2Img1} />
                                     </div>
                                     <div className='right'>
-                                        <h2>It's efficient, innovative, and free!</h2>
+                                        <h2>It's efficient, innovative, & free!</h2>
                                         <p>
-                                            Complete the quick 60-second quotation form and receive:<br /><br />
-                                            — A tailored AI and remote team implementation strategy<br />
-                                            — Detailed consultation on optimizing your customer support<br />
-                                            — Free onboarding and training of agents customized to your company<br /><br />
+                                            Complete the quick 60-second quotation form and receive:<br />
+                                            <p style={{ margin: '1rem 0' }}>
+                                                — A tailored AI and remote team implementation strategy<br />
+                                                — Detailed consultation on optimizing your customer support<br />
+                                                — Free onboarding and training of agents customized to your company<br />
+                                            </p>
                                             It is completely free to use, personalised for you and with zero obligation.
                                         </p>
                                     </div>
@@ -227,7 +291,7 @@ const HireSupport = () => {
                                         <img src={f2Img3} />
                                     </div>
                                     <div className='right'>
-                                        <h2>Confidential, transparent, and transformative</h2>
+                                        <h2>Confidential, transparent, <span style={{ textTransform: 'lowercase' }}>and</span> transformative</h2>
                                         <p style={{ lineHeight: "160%", margin: '1.75rem 0' }}>
                                             The process is completely confidential for you, the client, and designed to be seamless and impactful.
                                             Our mission is to be a trusted partner in elevating your customer experience through AI and human talent.<br /><br />
@@ -278,7 +342,6 @@ const HireSupport = () => {
                 </div>
             </section>
 
-
             <section className='hire-support-section'>
                 <section className='get-started-section'>
                     <div className='get-started'>
@@ -327,17 +390,8 @@ const HireSupport = () => {
                                     onOk={() => setOpenModal(false)}
                                     onCancel={() => setOpenModal(false)}
                                     footer={null}
-                                // footer={[
-                                //     currentPage < totalPages ? (
-                                //         <Button key="next" onClick={nextPage}>
-                                //             Next
-                                //         </Button>
-                                //     ) : (
-                                //         <Button key="submit" type="primary" onClick={handleSubmit}>
-                                //             Submit
-                                //         </Button>
-                                //     )
-                                // ]}
+                                    closeIcon={<img src={ModalCloseIcon} />}
+
                                 >
                                     {renderPageContent(currentPage)}
                                 </Modal>
@@ -346,7 +400,13 @@ const HireSupport = () => {
                     </div>
                 </section>
             </section>
-            <FooterLP3 />
+
+
+            <div className='footer'>
+                <FooterLP3 />
+            </div>
+            <ScrollToTop smooth style={{ zIndex: '100' }} component={<img src={arrowTop} />} />
+
         </div>
     )
 }

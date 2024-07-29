@@ -15,14 +15,14 @@
             border-bottom-left-radius: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 2.88rem;
         }
 
         .l-1 {
             & {
                 display: flex;
                 flex-direction: column;
-                gap: 3rem;
+                gap: 2.5rem;
             }
 
             .header {
@@ -33,7 +33,9 @@
                 font-weight: 700;
                 line-height: 3.79375rem;
                 /* 216.786% */
-                text-transform: capitalize;
+                // text-transform: capitalize;
+                font-family: "Helvetica Now Display";
+
             }
 
             .l1-list-container {
@@ -41,6 +43,9 @@
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
+                    border-radius: 1.0625rem;
+                    background: #FFF;
+                    padding: 2rem 1.65rem;
 
                 }
 
@@ -48,10 +53,8 @@
                     display: flex;
                     align-items: center;
                     gap: 1rem;
-                    color: #FFF;
-                    /* 170% */
-                    // max-width: 45ch;
-
+                    color: #545454;
+                    font-family: 'Helvetica Now Display';
                     font-size: 1.125rem;
                     font-style: normal;
                     font-weight: 500;
@@ -59,6 +62,7 @@
                     /* 144.444% */
                     letter-spacing: 0.0225rem;
                     text-transform: capitalize;
+                    max-width: 28ch;
                 }
             }
         }
@@ -73,45 +77,48 @@
 
             .l2-text {
                 color: #FFF;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 2rem;
                 /* 160% */
-                text-transform: capitalize;
-                max-width: 20rem;
+                // text-transform: capitalize;
+                max-width: 22rem;
+                font-family: "Helvetica Now Display";
+
             }
 
             .l2-grid {
-                margin-left: -0.4rem;
+                margin-left: -0.8rem;
 
                 .grid-row {
                     .grid-col {
                         display: flex;
                         flex-direction: column;
-                        gap: 2.5rem;
+                        gap: 1.75rem;
+                        padding: 1.75rem;
+                        margin: 0.4rem;
+                        border-radius: 1.875rem;
 
                         .metric-val {
                             margin: 0;
-                            color: #FFF;
+                            font-family: "Helvetica Now Display";
                             font-size: 2.625rem;
                             font-style: normal;
                             font-weight: 700;
-                            line-height: 4.35175rem;
-                            /* 165.782% */
                             letter-spacing: 0.0525rem;
                             text-transform: capitalize;
+                            line-height: 100%;
                         }
 
                         .metric-text {
                             margin: 0;
-                            color: #FFF;
-                            font-size: 0.97156rem;
+                            font-family: "Helvetica Now Display";
+                            font-size: 1.25rem;
                             font-style: normal;
                             font-weight: 500;
                             line-height: 1.5625rem;
-                            /* 160.824% */
-                            letter-spacing: 0.01944rem;
+                            letter-spacing: 0.025rem;
                             text-transform: capitalize;
                         }
                     }
@@ -133,6 +140,8 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
+                font-family: "Helvetica Now Display";
+                padding-bottom: 2rem;
                 // line-height: 4.75rem;
                 // text-transform: capitalize;
             }
@@ -142,7 +151,9 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 4.75rem;
+                // line-height: 4.75rem;
+                font-family: "Helvetica Now Display";
+
                 /* 422.222% */
                 text-transform: capitalize;
             }
@@ -159,6 +170,21 @@
             /* 127.778% */
             text-transform: capitalize;
             max-width: 20ch;
+            font-family: "Helvetica Now Display";
+
+        }
+
+        .error-text {
+            position: relative;
+            top: 0.75rem;
+            // margin-top: 0.75rem;
+            padding: 0.5rem;
+            color: #DB0011;
+        }
+
+        .agent-val-cell:hover {
+            background: #030303 !important;
+            color: white !important;
         }
 
         .modal1-r-subtext {
@@ -167,9 +193,11 @@
             color: #3E3E3E;
             font-size: 1.125rem;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 1.9375rem;
             max-width: 40ch;
+            font-family: "Helvetica Now Display";
+
 
         }
 
@@ -195,6 +223,7 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
+                font-family: 'Helvetica Neue';
             }
 
             .begin-cta:hover {
@@ -231,6 +260,7 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
+                font-family: 'Helvetica Neue';
 
             }
         }
@@ -250,6 +280,8 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
+                font-family: "Helvetica Now Display";
+                padding-bottom: 2rem;
                 // line-height: 4.75rem;
                 // text-transform: capitalize;
             }
@@ -259,7 +291,9 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 4.75rem;
+                // line-height: 4.75rem;
+                font-family: "Helvetica Now Display";
+
                 /* 422.222% */
                 text-transform: capitalize;
             }
@@ -276,18 +310,37 @@
             /* 127.778% */
             text-transform: capitalize;
             max-width: 20ch;
+            font-family: 'Helvetica Now Display';
+
         }
 
         .modal2-r-subtext {
             margin: 0;
-            margin-top: 3.5rem;
+            margin-top: 3.44rem;
             color: #3E3E3E;
             font-size: 1.125rem;
             font-style: normal;
             font-weight: 600;
             line-height: 1.9375rem;
             max-width: 40ch;
+            font-family: 'Helvetica Now Display';
 
+
+        }
+
+        .error-text {
+            position: relative;
+            top: 0.5rem;
+            // margin-top: 0.75rem;
+            padding: 0 0.5rem;
+            // padding-top: 0;
+            color: #DB0011;
+        }
+
+
+        .company-val-cell:hover {
+            background: #030303 !important;
+            color: white !important;
         }
 
         .modal2-dropdown-container {
@@ -297,8 +350,9 @@
                 color: #3E3E3E;
                 font-size: 1.125rem;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 700;
                 line-height: 100%;
+                font-family: 'Helvetica Now Display';
             }
 
             .select-container {
@@ -313,7 +367,15 @@
                     font-size: 1.25rem;
                     font-style: normal;
                     font-weight: 500;
+                    font-family: 'Helvetica Now Display';
+
                     text-transform: capitalize;
+
+                    .ant-select-selection-placeholder,
+                    .ant-select-selection-item {
+                        padding-inline-start: 0.75rem;
+                    }
+
                 }
             }
         }
@@ -394,6 +456,8 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
+                font-family: "Helvetica Now Display";
+                padding-bottom: 2rem;
                 // line-height: 4.75rem;
                 // text-transform: capitalize;
             }
@@ -403,7 +467,9 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 4.75rem;
+                // line-height: 4.75rem;
+                font-family: "Helvetica Now Display";
+
                 /* 422.222% */
                 text-transform: capitalize;
             }
@@ -420,14 +486,24 @@
             /* 127.778% */
             text-transform: capitalize;
             max-width: 20ch;
+            font-family: "Helvetica Now Display";
+
+        }
+
+        .error-text {
+            position: relative;
+            top: -0.55rem;
+            // margin-top: 0.75rem;
+            padding: 0 0.5rem;
+            color: #DB0011;
         }
 
         .modal3-input-container {
             & {
                 display: flex;
                 flex-direction: column;
-                gap: 2rem;
-                margin-top: 3rem;
+                gap: 1.85rem;
+                margin-top: 2.75rem;
             }
 
             .ip1,
@@ -442,21 +518,22 @@
                 .input-header {
                     margin: 0;
                     color: #3E3E3E;
-                    font-size: 1.2rem;
+                    font-size: 1.125rem;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 700;
+                    font-family: 'Helvetica Now Display';
                     // line-height: 4.75rem;
                 }
 
                 .ant-input {
                     width: 100%;
                     color: #9A9A9A;
+                    font-family: 'Helvetica Now Display';
 
-
-                    padding: 1.2rem;
+                    padding: 1rem;
                     border-radius: 0.8125rem;
                     border: 1px solid #CACACA;
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     font-style: normal;
                     font-weight: 500;
                 }
@@ -472,7 +549,7 @@
             }
 
             .begin-cta {
-                margin-top: 3rem;
+                margin-top: 2.85rem;
                 width: 100%;
                 border-radius: 2.5rem;
                 background: #2A71FA;
@@ -516,7 +593,7 @@
                 padding: 0;
                 border: none;
                 margin: 0 auto;
-                margin-top: 2rem;
+                margin-top: 1.75rem;
                 color: #282828;
                 font-size: 1.25rem;
                 font-style: normal;
@@ -533,34 +610,43 @@
             color: #fff;
             width: 45%;
             padding: 3rem;
+            padding-bottom: 1rem;
             border-top-left-radius: 2rem;
             border-bottom-left-radius: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 5rem;
-            justify-content: space-around;
+            gap: 2.75rem;
+            // justify-content: space-around;
         }
 
         .l-1 {
             & {
                 display: flex;
-                gap: 2.75rem;
+                gap: 2.25rem;
                 flex-direction: column;
             }
 
             .header {
                 margin: 0;
                 color: #FFF;
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 700;
                 line-height: 2.29375rem;
                 /* 152.917% */
                 text-transform: capitalize;
-                max-width: 25ch;
+                max-width: 22ch;
+                font-family: "Helvetica Now Display";
+
             }
 
             .l1-grid-container {
+                & {
+                    border-radius: 1rem;
+                    padding: 1rem;
+                    background: #FFF;
+                }
+
                 .grid-row {
                     .grid-col {
                         .grid-cell {
@@ -571,14 +657,15 @@
                             }
 
                             .text {
-                                color: #FFF;
-                                font-size: 1.15rem;
+                                color: #565656;
+
+                                font-family: "Helvetica Now Display";
+                                font-size: 0.875rem;
                                 font-style: normal;
-                                font-weight: 400;
-                                line-height: 150%;
-                                /* 162.5% */
-                                letter-spacing: 0.02rem;
-                                text-transform: capitalize;
+                                font-weight: 500;
+                                line-height: 1.625rem;
+                                /* 185.714% */
+                                letter-spacing: 0.0175rem;
                             }
                         }
 
@@ -597,24 +684,27 @@
             .header {
                 margin: 0;
                 color: #FFF;
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 2.29375rem;
                 /* 152.917% */
                 text-transform: capitalize;
-                max-width: 30ch;
+                max-width: 24ch;
+                font-family: "Helvetica Now Display";
 
             }
 
             .subtext {
                 margin: 0;
                 color: #FFF;
-                font-size: 1.15rem;
+                font-size: 1rem;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 1.625rem;
                 letter-spacing: 0.02rem;
+                font-family: "Helvetica Now Display";
+
             }
 
             .l2-list-container {
@@ -623,7 +713,7 @@
                     flex-direction: column;
                     gap: 2rem;
                     border-radius: 0.875rem;
-                    background: #3F7FFA;
+                    background: #FFF;
                     padding: 1.75rem 1.625rem;
 
                 }
@@ -632,17 +722,14 @@
                     display: flex;
                     align-items: center;
                     gap: 1rem;
-                    color: #FFF;
-                    /* 170% */
-                    // max-width: 45ch;
-
+                    color: #565656;
+                    font-family: "Helvetica Now Display";
                     font-size: 1.125rem;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 1.625rem;
                     /* 144.444% */
                     letter-spacing: 0.0225rem;
-                    text-transform: capitalize;
                 }
             }
         }
@@ -661,6 +748,8 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
+                font-family: "Helvetica Now Display";
+                padding-bottom: 2rem;
                 // line-height: 4.75rem;
                 // text-transform: capitalize;
             }
@@ -670,7 +759,9 @@
                 font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 4.75rem;
+                // line-height: 4.75rem;
+                font-family: "Helvetica Now Display";
+
                 /* 422.222% */
                 text-transform: capitalize;
             }
@@ -679,13 +770,22 @@
         .modal4-r-heading {
             margin: 0;
             color: #0B0B0B;
+            font-family: "Helvetica Now Display";
             font-size: 2.25rem;
             font-style: normal;
             font-weight: 700;
-            line-height: 2.875rem;
-            /* 127.778% */
+            line-height: 3rem;
+            /* 133.333% */
             text-transform: capitalize;
-            max-width: 20ch;
+            max-width: 18ch;
+        }
+
+        .error-text {
+            margin: 0;
+            color: #DB0011;
+            position: relative;
+            margin-top: -1rem;
+
         }
 
         .modal4-input-container {
@@ -693,7 +793,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1.8rem;
-                margin-top: 3rem;
+                margin-top: 2.75rem;
             }
 
             .ip1 {
@@ -712,21 +812,22 @@
                 .input-header {
                     margin: 0;
                     color: #3E3E3E;
-                    font-size: 1.2rem;
+                    font-size: 1.125rem;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 700;
+                    font-family: 'Helvetica Now Display';
                     // line-height: 4.75rem;
                 }
 
                 .ant-input {
                     width: 100%;
                     color: #9A9A9A;
+                    font-family: 'Helvetica Now Display';
 
-
-                    padding: 1.2rem;
+                    padding: 1rem;
                     border-radius: 0.8125rem;
                     border: 1px solid #CACACA;
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     font-style: normal;
                     font-weight: 500;
                 }
@@ -736,15 +837,17 @@
 
         .disclaimer-text {
             margin: 0;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             color: #7E8F9A;
-            font-size: 1.1rem;
+
+            font-family: "Helvetica Now Display";
+            font-size: 1rem;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             line-height: 1.625rem;
+            /* 162.5% */
             letter-spacing: 0.02rem;
-            text-transform: capitalize;
-            max-width: 80ch;
+            max-width: 50ch;
         }
 
         .cta-container {
@@ -755,7 +858,7 @@
             }
 
             .begin-cta {
-                margin-top: 2.65rem;
+                margin-top: 1.65rem;
                 width: 100%;
                 border-radius: 2.5rem;
                 background: #2A71FA;
@@ -827,22 +930,22 @@
 
         .l-1 {
             & {
-                padding: 1.5rem;
+                padding: 1.75rem 1.5rem;
                 border-radius: 1.125rem;
-                background: rgba(255, 255, 255, 0.15);
+                background: white;
             }
 
             .l1-text {
                 margin: 0;
-                color: #FFF;
-                font-size: 1.1725rem;
+                color: #0C0C0C;
+                font-family: "Helvetica Now Display";
+                font-size: 1.0625rem;
                 font-style: normal;
-                font-weight: 400;
-                line-height: 1.825rem;
+                font-weight: 500;
+                line-height: 1.625rem;
                 /* 152.941% */
-                letter-spacing: 0.0225rem;
-                text-transform: capitalize;
-                max-width: 41ch;
+                letter-spacing: 0.02125rem;
+                max-width: 33ch;
             }
         }
 
@@ -856,45 +959,46 @@
 
             .l2-text {
                 color: #FFF;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 2rem;
                 /* 160% */
-                text-transform: capitalize;
-                max-width: 20rem;
+                max-width: 24rem;
+                font-family: 'Helvetica Now Display';
             }
 
             .l2-grid {
-                margin-left: -0.4rem;
+                margin-left: -0.8rem;
 
                 .grid-row {
                     .grid-col {
                         display: flex;
                         flex-direction: column;
-                        gap: 2.5rem;
+                        gap: 1.75rem;
+                        padding: 1.75rem;
+                        margin: 0.4rem;
+                        border-radius: 1.875rem;
 
                         .metric-val {
                             margin: 0;
-                            color: #FFF;
+                            font-family: "Helvetica Now Display";
                             font-size: 2.625rem;
                             font-style: normal;
                             font-weight: 700;
-                            line-height: 4.35175rem;
-                            /* 165.782% */
                             letter-spacing: 0.0525rem;
                             text-transform: capitalize;
+                            line-height: 100%;
                         }
 
                         .metric-text {
                             margin: 0;
-                            color: #FFF;
-                            font-size: 0.97156rem;
+                            font-family: "Helvetica Now Display";
+                            font-size: 1.25rem;
                             font-style: normal;
                             font-weight: 500;
                             line-height: 1.5625rem;
-                            /* 160.824% */
-                            letter-spacing: 0.01944rem;
+                            letter-spacing: 0.025rem;
                             text-transform: capitalize;
                         }
                     }
@@ -922,8 +1026,11 @@
             line-height: 3rem;
             /* 133.333% */
             text-transform: capitalize;
-            max-width: 25ch;
+            max-width: 21ch;
+            font-family: 'Helvetica Now Display';
         }
+
+
 
         .whats-next-container {
             & {
@@ -942,6 +1049,7 @@
                 /* 150% */
                 letter-spacing: 0.025rem;
                 text-transform: capitalize;
+                font-family: 'Helvetica Now Display';
             }
 
             .list-container {
@@ -955,12 +1063,13 @@
                 li {
                     max-width: 40ch;
                     color: #778092;
-                    font-size: 1.3rem;
+                    font-size: 1.25rem;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: 500;
                     line-height: 2.25rem;
                     letter-spacing: 0.025rem;
-                    text-transform: capitalize;
+                    // text-transform: capitalize;
+                    font-family: 'Helvetica Now Display';
                 }
             }
         }

@@ -89,7 +89,7 @@ const Feature1LP3 = () => {
     const CardElement = ({ imgSrc, header, subHeader, points }) => {
         return (
             <motion.div variants={itemVariants}>
-                <Card hoverable className='card'>
+                <Card className='card'>
                     <div className='card-upper'>
                         <img className='upper-img' src={imgSrc} alt={header} width={56} />
                         <h2 className='header'>{header}</h2>
@@ -142,7 +142,7 @@ const Feature1LP3 = () => {
                     >
                         Book a Call
                         <img className='arrow-icon' src={arrowRight} />
-                        <img className='arrow-icon-hover' src={arrowRightWhite} />
+                        {/* <img className='arrow-icon-hover' src={arrowRightWhite} /> */}
                     </Button>
                 </motion.div>
 

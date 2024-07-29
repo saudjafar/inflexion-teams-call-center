@@ -1,6 +1,7 @@
 .header-LP3-container {
     & {
         padding: 1.5rem 3rem;
+        padding-bottom: 2.25rem;
         border-radius: 1.25rem;
         // border-top-left-radius: 0;
         // border-top-right-radius: 0;
@@ -20,23 +21,7 @@
             justify-content: space-between;
         }
 
-        .desktop-navbar-container {
-            & {
-                display: flex;
-                gap: 3.87rem;
-            }
 
-            .navbar-item {
-                color: #D5D5D5;
-                // font-family: "Helvetica Neue";
-                font-size: 1.125rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                cursor: pointer;
-            }
-
-        }
 
         .quote-cta {
             border: none;
@@ -55,5 +40,32 @@
             line-height: normal;
             text-transform: none;
         }
+    }
+
+    .desktop-navbar-container {
+        & {
+            justify-content: center;
+            display: flex;
+            gap: 3.87rem;
+            // position: relative;
+            // top: -34px;
+            margin-top: -34px;
+        }
+
+        .navbar-item {
+            color: #D5D5D5;
+            font-family: "Helvetica Neue Light";
+            font-size: 1.125rem;
+            font-style: normal;
+            // font-weight: 400;
+            line-height: normal;
+            cursor: pointer;
+            transition: all ease-in-out 0.25s;
+        }
+
+        .navbar-item:hover {
+            color: #2A71FA;
+        }
+
     }
 }

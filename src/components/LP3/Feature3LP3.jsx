@@ -48,14 +48,16 @@ const Feature3LP3 = () => {
     ]
     const F3LP3Card = ({ imgSrc, header, subtext }) => {
         return (
-            <Card className='card' hoverable style={{ border: 'none' }}>
-                <div className='card-content'>
-                    <img src={imgSrc} alt={header} className='card-image' />
-                    <h2 className='card-header'>{header}</h2>
-                    <p className='card-subtext'>{subtext}</p>
-                    <span className='explore-cta'>Explore This Role <img src={arrowBlue} /></span>
-                </div>
-            </Card>
+            <div>
+                <Card className='card' style={{ border: 'none' }}>
+                    <div className='card-content'>
+                        <img src={imgSrc} alt={header} className='card-image' />
+                        <h2 className='card-header'>{header}</h2>
+                        <p className='card-subtext'>{subtext}</p>
+                        <span className='explore-cta'>Explore This Role <img src={arrowBlue} /></span>
+                    </div>
+                </Card>
+            </div>
         );
     };
 

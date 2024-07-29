@@ -1,18 +1,13 @@
 import React from 'react'
 import '../../styles/HireSupport/HireSupportModals.scss';
-import checkIcon from '../../assets/svgs/check-whitebg.svg'
+import checkIcon from '../../assets/svgs/check-whiteblu.svg'
 import { Row, Col } from 'antd';
 const Modal123Left = () => {
-    const gridStyle = {
-        padding: '1.5rem',
-        margin: '0.4rem',
-        borderRadius: '1.1875rem',
-        background: 'rgba(255, 255, 255, 0.10)'
-    };
+
     return (
         <div className='modal123-left'>
             <div className='l-1'>
-                <h1 className='header'>Get a free quote</h1>
+                <h1 className='header'>Get a Free Quote</h1>
                 <div className='l1-list-container'>
                     <span className='list-item'><img src={checkIcon} />Save 70% on employment costs.</span>
                     <span className='list-item'><img src={checkIcon} />Enhance customer service & integrate cutting-edge AI. </span>
@@ -25,21 +20,21 @@ const Modal123Left = () => {
                 </span>
                 <div className='l2-grid'>
                     <Row className='grid-row'>
-                        <Col span={11} className='grid-col' style={gridStyle}>
-                            <h1 className='metric-val'>4M+</h1>
-                            <span className='metric-text'>Global Talent</span>
+                        <Col span={11} className='grid-col' style={{ background: '#FFC7ED' }}>
+                            <h1 className='metric-val' style={{ color: '#992473' }}>4M+</h1>
+                            <span className='metric-text' style={{ color: '#992473' }}>Global Talent</span>
                         </Col>
-                        <Col span={11} className='grid-col' style={gridStyle}>
-                            <h1 className='metric-val'>50+</h1>
-                            <span className='metric-text'>Years Exp</span>
+                        <Col span={11} className='grid-col' style={{ background: '#FFD3B6' }}>
+                            <h1 className='metric-val' style={{ color: '#8D4516' }}>50+</h1>
+                            <span className='metric-text' style={{ color: '#8D4516' }}>Years Exp</span>
                         </Col>
-                        <Col span={11} className='grid-col' style={gridStyle}>
-                            <h1 className='metric-val'>$4bn</h1>
-                            <span className='metric-text'>Value</span>
+                        <Col span={11} className='grid-col' style={{ background: '#ADF7B6' }}>
+                            <h1 className='metric-val' style={{ color: '#1E5D25' }}>$4bn</h1>
+                            <span className='metric-text' style={{ color: '#1E5D25' }}>Value</span>
                         </Col>
-                        <Col span={11} className='grid-col' style={gridStyle}>
-                            <h1 className='metric-val'>30+</h1>
-                            <span className='metric-text'>AI Exp</span>
+                        <Col span={11} className='grid-col' style={{ background: '#70DCF3' }}>
+                            <h1 className='metric-val' style={{ color: '#185562' }}>30+</h1>
+                            <span className='metric-text' style={{ color: '#185562' }}>Years AI Exp</span>
                         </Col>
                     </Row>
                 </div>

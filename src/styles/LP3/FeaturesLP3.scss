@@ -277,7 +277,7 @@
             gap: 0.625rem;
             border-radius: 2.5rem;
             border: 1px solid #000;
-            background: #F2F2F2;
+            background: #FFF;
             color: #010101;
             font-size: 1.2rem;
             font-style: normal;
@@ -290,28 +290,30 @@
 
         .book-a-call-cta:hover {
             border: 1px solid black;
+            background: #F2F2F2;
+            color: #0B0B0B;
         }
 
-        .book-a-call-cta .arrow-icon {
-            transition: opacity 0.3s ease-in-out;
-        }
+        // .book-a-call-cta .arrow-icon {
+        //     transition: opacity 0.3s ease-in-out;
+        // }
 
-        .book-a-call-cta:hover .arrow-icon {
-            display: none;
-        }
+        // .book-a-call-cta:hover .arrow-icon {
+        //     display: none;
+        // }
 
-        .book-a-call-cta .arrow-icon-hover {
-            display: none;
-        }
+        // .book-a-call-cta .arrow-icon-hover {
+        //     display: none;
+        // }
 
-        .book-a-call-cta:hover .arrow-icon-hover {
-            display: inline;
-        }
+        // .book-a-call-cta:hover .arrow-icon-hover {
+        //     display: inline;
+        // }
 
-        .book-a-call-cta:hover {
-            background: #010101;
-            color: #FFF;
-        }
+        // .book-a-call-cta:hover {
+        //     background: #010101;
+        //     color: #FFF;
+        // }
 
         .hr-line {
             margin: 0 auto;
@@ -418,6 +420,9 @@
 .feature-3-LP3-section {
     & {
         color: #FFF;
+        position: relative;
+        z-index: 2;
+        background: #030303;
     }
 
     .feature-3-LP3 {
@@ -484,6 +489,7 @@
             max-width: 96.2rem;
             margin: 0 auto;
             gap: 2.38rem;
+            padding: 0 6rem;
             padding-bottom: 11.4rem;
 
             .feature-3-row {
@@ -491,17 +497,20 @@
                 flex-wrap: wrap;
                 gap: 2.38rem;
                 width: 100%;
-                justify-content: center;
+                justify-content: space-between;
             }
 
             .feature-3-row-top {
                 padding-bottom: 8rem;
-                margin-left: 16rem;
+                // margin-left: 16rem;
+                margin: 0 auto;
+
             }
 
             .feature-3-row-bottom {
                 padding-top: 8rem;
-                margin-left: 16rem;
+                // margin-left: 16rem;
+                margin: 0 auto;
 
             }
 
@@ -540,6 +549,7 @@
                 }
 
                 .card-header {
+                    max-width: fit-content;
                     margin: 0;
                     color: #FFF;
                     font-size: 2rem;
@@ -598,6 +608,7 @@
         background: #272727;
         padding: 10.75rem 0;
         position: relative;
+        z-index: 2;
     }
 
     .header-svg {
@@ -656,7 +667,7 @@
                 color: #cecece;
                 text-align: center;
                 font-family: "Helvetica Now Display";
-
+                margin-top: -1.25rem;
                 font-size: 1.25rem;
                 font-style: normal;
                 font-weight: 500;
@@ -762,6 +773,7 @@
         // background: #272727;
         padding: 8.5rem 6rem;
         position: relative;
+        z-index: 2;
     }
 
     .feature-5-LP3 {
@@ -938,6 +950,7 @@
         margin-top: 1rem;
         padding: 10.5rem 6rem 7.56rem;
         position: relative;
+        z-index: 2;
     }
 
     .feature-6-LP3 {
@@ -1108,24 +1121,29 @@
 
 .feature-7-LP3-section {
     & {
+        position: relative;
+        top: -2.5rem;
+        z-index: 2;
         border-radius: 2rem;
         background: #FFF;
         border: none;
-        margin-top: 1rem;
-        padding: 8.5rem 0rem 6rem;
+        // margin-top: 1rem;
+        padding: 7rem 0rem 6rem;
         position: relative;
         overflow: hidden;
     }
 
     .lines-img {
-        // scale: 1.2;
         position: absolute;
-        top: -2.5rem;
-        // left: 0.5rem;
-        // transform: rotate(2.5deg);
+        /* top: 0px; */
+        bottom: 0px;
         overflow: hidden;
-        max-width: 100%;
+        /* max-width: 100%; */
+        width: 100vw;
         height: auto;
+        /* top: 0rem; */
+        /* scale: 1.15; */
+
     }
 
     .feature-7-LP3 {
@@ -1204,7 +1222,7 @@
     & {
         padding: 9rem 6rem 14rem;
         position: relative;
-        margin-top: 1.94rem;
+        // margin-top: 1.94rem;
         border-radius: 1.875rem;
         border-top: 1px solid #4d4d4d;
     }
@@ -1233,6 +1251,7 @@
             letter-spacing: 0.0625rem;
             text-transform: capitalize;
             font-family: 'Helvetica Now Display';
+            text-align: left;
         }
 
         .input-container {

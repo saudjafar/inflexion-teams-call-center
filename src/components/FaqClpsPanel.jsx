@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Collapse } from 'antd';
-import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
+// import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
+import PlusOutlined from '../assets/svgs/plus-outlined.svg';
+import MinusOutlined from '../assets/svgs/minus-outlined.svg';
+
 import '../styles/HowItWorks/FaqClpsPanel.scss';
 const { Panel } = Collapse;
 
@@ -14,7 +17,7 @@ const FaqClpsPanel = () => {
         { header: "What makes Inflexion Teams different from other BPOs?", subtext: "This is details for Header 5" },
         { header: "How will my team stay updated with the latest technologies?", subtext: "This is details for Header 6" }
     ];
-    const [activeKey, setActiveKey] = useState([0]);
+    const [activeKey, setActiveKey] = useState([]);
 
     const onPanelChange = key => {
         setActiveKey(key);
@@ -29,7 +32,7 @@ const FaqClpsPanel = () => {
                     header={
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             {item.header}
-                            {activeKey.includes(index.toString()) ? <MinusOutlined /> : <PlusOutlined />}
+                            {activeKey.includes(index.toString()) ? <img src={MinusOutlined} /> : <img src={PlusOutlined} />}
                         </div>
                     }
                     key={index.toString()}

@@ -2,3 +2,21 @@
     background: #030303;
 
 }
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #030303;
+    color: white;
+    z-index: 1;
+    /* Initially behind the content */
+    display: none;
+    /* Initially hidden */
+}
+
+.footer.show {
+    display: block;
+    /* Show the footer when the class 'show' is added */
+}

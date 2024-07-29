@@ -7,11 +7,20 @@ import Modal123Left from './Modal123Left';
 const Modal1 = ({ nextPage, previousPage }) => {
 
     const [selectedCell, setSelectedCell] = useState(null);
+    const [showError, setShowError] = useState(false);
 
     const handleCellClick = (cellId) => {
         setSelectedCell(cellId);
+        setShowError(false);
     };
-
+    const handleNextPageCall = () => {
+        if (selectedCell != null) {
+            nextPage();
+        }
+        else {
+            setShowError(true)
+        }
+    }
     const agentSizeArray = ['1 - 5 agents', '6 - 15 agents', '16 - 30 agents', '31 - 50 agents', '50+ agents', 'Other']
 
     const agentValCellStyle = (cellId) => ({
@@ -19,13 +28,14 @@ const Modal1 = ({ nextPage, previousPage }) => {
         border: selectedCell === cellId ? '1px solid black' : '1px solid #D5D5D5',
         padding: '1.31rem 1.25rem',
         color: selectedCell === cellId ? 'white' : '#3E3E3E',
-        background: selectedCell === cellId ? 'black' : 'none',
+        background: selectedCell === cellId ? '#030303' : 'none',
         cursor: 'pointer',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         transition: 'all 0.2s ease-in-out',
         fontSize: '1.125rem',
+        fontFamily: 'Helvetica Now Display',
         fontWeight: '600'
     });
 
@@ -33,7 +43,7 @@ const Modal1 = ({ nextPage, previousPage }) => {
         <div className='modal-container modal-1-container'>
             <Modal123Left />
             <div className='modal1-right'>
-                <div className='page-no'><span className='curr-page'>1 </span>/ 3</div>
+                <div className='page-no'><span className='curr-page'>1 </span>/ 4</div>
 
                 <h1 className='modal1-r-heading'>
                     Let's understand your customer service needs
@@ -46,17 +56,21 @@ const Modal1 = ({ nextPage, previousPage }) => {
                 <div className='agent-val-grid' style={{ marginTop: '2.56rem' }}>
                     <Row gutter={[16, 16]}>
                         {agentSizeArray.map((agentSize, index) => (
-                            <Col key={index} span={8} onClick={() => handleCellClick(index)}>
-                                <div style={agentValCellStyle(index)}>
+                            <Col key={index} span={8} onClick={() => handleCellClick(index)} >
+                                <div style={agentValCellStyle(index)} className='agent-val-cell'>
                                     {agentSize}
                                 </div>
                             </Col>
                         ))}
                     </Row>
+
+                    <span className='error-text' style={{ display: ` ${showError ? 'block' : 'none'}` }}>
+                        Please select a range of agent team size to proceed.
+                    </span>
                 </div>
 
                 <div className='cta-container'>
-                    <Button className='begin-cta' onClick={nextPage}>
+                    <Button className='begin-cta' onClick={handleNextPageCall}>
                         Let's Begin <img src={arrowWhite} className='arrow-icon' /><img src={arrowRightBlue} className='arrow-icon-hover' />
                     </Button>
 

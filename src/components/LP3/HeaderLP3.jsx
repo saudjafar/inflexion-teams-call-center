@@ -7,12 +7,12 @@ const HeaderLP3 = () => {
         <section className='header-LP3-container'>
             <div className='header-LP3'>
                 <img src={inflexionLogoLP3} alt='inflexion-logo' />
-                <div className='desktop-navbar-container'>
-                    <span className='navbar-item'>Features</span>
-                    <span className='navbar-item'>How it works</span>
-                    <span className='navbar-item'>Blog</span>
-                </div>
                 <Button className='quote-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Get a Quote</Button>
+            </div>
+            <div className='desktop-navbar-container'>
+                <span className='navbar-item'>Features</span>
+                <span className='navbar-item'>How it works</span>
+                <span className='navbar-item'>Blog</span>
             </div>
         </section>
     )

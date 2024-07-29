@@ -1,77 +1,119 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-cards";
-// import { EffectCards } from "swiper";
-import { Autoplay, EffectCards } from "swiper/modules";
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import move from "lodash-move";
 
-import styled from "styled-components";
-import sliderImg1 from '../../assets/imgs/hero-slider1.png';
-import sliderImg2 from '../../assets/imgs/hero-slider2.png';
-import sliderImg3 from '../../assets/imgs/hero-slider3.png';
-import sliderImg4 from '../../assets/imgs/hero-slider4.png';
-import sliderImg5 from '../../assets/imgs/hero-slider5.png';
+// Import your images
+import image1 from '../../assets/imgs/hero-slider1.png';
+import image2 from '../../assets/imgs/hero-slider2.png';
+import image3 from '../../assets/imgs/hero-slider3.png';
+import image4 from '../../assets/imgs/hero-slider4.png';
+import image5 from '../../assets/imgs/hero-slider5.png';
 
+const IMAGES = [image1, image2, image3, image4, image5];
+const CARD_OFFSET = 10;
+const SCALE_FACTOR = 0.06;
 
-// Styled Components
-const Container = styled.div`
-  padding: 0 2rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;  
-  position: relative;
-    
-`;
+const HeroSlider = () => {
+  const [cards, setCards] = React.useState(IMAGES);
+  const [isDragging, setIsDragging] = React.useState(false);
+  const intervalRef = useRef(null);
 
-const Heading = styled.h2`
-  padding-top: 3rem;
-  text-align: center;
-`;
+  const moveToEnd = (from) => {
+    setCards((prevCards) => move(prevCards, from, prevCards.length - 1));
+  };
 
-// 450x677
-const StyledSwiper = styled(Swiper)`
-  position: relative;
-  width: 450px; 
-  height: 677px;
+  const startAutoRotate = () => {
+    intervalRef.current = setInterval(() => {
+      if (!isDragging) {
+        moveToEnd(0);
+      }
+    }, 2500); // Rotate every 2500ms
+  };
 
-  .swiper-slide {
-    border-radius: 18px;
-    img {
-      width: 100%;
-      object-fit: cover;
-      border-radius: 18px;
+  const stopAutoRotate = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
     }
-  }
-`;
+  };
 
-// React Component
-const SwiperComponent = () => {
-  const images = [sliderImg1, sliderImg2, sliderImg3, sliderImg4, sliderImg5];
+  useEffect(() => {
+    startAutoRotate();
+    return () => stopAutoRotate(); // Clean up interval on unmount
+  }, [isDragging]);
+
+  const handleDragEnd = (index, info) => {
+    if (info.offset.x > 150 || info.offset.x < -150) {
+      moveToEnd(index);
+    }
+    setIsDragging(false);
+    startAutoRotate(); // Resume auto-rotate after drag ends
+  };
+
+  const handleDragStart = () => {
+    stopAutoRotate();
+    setIsDragging(true);
+  };
 
   return (
-    <Container className="swiper-parent-container">
-      <StyledSwiper
-        modules={[EffectCards, Autoplay]}
-        effect="cards"
+    <div style={wrapperStyle}>
+      <ul style={cardWrapStyle}>
+        {cards.map((image, index) => {
+          const canDrag = index === 0;
 
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        autoplay={{
-          delay: 2500,  // Delay between transitions (in ms). Adjust as needed.
-          disableOnInteraction: false  // Continue autoplay after interaction.
-        }}
-      >
-        {images.map((imgSrc, index) => (
-          <SwiperSlide key={index}>
-            <img src={imgSrc} alt={`Slide Image ${index + 1}`} width={450} height={677} />
-          </SwiperSlide>
-        ))}
-      </StyledSwiper>
-    </Container>
+          return (
+            <motion.li
+              key={image}
+              style={{
+                ...cardStyle,
+                cursor: canDrag ? "grab" : "auto",
+                background: `url(${image})`,
+                objectFit: 'cover'
+              }}
+              animate={{
+                left: index * CARD_OFFSET,
+                scale: 1 - index * SCALE_FACTOR,
+                zIndex: cards.length - index,
+                transition: {
+                  left: { duration: 0.75, ease: "easeInOut" },
+                  scale: { duration: 0.75, ease: "easeInOut" },
+                }
+              }}
+              drag={canDrag ? "x" : false}
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragStart={handleDragStart}
+              onDragEnd={(event, info) => handleDragEnd(index, info)}
+            >
+            </motion.li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 
-export default SwiperComponent;
+const wrapperStyle = {
+  position: "relative",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  // height: "100vh"
+};
+
+const cardWrapStyle = {
+  position: "relative",
+  width: "28rem",
+  height: "42rem"
+};
+
+const cardStyle = {
+  position: "absolute",
+  width: "28rem",
+  height: "42rem",
+  borderRadius: "2rem",
+  transformOrigin: "center right",
+  listStyle: "none",
+  overflow: "hidden" // Ensure the img fits within the card's rounded corners
+};
+
+export default HeroSlider;

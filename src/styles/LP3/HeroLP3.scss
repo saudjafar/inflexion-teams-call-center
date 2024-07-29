@@ -3,6 +3,8 @@
         border-radius: 1.0625rem;
         background: #030303;
         padding: 4rem 0;
+        position: relative;
+        z-index: 2;
 
     }
 
@@ -10,6 +12,7 @@
         & {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             // max-width: 90rem;
             margin: 0 auto;
             position: relative;
@@ -25,7 +28,7 @@
                 flex-direction: column;
                 gap: 2.5rem;
                 padding-left: 6rem;
-                flex: 1 0;
+                // flex: 1 0;
                 position: relative;
                 z-index: 2;
             }
@@ -93,11 +96,12 @@
 
         .right {
             & {
-                flex: 1 0;
+                // flex: 1 0;
                 max-width: fit-content;
                 position: relative;
-                top: 2rem;
-                left: -8rem;
+                // top: 2rem;
+                // left: -8rem;
+                // padding-right: 6rem;
             }
         }
     }
@@ -121,5 +125,11 @@
         margin-top: 1rem;
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (min-width: 1600px) {
+    .right {
+        padding-right: 6rem;
     }
 }

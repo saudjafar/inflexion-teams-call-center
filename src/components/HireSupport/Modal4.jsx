@@ -3,12 +3,52 @@ import '../../styles/HireSupport/HireSupportModals.scss';
 import arrowWhite from '../../assets/svgs/arrow-white.svg';
 import arrowRightBlue from '../../assets/svgs/arrow-blue.svg';
 import { Button, Input, Row, Col } from 'antd';
-import checkIcon from '../../assets/svgs/check-whitebg.svg'
+import checkIcon from '../../assets/svgs/check-whiteblu.svg'
 import helpIcon from '../../assets/svgs/help-icon.svg'
 
 const { TextArea } = Input;
 
 const Modal4 = ({ nextPage, previousPage }) => {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [cellNumber, setCellNumber] = useState('');
+    const [errors, setErrors] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        cellNumber: ''
+    });
+
+    const handleNextPage = () => {
+        const newErrors = {};
+
+        if (!firstName) {
+            newErrors.firstName = 'Please enter your first name.';
+        }
+
+        if (!lastName) {
+            newErrors.lastName = 'Please enter your last name.';
+        }
+
+        if (!email) {
+            newErrors.email = 'Please enter your email address.';
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            newErrors.email = 'Please enter a valid email address.';
+        }
+
+        if (!cellNumber) {
+            newErrors.cellNumber = 'Please enter your cell number.';
+        }
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+        } else {
+            setErrors({});
+            nextPage();
+        }
+    };
+
     return (
         <div className='modal-container modal-4-container'>
             <div className='modal4-left'>
@@ -59,7 +99,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
                 </div>
             </div>
             <div className='modal4-right'>
-                <div className='page-no'><span className='curr-page'>4 </span>/ 3</div>
+                <div className='page-no'><span className='curr-page'>4 </span>/ 4</div>
                 <h1 className='modal4-r-heading'>
                     Level up your customer service today.
                 </h1>
@@ -74,7 +114,10 @@ const Modal4 = ({ nextPage, previousPage }) => {
                                 className='input-element'
                                 type='text'
                                 placeholder='Your First Name'
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
                             />
+                            {errors.firstName && <div className='error-text'>{errors.firstName}</div>}
                         </div>
                         <div className='ip1'>
                             <h1 className='input-header'>
@@ -84,7 +127,10 @@ const Modal4 = ({ nextPage, previousPage }) => {
                                 className='input-element'
                                 type='text'
                                 placeholder='Your Last Name'
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
                             />
+                            {errors.lastName && <div className='error-text'>{errors.lastName}</div>}
                         </div>
                     </div>
                     <div className='ip2'>
@@ -95,7 +141,10 @@ const Modal4 = ({ nextPage, previousPage }) => {
                             className='input-element'
                             type='text'
                             placeholder='Your Business Email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
+                        {errors.email && <div className='error-text'>{errors.email}</div>}
                     </div>
 
                     <div className='ip3'>
@@ -106,7 +155,10 @@ const Modal4 = ({ nextPage, previousPage }) => {
                             className='input-element'
                             type='text'
                             placeholder='Your Cell Number'
+                            value={cellNumber}
+                            onChange={(e) => setCellNumber(e.target.value)}
                         />
+                        {errors.cellNumber && <div className='error-text'>{errors.cellNumber}</div>}
                     </div>
 
                 </div>
@@ -116,17 +168,17 @@ const Modal4 = ({ nextPage, previousPage }) => {
                 </p>
 
                 <div className='cta-container'>
-                    <Button className='begin-cta' onClick={nextPage}>
+                    <Button className='begin-cta' onClick={handleNextPage}>
                         Submit <img src={arrowWhite} className='arrow-icon' /><img src={arrowRightBlue} className='arrow-icon-hover' />
                     </Button>
 
-                    {/* <Button className='back-cta' onClick={previousPage}>
+                    <Button className='back-cta' onClick={previousPage}>
                         Back
-                    </Button> */}
+                    </Button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Modal4
+export default Modal4;

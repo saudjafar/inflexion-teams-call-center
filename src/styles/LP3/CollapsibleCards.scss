@@ -42,14 +42,15 @@
                 gap: 2rem;
                 background: #F0F0F0;
                 border-radius: 2rem;
-                padding: 2.75rem 2rem;
+                padding: 2.5rem 2rem;
                 color: #030303;
                 transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
 
                 .collapse-heading {
+                    font-family: "Helvetica Now Display";
                     font-size: 2rem;
-                    font-weight: 600;
-                    line-height: 1.7185rem;
+                    font-weight: 700;
+                    line-height: 148%;
                     letter-spacing: 0.04rem;
                     text-transform: capitalize;
                     color: inherit;
@@ -61,18 +62,24 @@
             padding: 0;
 
             .ant-collapse-content-box {
+
                 background: #030303;
                 font-size: 1.25rem;
                 font-weight: 400;
                 line-height: 2rem;
-                padding: 3.5rem 2rem;
-                padding-top: 1rem;
-                padding-left: 3rem;
+                padding: 3rem 2rem;
+                padding-top: 0rem;
+                padding-left: 3.05rem;
                 border-radius: 1.75rem;
                 transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
 
                 .collapse-subtext {
                     color: #CECECE;
+                    max-width: 48ch;
+                    font-family: 'Helvetica Neue Light';
+                    // margin-top: -2.5rem;
+                    // position: relative;
+                    // z-index: 2;
                 }
             }
         }

@@ -9,10 +9,33 @@ import Modal123Left from './Modal123Left';
 const Modal2 = ({ nextPage, previousPage }) => {
 
     const [selectedCell, setSelectedCell] = useState(null);
+    const [dropdownVal, setDropdownVal] = useState(null);
+    const [showError, setShowError] = useState(false);
+    const [dropdownError, setDropdownError] = useState(false);
+
 
     const handleCellClick = (cellId) => {
         setSelectedCell(cellId);
+        setShowError(false);
+
     };
+    const handleDropdownChange = (value) => {
+        setDropdownVal(value);
+        setDropdownError(false);
+        console.log(value);
+    }
+    const handleNextPageCall = () => {
+        if (selectedCell != null && dropdownVal != null) {
+            nextPage();
+        }
+        else {
+            if (selectedCell == null)
+                setShowError(true)
+            if (dropdownVal == null) {
+                setDropdownError(true)
+            }
+        }
+    }
 
     const companySizeArray = ['1-10', '11-50', '51-100', '101 - 250', '251-500', '500+']
 
@@ -28,14 +51,15 @@ const Modal2 = ({ nextPage, previousPage }) => {
         alignItems: 'center',
         transition: 'all 0.2s ease-in-out',
         fontSize: '1.125rem',
-        fontWeight: '600'
+        fontFamily: 'Helvetica Now Display',
+        fontWeight: '700'
     });
 
     return (
         <div className='modal-container modal-2-container'>
             <Modal123Left />
             <div className='modal2-right'>
-                <div className='page-no'><span className='curr-page'>2 </span>/ 3</div>
+                <div className='page-no'><span className='curr-page'>2 </span>/ 4</div>
                 <h1 className='modal2-r-heading'>
                     Tell us about your company
                 </h1>
@@ -44,16 +68,19 @@ const Modal2 = ({ nextPage, previousPage }) => {
                     What's the size of your organization?
                 </p>
 
-                <div className='company-val-grid' style={{ marginTop: '2.56rem' }}>
+                <div className='company-val-grid' style={{ marginTop: '3.37rem' }}>
                     <Row gutter={[16, 16]}>
                         {companySizeArray.map((companySize, index) => (
                             <Col key={index} span={8} onClick={() => handleCellClick(index)}>
-                                <div style={companyValCellStyle(index)}>
+                                <div style={companyValCellStyle(index)} className='company-val-cell'>
                                     {companySize}
                                 </div>
                             </Col>
                         ))}
                     </Row>
+                    <span className='error-text' style={{ display: ` ${showError ? 'block' : 'none'}` }}>
+                        Please select size of your organization.
+                    </span>
                 </div>
 
                 <div className='modal2-dropdown-container'>
@@ -62,7 +89,7 @@ const Modal2 = ({ nextPage, previousPage }) => {
                     <Select
                         className='select-container'
                         placeholder='Select Sector'
-                        // onChange={handleChange}
+                        onChange={handleDropdownChange}
                         options={[
                             {
                                 value: 'Technology',
@@ -78,10 +105,13 @@ const Modal2 = ({ nextPage, previousPage }) => {
                             },
                         ]}
                     />
+                    <span className='error-text' style={{ display: ` ${dropdownError ? 'block' : 'none'}` }}>
+                        Please select an option.
+                    </span>
                 </div>
 
                 <div className='cta-container'>
-                    <Button className='begin-cta' onClick={nextPage}>
+                    <Button className='begin-cta' onClick={handleNextPageCall}>
                         Next <img src={arrowWhite} className='arrow-icon' /><img src={arrowRightBlue} className='arrow-icon-hover' />
                     </Button>
 

@@ -12,7 +12,7 @@ const Feature5LP3 = () => {
     return (
         <section className='feature-5-LP3-section'>
             <div className='feature-5-LP3'>
-                <ScrollAnimation animateIn="fadeInUp" offset={200} initiallyVisible={false} animateOnce={true}>
+                <ScrollAnimation animateIn="fadeInUp" offset={150} initiallyVisible={false} animateOnce={true}>
                     <div className='top'>
                         <div className='left'>
                             <h1 className='header'>
@@ -28,7 +28,7 @@ const Feature5LP3 = () => {
                     </div>
                 </ScrollAnimation>
                 <div className='hr-divider' />
-                <ScrollAnimation animateIn="fadeIn slideInUp" offset={200} initiallyVisible={false} animateOnce={true}>
+                <ScrollAnimation animateIn="fadeIn slideInUp" offset={150} initiallyVisible={false} animateOnce={true}>
                     <div className='bottom'>
                         <span className='pre-header'>HOW WE WORK</span>
                         <h1 className='header'>Simplicity as a Service</h1>

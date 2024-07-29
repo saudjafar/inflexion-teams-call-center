@@ -67,7 +67,7 @@ const OurProcessScrollMenu = () => {
 
     return (
         // gap: '12.75rem' in below div
-        <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '130rem', height: '600.25px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '130rem', height: '600px' }}>
             <div className='scroll-links-container'>
                 {data.map(item => (
                     <Link
@@ -92,7 +92,7 @@ const OurProcessScrollMenu = () => {
                     <Element className='panel-right' key={item.id} name={item.id}>
                         <h2 className='header'>{item.titleCard}</h2>
                         <p className='sub-text'>{item.subtext}</p>
-                        <img className='panel-img' src={item.imgSrc} alt={item.title} />
+                        <img className='panel-img' src={item.imgSrc} alt={item.title} width={704} />
                     </Element>
                 ))}
             </div>

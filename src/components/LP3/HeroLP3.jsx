@@ -20,7 +20,7 @@ const HeroLP3 = () => {
     };
 
     const rightAnimation = {
-        hidden: { opacity: 0, y: 100 },
+        hidden: { opacity: 0, y: 120 },
         visible: {
             opacity: 1,
             y: 0,
@@ -32,7 +32,7 @@ const HeroLP3 = () => {
         <section className='hero-LP3-section'>
             <div className='hero-LP3'>
                 <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', zIndex: '1' }} />
-
+                {/* <div className='left'> */}
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -51,7 +51,9 @@ const HeroLP3 = () => {
 
                     <Button className='request-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Request a Quote</Button>
                 </motion.div>
+                {/* </div> */}
 
+                {/* <div className='right'> */}
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -60,6 +62,7 @@ const HeroLP3 = () => {
                 >
                     <HeroSlider />
                 </motion.div>
+                {/* </div> */}
             </div>
 
             <>
