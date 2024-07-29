@@ -4,7 +4,7 @@ import iconHandshake from '../../assets/svgs/Frame.svg';
 import iconAI from '../../assets/svgs/Group 48095540.svg';
 import iconOutsource from '../../assets/svgs/Frame-1.svg';
 import { Button, Card } from 'antd';
-import arrowRight from '../../assets/svgs/arrow-right-2.svg';
+import arrowRightBlu from '../../assets/svgs/arrow-blue.svg';
 import arrowRightWhite from '../../assets/svgs/arrow-white.svg';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -141,8 +141,8 @@ const Feature1LP3 = () => {
                         onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}
                     >
                         Book a Call
-                        <img className='arrow-icon' src={arrowRight} />
-                        {/* <img className='arrow-icon-hover' src={arrowRightWhite} /> */}
+                        <img className='arrow-icon' src={arrowRightWhite} />
+                        <img className='arrow-icon-hover' src={arrowRightBlu} />
                     </Button>
                 </motion.div>
 

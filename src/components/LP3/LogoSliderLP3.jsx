@@ -96,7 +96,7 @@ const LogoSliderLP3 = () => {
         <div className="logo-slider" style={sliderContainerStyle}>
             <div style={fadeLeftStyle}></div>
             <Slider {...settings}>
-                {logos.map((logo, index) => (
+                {logos.concat(logos).map((logo, index) => (
                     <div className="logo-slide" key={index} style={logoSlideStyle}>
                         <div className='logo-img-container' style={logoImgContainerStyle}>
                             <img src={logo} alt={`Logo ${index}`} />

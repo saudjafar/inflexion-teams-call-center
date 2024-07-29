@@ -3,7 +3,7 @@ import '../styles/HireSupport/HireSupport.scss'
 import FooterLP3 from '../components/LP3/FooterLP3'
 import freeTagIcon from '../assets/svgs/free-tag.svg'
 import checkIcon from '../assets/svgs/check-whitebg.svg'
-import { Button, Card, Modal } from 'antd'
+import { Button, Card, Modal, Row, Col } from 'antd'
 import outSourceImg from '../assets/svgs/outsourceImg.svg'
 import Modal1 from '../components/HireSupport/Modal1'
 import Modal2 from '../components/HireSupport/Modal2'
@@ -33,11 +33,38 @@ import arrowTop from '../assets/svgs/arrow-top.svg'
 import ModalCloseIcon from '../assets/svgs/modal-close-icon.svg'
 
 import ScrollAnimation from 'react-animate-on-scroll';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
 import "animate.css/animate.compat.css"
 
+import { useModal } from '../contexts/ModalContext';
 
 const HireSupport = () => {
+    const { showModal } = useModal();
+
+    const agentSizeArray = ['1 - 2 Staff', '3 - 10 Staff', '11 - 20 Staff', '21 - 50 Staff', '50+ Staff', 'Other']
+
+    const [selectedCell, setSelectedCell] = useState(null);
+
+    const handleCellClick = (cellId) => {
+        setSelectedCell(cellId);
+    };
+
+    const agentValCellStyle = (cellId) => ({
+        borderRadius: '2.5rem',
+        border: selectedCell === cellId ? '1px solid black' : '1px solid #D5D5D5',
+        padding: '1.31rem 1.25rem',
+        color: selectedCell === cellId ? 'white' : '#3E3E3E',
+        background: selectedCell === cellId ? '#030303' : 'none',
+        cursor: 'pointer',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        transition: 'all 0.2s ease-in-out',
+        fontSize: '1.125rem',
+        fontFamily: 'Helvetica Now Display',
+        fontWeight: '700'
+    });
 
     const leftAnimation = {
         hidden: { opacity: 0, y: 100 },
@@ -57,47 +84,6 @@ const HireSupport = () => {
         },
     };
 
-
-    const [openModal, setOpenModal] = useState(false);
-    const [currentPage, setCurrentPage] = useState(1);
-    const totalPages = 5;
-
-    const nextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
-
-    const previousPage = () => {
-        if (currentPage === 1) {
-            setOpenModal(false);
-        }
-        else {
-            setCurrentPage(currentPage - 1);
-        }
-    }
-
-    const handleSubmit = () => {
-        console.log('Form submitted');
-        setOpenModal(false); // Close the modal after submission
-    };
-
-    const renderPageContent = (page) => {
-        switch (page) {
-            case 1:
-                return <Modal1 nextPage={nextPage} previousPage={previousPage} />;
-            case 2:
-                return <Modal2 nextPage={nextPage} previousPage={previousPage} />;
-            case 3:
-                return <Modal3 nextPage={nextPage} previousPage={previousPage} />;
-            case 4:
-                return <Modal4 nextPage={nextPage} previousPage={previousPage} />;
-            case 5:
-                return <Modal5 nextPage={nextPage} previousPage={previousPage} />;
-            default:
-                return <div>Content not found</div>;
-        }
-    };
 
     const statsMetric = [
         {
@@ -144,6 +130,60 @@ const HireSupport = () => {
         };
     }, []);
 
+    ////////////////////////////////////////////////////////////////////////////////////
+    const controlsHireSupportFeatures = useAnimation();
+    const { ref: refHireSupportFeatures, inView: inViewHireSupportFeatures } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    const controlsStats = useAnimation();
+    const { ref: refStats, inView: inViewStats } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    const controlsHireSupport = useAnimation();
+    const { ref: refHireSupport, inView: inViewHireSupport } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    useEffect(() => {
+        if (inViewHireSupportFeatures) {
+            controlsHireSupportFeatures.start('visible');
+        }
+    }, [controlsHireSupportFeatures, inViewHireSupportFeatures]);
+
+    useEffect(() => {
+        if (inViewStats) {
+            controlsStats.start('visible');
+        }
+    }, [controlsStats, inViewStats]);
+
+    useEffect(() => {
+        if (inViewHireSupport) {
+            controlsHireSupport.start('visible');
+        }
+    }, [controlsHireSupport, inViewHireSupport]);
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: 120 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                when: 'beforeChildren',
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
         <div style={{ background: '#030303' }}>
             <HeaderHireSupport />
@@ -185,7 +225,9 @@ const HireSupport = () => {
                             </div>
                             <Button
                                 className='get-started-cta'
-                                onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>
+                                // onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}
+                                onClick={showModal}
+                            >
                                 Book Your Free Trial
                             </Button>
                         </motion.div>
@@ -213,7 +255,7 @@ const HireSupport = () => {
 
                 </section>
             </section>
-
+            {/* 
             <section className='hire-support-features-section'>
                 <div className='hire-support-features'>
                     <div className='feature1'>
@@ -303,7 +345,6 @@ const HireSupport = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -327,7 +368,7 @@ const HireSupport = () => {
                             <img src={logo4} />
 
                         </div>
-                        <Button className='free-quote-cta'>
+                        <Button className='free-quote-cta' onClick={showModal}>
                             Get Your Free Quote
                         </Button>
                     </div>
@@ -377,28 +418,231 @@ const HireSupport = () => {
                                     <p className='outsource-img-text'>
                                         How many staff do you need to outsource?
                                     </p>
-                                    <img src={outSourceImg} />
+                                    <div className='agent-val-grid'>
+                                        <Row gutter={[16, 16]}>
+                                            {agentSizeArray.map((agentSize, index) => (
+                                                <Col key={index} span={8} onClick={() => handleCellClick(index)} >
+                                                    <div style={agentValCellStyle(index)} className='agent-val-cell'>
+                                                        {agentSize}
+                                                    </div>
+                                                </Col>
+                                            ))}
+                                        </Row>
+                                    </div>
                                 </div>
 
-                                <Button className="start-cta" onClick={() => { setOpenModal(true); setCurrentPage(1); }}>
+                                <Button className="start-cta"
+                                    onClick={showModal}
+                                // onClick={() => { setOpenModal(true); setCurrentPage(1); }}
+                                >
                                     Start
                                 </Button>
-                                <Modal
-                                    className='test-name'
-                                    centered
-                                    open={openModal}
-                                    onOk={() => setOpenModal(false)}
-                                    onCancel={() => setOpenModal(false)}
-                                    footer={null}
-                                    closeIcon={<img src={ModalCloseIcon} />}
-
-                                >
-                                    {renderPageContent(currentPage)}
-                                </Modal>
                             </div>
                         </div>
                     </div>
                 </section>
+            </section> */}
+
+            <section className='hire-support-features-section'>
+                <motion.div
+                    className='hire-support-features'
+                    ref={refHireSupportFeatures}
+                    initial="hidden"
+                    animate={controlsHireSupportFeatures}
+                    variants={containerVariants}
+                >
+                    <div className='feature1'>
+                        <h1 className='header'>
+                            Experience Exceptional <span style={{ color: '#2A71FA' }}>Customer Support</span> with Inflexion Teams
+                        </h1>
+
+                        <motion.div className='feature1-cards-container' variants={itemVariants}>
+                            <Card className='feature1-card' >
+                                <img src={blue01} />
+                                <h3 className='feature-header'>Tell us about the agents you need</h3>
+                                <p className='feature-subtext'>
+                                    Share your customer support requirements with our experienced consultants. We'll leverage our AI-driven insights to craft a tailored plan that meets your unique needs.
+                                </p>
+                            </Card>
+                            <Card className='feature1-card' >
+                                <img src={blue02} />
+                                <h3 className='feature-header'>We Build Your Dream Team at Zero Risk</h3>
+                                <p className='feature-subtext'>
+                                    Inflexion Teams will recruit, onboard, and train your customer support team with our cutting-edge AI technology and industry expertise. You won’t pay anything for us to completely train and onboard your entire team.
+                                </p>
+                            </Card>
+                            <Card className='feature1-card' >
+                                <img src={blue03} />
+                                <h3 className='feature-header'>Enjoy a Fully-Trained Team with a Guarantee</h3>
+                                <p className='feature-subtext'>
+                                    Receive a completely vetted and trained customer support agent, backed by our advanced AI tools. Test their skills with our one-week money-back guarantee for total peace of mind.
+                                </p>
+                            </Card>
+                        </motion.div>
+                    </div>
+                    <div className='feature2'>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
+                            <h1 className='header'>
+                                Get expert AI-powered outsourcing assistance
+                            </h1>
+                            <p className='subtext'>
+                                Inflexion Teams is a leading premium outsourcing company specializing in customer support. Working with Inflexion Teams ensures you get high-quality, AI-enhanced customer service solutions - without compromise or hassle.
+                            </p>
+
+                            <motion.div className='feature2-cards-container'>
+                                <motion.div className='feature2-card card1' variants={itemVariants}>
+                                    <div className='left'>
+                                        <img src={f2Img1} />
+                                    </div>
+                                    <div className='right'>
+                                        <h2>It's efficient, innovative, & free!</h2>
+                                        <p>
+                                            Complete the quick 60-second quotation form and receive:<br />
+                                            <p style={{ margin: '1rem 0' }}>
+                                                — A tailored AI and remote team implementation strategy<br />
+                                                — Detailed consultation on optimizing your customer support<br />
+                                                — Free onboarding and training of agents customized to your company<br />
+                                            </p>
+                                            It is completely free to use, personalized for you and with zero obligation.
+                                        </p>
+                                    </div>
+                                </motion.div>
+                                <motion.div className='feature2-card card2' variants={itemVariants}>
+                                    <div className='left'>
+                                        <h2>The customer service innovators</h2>
+                                        <p>
+                                            Inflexion Teams offers the world's most advanced AI-powered customer support outsourcing.
+                                            Our service connects top global talent with cutting-edge AI tools to deliver exceptional customer
+                                            experiences.<br /><br />
+                                            Inflexion Teams is the leader in AI-enhanced customer support, providing end-to-end managed
+                                            services from recruitment and training to ongoing optimization.
+                                        </p>
+                                    </div>
+                                    <div className='right' style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                        <img src={f2Img2} />
+                                    </div>
+                                </motion.div>
+                                <motion.div className='feature2-card card3' variants={itemVariants}>
+                                    <div className='left'>
+                                        <img src={f2Img3} />
+                                    </div>
+                                    <div className='right'>
+                                        <h2>Confidential, transparent, <span style={{ textTransform: 'lowercase' }}>and</span> transformative</h2>
+                                        <p style={{ lineHeight: "160%", margin: '1.75rem 0' }}>
+                                            The process is completely confidential for you, the client, and designed to be seamless and impactful.
+                                            Our mission is to be a trusted partner in elevating your customer experience through AI and human talent.<br /><br />
+                                            We do not share your information with any third parties. We provide a detailed, personalized strategy and
+                                            free onboarding before any commitment. Explore how AI can transform your customer support with no pressure or risk.
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </motion.div>
+            </section>
+
+            <section className='stats-section'>
+                <motion.div
+                    className='stats'
+                    ref={refStats}
+                    initial="hidden"
+                    animate={controlsStats}
+                    variants={containerVariants}
+                >
+                    <div className='stats-text'>
+                        <span className='pre-header'>STATS</span>
+                        <h1 className='header'>Exceptional Service, Simplified</h1>
+                        <p className='subtext'>
+                            Inflexion Teams is the premier AI-enhanced customer support outsourcing solution.
+                            We specialize in delivering top-tier remote customer service teams, leveraging cutting
+                            -edge AI technology to elevate your customer experience. Our mission is to provide
+                            7-star customer service to businesses of all sizes, making exceptional support accessible
+                            and affordable.
+                        </p>
+
+                        <div className='company-logos-container' style={{ display: 'flex', gap: '3rem' }}>
+                            <img src={logo1} />
+                            <img src={logo2} />
+                            <img src={logo3} />
+                            <img src={logo4} />
+                        </div>
+                        <Button className='free-quote-cta' onClick={showModal}>
+                            Get Your Free Quote
+                        </Button>
+                    </div>
+                    <motion.div className='stats-metric'>
+                        {statsMetric.map((stats, index) => (
+                            <motion.div key={index} className={`stat-container container${index + 1}`} variants={itemVariants}>
+                                <h2 className='stat-header' style={{ color: stats.color }}>{stats.line1}</h2>
+                                <span className='stat-subtext'>{stats.line2}</span>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
+            </section>
+
+            <section className='hire-support-section'>
+                <motion.section
+                    className='get-started-section'
+                    ref={refHireSupport}
+                    initial="hidden"
+                    animate={controlsHireSupport}
+                    variants={containerVariants}
+                >
+                    <div className='get-started'>
+                        <h1 className='header'>
+                            Simplify your customer service. Consult with AI experts, free.
+                        </h1>
+                        <div className='get-started-details'>
+                            <div className='details-text'>
+                                <motion.div className='text text-1' variants={itemVariants}>
+                                    <img src={freeTagIcon} style={{ position: 'absolute', top: '-5rem', right: '2rem' }} />
+                                    <h3 className='heading'>Request your<br /> complimentary quote</h3>
+                                    <p className='sub-text'>
+                                        Hire end-to-end customer support and save up to 70% on staff costs. Speak with our outsourcing specialists to discover how Inflexion Teams can revolutionize your customer experience.
+                                    </p>
+                                </motion.div>
+                                <motion.div className='text text-2' variants={itemVariants}>
+                                    <h4 className='heading'>
+                                        Why partner with Inflexion Teams?
+                                    </h4>
+                                    <div className='list-container'>
+                                        <span className='list-item'><img src={checkIcon} />Access AI expertise from team of ex-Google, Yahoo & PhDs</span>
+                                        <span className='list-item'><img src={checkIcon} />Free training and onboarding of all agents</span>
+                                        <span className='list-item'><img src={checkIcon} />No risk and 1-week money back guarantee</span>
+                                    </div>
+                                </motion.div>
+                            </div>
+                            <motion.div className='popup-cta-container' variants={itemVariants}>
+                                <h2 className='heading'>
+                                    Get Started
+                                </h2>
+                                <div className='outsource-img-container'>
+                                    <p className='outsource-img-text'>
+                                        How many staff do you need to outsource?
+                                    </p>
+                                    <div className='agent-val-grid'>
+                                        <Row gutter={[16, 16]}>
+                                            {agentSizeArray.map((agentSize, index) => (
+                                                <Col key={index} span={8} onClick={() => handleCellClick(index)} >
+                                                    <div style={agentValCellStyle(index)} className='agent-val-cell'>
+                                                        {agentSize}
+                                                    </div>
+                                                </Col>
+                                            ))}
+                                        </Row>
+                                    </div>
+                                </div>
+                                <Button className="start-cta"
+                                    onClick={showModal}
+                                >
+                                    Start
+                                </Button>
+                            </motion.div>
+                        </div>
+                    </div>
+                </motion.section>
             </section>
 
 

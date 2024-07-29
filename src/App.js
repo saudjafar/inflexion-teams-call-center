@@ -13,26 +13,31 @@ import HomePage from './pages/HomePage';
 import LP3 from './pages/LP3';
 import HowItWorks from './pages/HowItWorks';
 import HireSupport from './pages/HireSupport';
+import { ModalProvider } from './contexts/ModalContext';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/lp1" element={<LP1 />} />
-          <Route path="/lp2" element={<LP2 />} />
-          <Route path="/lp3" element={<LP3 />} />
-          <Route path="/customer-support" element={<CustomerSupport />} />
-          <Route path="/technical-support" element={<TechnicalSupport />} />
-          <Route path="/data-management" element={<DataManagement />} />
-          <Route path="/content-moderation" element={<ContentModeration />} />
-          <Route path="/back-office" element={<BackOffice />} />
-          <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/hire-support" element={<HireSupport />} />
-        </Routes>
-      </div>
-    </Router>
+    <ModalProvider>
+
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/lp1" element={<LP1 />} />
+            <Route path="/lp2" element={<LP2 />} />
+            <Route path="/lp3" element={<LP3 />} />
+            <Route path="/customer-support" element={<CustomerSupport />} />
+            <Route path="/technical-support" element={<TechnicalSupport />} />
+            <Route path="/data-management" element={<DataManagement />} />
+            <Route path="/content-moderation" element={<ContentModeration />} />
+            <Route path="/back-office" element={<BackOffice />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/hire-support" element={<HireSupport />} />
+          </Routes>
+        </div>
+      </Router>
+    </ModalProvider>
+
   );
 }
 

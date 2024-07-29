@@ -140,6 +140,8 @@
                     margin-right: 3rem;
                     // margin-top: 5rem;
                 }
+
+
             }
         }
 
@@ -664,6 +666,11 @@
                         display: flex;
                         flex-direction: column;
                         gap: 3rem;
+
+                        .agent-val-cell:hover {
+                            background: #030303 !important;
+                            color: white !important;
+                        }
                     }
 
                     .outsource-img-text {

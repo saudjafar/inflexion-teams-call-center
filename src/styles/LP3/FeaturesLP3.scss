@@ -276,12 +276,12 @@
             align-items: center;
             gap: 0.625rem;
             border-radius: 2.5rem;
-            border: 1px solid #000;
-            background: #FFF;
-            color: #010101;
+            border: 1px solid #2A71FA;
+            background: #2A71FA;
+            color: #FFF;
             font-size: 1.2rem;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 500;
             line-height: normal;
             text-transform: capitalize;
             cursor: pointer;
@@ -289,31 +289,27 @@
         }
 
         .book-a-call-cta:hover {
-            border: 1px solid black;
-            background: #F2F2F2;
-            color: #0B0B0B;
+            // border: 1px solid black;
+            background: #FFF;
+            color: #2A71FA;
         }
 
-        // .book-a-call-cta .arrow-icon {
-        //     transition: opacity 0.3s ease-in-out;
-        // }
+        .book-a-call-cta .arrow-icon {
+            transition: opacity 0.3s ease-in-out;
+        }
 
-        // .book-a-call-cta:hover .arrow-icon {
-        //     display: none;
-        // }
+        .book-a-call-cta:hover .arrow-icon {
+            display: none;
+        }
 
-        // .book-a-call-cta .arrow-icon-hover {
-        //     display: none;
-        // }
+        .book-a-call-cta .arrow-icon-hover {
+            display: none;
+        }
 
-        // .book-a-call-cta:hover .arrow-icon-hover {
-        //     display: inline;
-        // }
+        .book-a-call-cta:hover .arrow-icon-hover {
+            display: inline;
+        }
 
-        // .book-a-call-cta:hover {
-        //     background: #010101;
-        //     color: #FFF;
-        // }
 
         .hr-line {
             margin: 0 auto;
