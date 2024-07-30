@@ -90,7 +90,7 @@ const Feature4LP3 = () => {
                 </motion.div>
                 <motion.div variants={childVariants}>
                     <Button className='why-us-cta'>
-                        See Why Us <img className='arrow-icon' src={arrowRight} /><img className='arrow-icon-hover' src={arrowRightWhite} />
+                        Discover Our Edge <img className='arrow-icon' src={arrowRight} /><img className='arrow-icon-hover' src={arrowRightWhite} />
                     </Button>
                 </motion.div>
             </motion.div>

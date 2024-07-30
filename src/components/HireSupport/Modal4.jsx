@@ -5,7 +5,7 @@ import arrowRightBlue from '../../assets/svgs/arrow-blue.svg';
 import { Button, Input, Row, Col } from 'antd';
 import checkIcon from '../../assets/svgs/check-whiteblu.svg'
 import helpIcon from '../../assets/svgs/help-icon.svg'
-
+import { Checkbox } from 'antd';
 const { TextArea } = Input;
 
 const Modal4 = ({ nextPage, previousPage }) => {
@@ -13,11 +13,13 @@ const Modal4 = ({ nextPage, previousPage }) => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [cellNumber, setCellNumber] = useState('');
+    const [disclaimer, setDisclaimer] = useState(false);
     const [errors, setErrors] = useState({
         firstName: '',
         lastName: '',
         email: '',
-        cellNumber: ''
+        cellNumber: '',
+        disclaimer: ''
     });
 
     const handleNextPage = () => {
@@ -41,6 +43,10 @@ const Modal4 = ({ nextPage, previousPage }) => {
             newErrors.cellNumber = 'Please enter your cell number.';
         }
 
+        if (!disclaimer) {
+            newErrors.disclaimer = 'Please accept the terms & conditions.';
+
+        }
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
         } else {
@@ -163,9 +169,17 @@ const Modal4 = ({ nextPage, previousPage }) => {
 
                 </div>
 
-                <p className='disclaimer-text'>
-                    I agree to be contacted by Inflexion Teams about their managed customer service solutions. We respect your privacy and will only use your information to reach out about our services.
-                </p>
+                <div className='disclaimer-container'>
+                    <p className='disclaimer-text'>
+                        <Checkbox className='checkbox' onChange={() => { setDisclaimer(!disclaimer) }} />
+                        <span>I agree to be contacted by Inflexion Teams about their managed
+                            customer service solutions. We respect your privacy and will only
+                            use your information to reach out about our services.
+                        </span>
+                    </p>
+                    {errors.disclaimer && <div className='error-text' style={{ marginTop: '0.5rem', marginLeft: '1.75rem' }}>{errors.disclaimer}</div>}
+
+                </div>
 
                 <div className='cta-container'>
                     <Button className='begin-cta' onClick={handleNextPage}>

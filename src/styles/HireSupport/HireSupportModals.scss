@@ -848,6 +848,13 @@
             /* 162.5% */
             letter-spacing: 0.02rem;
             max-width: 50ch;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+
+            .checkbox {
+                margin-top: 0.15rem;
+            }
         }
 
         .cta-container {

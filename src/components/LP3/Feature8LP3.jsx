@@ -7,7 +7,8 @@ const Feature8LP3 = () => {
             <img className='dots-svg' src={dotsLP3F8} />
             <div className='feature-8-LP3'>
                 <h1 className='header'>
-                    LEARN HOW TO SAVE UP TO 70% ON YOUR CX.  DOWNLOAD OUR FREE GUIDE NOW.
+                    Learn how to save up to 70% on your CX.<br />
+                    <span style={{ fontWeight: '700' }}>Download our free guide now.</span>
                 </h1>
 
                 <div className="input-container">
