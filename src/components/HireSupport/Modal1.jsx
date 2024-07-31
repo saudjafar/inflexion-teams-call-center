@@ -43,7 +43,7 @@ const Modal1 = ({ nextPage, previousPage }) => {
         <div className='modal-container modal-1-container'>
             <Modal123Left />
             <div className='modal1-right'>
-                <div className='page-no'><span className='curr-page'>1 </span>/ 4</div>
+                {/* <div className='page-no'><span className='curr-page'>1 </span>/ 4</div> */}
 
                 <h1 className='modal1-r-heading'>
                     Let's understand your customer service needs

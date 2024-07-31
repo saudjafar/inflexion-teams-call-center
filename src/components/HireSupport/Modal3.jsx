@@ -39,7 +39,7 @@ const Modal3 = ({ nextPage, previousPage }) => {
         <div className='modal-container modal-3-container'>
             <Modal123Left />
             <div className='modal3-right'>
-                <div className='page-no'><span className='curr-page'>3 </span>/ 4</div>
+                {/* <div className='page-no'><span className='curr-page'>3 </span>/ 4</div> */}
                 <h1 className='modal3-r-heading'>
                     Specific Requirements
                 </h1>

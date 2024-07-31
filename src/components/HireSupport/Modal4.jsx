@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../../styles/HireSupport/HireSupportModals.scss';
 import arrowWhite from '../../assets/svgs/arrow-white.svg';
 import arrowRightBlue from '../../assets/svgs/arrow-blue.svg';
-import { Button, Input, Row, Col } from 'antd';
+import { Button, Input, Row, Col, Tooltip } from 'antd';
 import checkIcon from '../../assets/svgs/check-whiteblu.svg'
 import helpIcon from '../../assets/svgs/help-icon.svg'
 import { Checkbox } from 'antd';
@@ -105,7 +105,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
                 </div>
             </div>
             <div className='modal4-right'>
-                <div className='page-no'><span className='curr-page'>4 </span>/ 4</div>
+                {/* <div className='page-no'><span className='curr-page'>4 </span>/ 4</div> */}
                 <h1 className='modal4-r-heading'>
                     Level up your customer service today.
                 </h1>
@@ -155,7 +155,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
 
                     <div className='ip3'>
                         <h1 className='input-header'>
-                            Cell Number<strong>*</strong> <img src={helpIcon} />
+                            Cell Number<strong>*</strong> <Tooltip placement="right" title={<span>Dummy text</span>}><img src={helpIcon} style={{ position: 'relative', top: '0.05rem' }} /></Tooltip>
                         </h1>
                         <Input
                             className='input-element'

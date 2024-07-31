@@ -626,7 +626,7 @@ const HireSupport = () => {
                                         <Row gutter={[16, 16]}>
                                             {agentSizeArray.map((agentSize, index) => (
                                                 <Col key={index} span={8} onClick={() => handleCellClick(index)} >
-                                                    <div style={agentValCellStyle(index)} className='agent-val-cell'>
+                                                    <div onClick={showModal} style={agentValCellStyle(index)} className='agent-val-cell'>
                                                         {agentSize}
                                                     </div>
                                                 </Col>

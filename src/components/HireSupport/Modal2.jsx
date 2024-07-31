@@ -37,7 +37,7 @@ const Modal2 = ({ nextPage, previousPage }) => {
         }
     }
 
-    const companySizeArray = ['1-10', '11-50', '51-100', '101 - 250', '251-500', '500+']
+    const companySizeArray = ['1-10 staff', '11-50 staff', '51-100 staff', '101 - 250 staff', '251-500 staff', '500+ staff']
 
     const companyValCellStyle = (cellId) => ({
         borderRadius: '2.5rem',
@@ -59,7 +59,7 @@ const Modal2 = ({ nextPage, previousPage }) => {
         <div className='modal-container modal-2-container'>
             <Modal123Left />
             <div className='modal2-right'>
-                <div className='page-no'><span className='curr-page'>2 </span>/ 4</div>
+                {/* <div className='page-no'><span className='curr-page'>2 </span>/ 4</div> */}
                 <h1 className='modal2-r-heading'>
                     Tell us about your company
                 </h1>
@@ -92,19 +92,120 @@ const Modal2 = ({ nextPage, previousPage }) => {
                         onChange={handleDropdownChange}
                         options={[
                             {
-                                value: 'Technology',
-                                label: 'Technology',
+                                value: 'advertising-and-pr',
+                                label: 'Advertising & PR',
                             },
                             {
-                                value: 'Option2',
-                                label: 'Option2',
+                                value: 'construction-renovation',
+                                label: 'Construction Renovation',
                             },
                             {
-                                value: 'Option3',
-                                label: 'Option3',
+                                value: 'digital-marketing',
+                                label: 'Digital Marketing',
+                            },
+                            {
+                                value: 'ecommerce',
+                                label: 'Ecommerce',
+                            },
+                            {
+                                value: 'education',
+                                label: 'Education',
+                            },
+                            {
+                                value: 'energy',
+                                label: 'Energy',
+                            },
+                            {
+                                value: 'entertainment',
+                                label: 'Entertainment',
+                            },
+                            {
+                                value: 'financial-services',
+                                label: 'Financial Services',
+                            },
+                            {
+                                value: 'food-beverage',
+                                label: 'Food & Beverage',
+                            },
+                            {
+                                value: 'game-dev-support',
+                                label: 'Game Dev & Support',
+                            },
+                            {
+                                value: 'government',
+                                label: 'Government',
+                            },
+                            {
+                                value: 'hardware-tech-it',
+                                label: 'Hardware Tech/IT',
+                            },
+                            {
+                                value: 'health-care',
+                                label: 'Healthcare',
+                            },
+                            {
+                                value: 'hospitality',
+                                label: 'Hospitality',
+                            },
+                            {
+                                value: 'legal',
+                                label: 'Legal',
+                            },
+                            {
+                                value: 'manufacturing',
+                                label: 'Manufacturing',
+                            },
+                            {
+                                value: 'media-publishing',
+                                label: 'Media Publishing',
+                            },
+                            {
+                                value: 'non-profit',
+                                label: 'Non Profit',
+                            },
+                            {
+                                value: 'pharmaceutical',
+                                label: 'Pharmaceutical',
+                            },
+                            {
+                                value: 'public-utilities',
+                                label: 'Public Utilities',
+                            },
+                            {
+                                value: 'real-estate',
+                                label: 'Real Estate',
+                            },
+                            {
+                                value: 'recruiting-staffing',
+                                label: 'Recruiting Staffing',
+                            },
+                            {
+                                value: 'retail',
+                                label: 'Retail',
+                            },
+                            {
+                                value: 'software-tech-it',
+                                label: 'Software Tech/IT',
+                            },
+                            {
+                                value: 'telecoms',
+                                label: 'Telecoms',
+                            },
+                            {
+                                value: 'transportation',
+                                label: 'Transportation',
+                            },
+                            {
+                                value: 'travel',
+                                label: 'Travel',
+                            },
+                            {
+                                value: 'other',
+                                label: 'Other sector',
                             },
                         ]}
                     />
+
                     <span className='error-text' style={{ display: ` ${dropdownError ? 'block' : 'none'}` }}>
                         Please select an option.
                     </span>

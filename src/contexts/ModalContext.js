@@ -6,10 +6,14 @@ import Modal2 from '../components/HireSupport/Modal2';
 import Modal3 from '../components/HireSupport/Modal3';
 import Modal4 from '../components/HireSupport/Modal4';
 import Modal5 from '../components/HireSupport/Modal5';
+import { Progress } from 'antd'
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [progressPercentage, setProgressPercentage] = useState(25);
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 5;
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -21,12 +25,11 @@ export const ModalProvider = ({ children }) => {
   };
 
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 5;
 
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
+      setProgressPercentage((prev) => (prev + 25 <= 100 ? prev + 25 : 100));
     }
   };
 
@@ -36,6 +39,7 @@ export const ModalProvider = ({ children }) => {
     }
     else {
       setCurrentPage(currentPage - 1);
+      setProgressPercentage((prev) => (prev - 25 >= 25 ? (prev - 25) : 25));
     }
   }
 
@@ -74,6 +78,14 @@ export const ModalProvider = ({ children }) => {
         footer={null}
         closeIcon={<img src={ModalCloseIcon} />}
       >
+        {/* <span>ello</span> */}
+        {currentPage != 5 && (
+
+          <div style={{ width: '560px', position: 'absolute', top: '4.5rem', left: '39rem' }}>
+            <Progress percent={progressPercentage} showInfo={false} size={[560, 14]} />
+          </div>
+
+        )}
         {/* <iframe
           src="https://www.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG"
           style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem" }}

@@ -7,20 +7,22 @@ const FooterLP3 = () => {
             <div className='LP3-footer'>
                 <div className='text-container'>
                     <div className='left'>
-                        <span style={{ cursor: 'auto' }}>© 2024 Inflexion.AI</span>
-                        <span>Terms of Use</span>
-                        <span>Privacy Policy</span>
+                        {/* <span style={{ cursor: 'auto' }}>© 2024 Inflexion.AI</span> */}
+                        {/* <span>Terms of Use</span>
+                        <span>Privacy Policy</span> */}
 
                     </div>
                     <div className='right'>
-                        <span>Features</span>
+                        {/* <span>Features</span>
                         <span>Blog</span>
-                        <span>How we work?</span>
+                        <span>How we work?</span> */}
 
                     </div>
                 </div>
                 <div className='watermark-container'>
                     <img src={waterMarkImg} alt='watermark' />
+                    <span style={{ cursor: 'auto' }}>© 2024 Inflexion.AI</span>
+
                 </div>
             </div>
         </section>

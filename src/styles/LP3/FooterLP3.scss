@@ -40,9 +40,25 @@
         }
 
         .watermark-container {
+            & {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
             img {
                 max-width: 100%;
                 height: auto;
+            }
+
+            span {
+                color: #928C97;
+                font-size: 1.1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.5rem;
+                // text-transform: uppercase;
+                font-family: 'Helvetica Neue Light';
             }
         }
     }
