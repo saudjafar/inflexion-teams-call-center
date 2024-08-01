@@ -22,6 +22,7 @@ export const ModalProvider = ({ children }) => {
 
   const handleCancel = () => {
     setIsModalVisible(false);
+    setProgressPercentage(25);
   };
 
 
