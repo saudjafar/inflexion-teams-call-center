@@ -38,6 +38,7 @@ import { useInView } from 'react-intersection-observer'
 import "animate.css/animate.compat.css"
 
 import { useModal } from '../contexts/ModalContext';
+import StatsMiniSlider from '../components/HireSupport/StatsMiniSlider'
 
 const HireSupport = () => {
     const { showModal } = useModal();
@@ -213,8 +214,8 @@ const HireSupport = () => {
             <HeaderHireSupport />
             <section className='hire-support-hero-section'>
                 <section className='hire-support-hero'>
+                    <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', zIndex: '1', maxWidth: '100%', height: 'auto', left: '0' }} />
                     <div className='hero-hire-support'>
-                        <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', zIndex: '1' }} />
                         <motion.div
                             initial="hidden"
                             animate="visible"
@@ -263,7 +264,7 @@ const HireSupport = () => {
                             className='right'
                         >
                             {/* <HeroSlider /> */}
-                            <img src={heroImg} />
+                            <img src={heroImg} style={{ maxWidth: '100%', height: 'auto' }} />
                         </motion.div>
                     </div>
 
@@ -335,8 +336,8 @@ const HireSupport = () => {
 
                             <motion.div className='feature2-cards-container' variants={containerVariants}>
                                 <motion.div className='feature2-card card1' variants={itemVariants}>
-                                    <div className='left'>
-                                        <img src={f2Img1} />
+                                    <div className='left' style={{ display: 'flex' }}>
+                                        <img src={f2Img1} style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }} />
                                     </div>
                                     <div className='right'>
                                         <h2>It's efficient, innovative, & free!</h2>
@@ -362,13 +363,13 @@ const HireSupport = () => {
                                             services from recruitment and training to ongoing optimization.
                                         </p>
                                     </div>
-                                    <div className='right' style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                                        <img src={f2Img2} />
+                                    <div className='right' style={{ display: 'flex' }}>
+                                        <img src={f2Img2} style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }} />
                                     </div>
                                 </motion.div>
                                 <motion.div className='feature2-card card3' variants={itemVariants}>
-                                    <div className='left'>
-                                        <img src={f2Img3} />
+                                    <div className='left' style={{ display: 'flex' }}>
+                                        <img src={f2Img3} style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }} />
                                     </div>
                                     <div className='right'>
                                         <h2>Confidential, transparent, <span style={{ textTransform: 'lowercase' }}>and</span> transformative</h2>
@@ -505,10 +506,11 @@ const HireSupport = () => {
                         </p>
 
                         <div className='company-logos-container' style={{ display: 'flex', gap: '3rem' }}>
-                            <img src={logo1} />
+                            {/* <img src={logo1} />
                             <img src={logo2} />
                             <img src={logo3} />
-                            <img src={logo4} />
+                            <img src={logo4} /> */}
+                            <StatsMiniSlider />
                         </div>
                         <Button className='free-quote-cta' onClick={showModal}>
                             Get Your Free Quote
@@ -540,7 +542,7 @@ const HireSupport = () => {
                         <div className='get-started-details'>
                             <div className='details-text'>
                                 <motion.div className='text text-1' variants={itemVariants}>
-                                    <img src={freeTagIcon} style={{ position: 'absolute', top: '-5rem', right: '2rem' }} />
+                                    <img src={freeTagIcon} style={{ position: 'absolute', top: '-5rem', right: '2rem', maxWidth: '100%', height: 'auto' }} />
                                     <h3 className='heading'>Request your<br /> complimentary quote</h3>
                                     <p className='sub-text'>
                                         Hire end-to-end customer support and save up to 70% on staff costs. Speak with our outsourcing specialists to discover how Inflexion Teams can revolutionize your customer experience.
@@ -568,7 +570,14 @@ const HireSupport = () => {
                                     <div className='agent-val-grid'>
                                         <Row gutter={[16, 16]}>
                                             {agentSizeArray.map((agentSize, index) => (
-                                                <Col key={index} span={8} onClick={() => handleCellClick(index)} >
+                                                <Col key={index}
+                                                    xs={12}
+                                                    sm={8}
+                                                    md={8}
+                                                    lg={8}
+                                                    xl={12}
+                                                    xxl={8}
+                                                    onClick={() => handleCellClick(index)} >
                                                     <div onClick={showModal} style={agentValCellStyle(index)} className='agent-val-cell'>
                                                         {agentSize}
                                                     </div>

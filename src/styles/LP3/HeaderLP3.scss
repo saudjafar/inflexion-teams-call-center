@@ -69,3 +69,21 @@
 
     }
 }
+
+@media (max-width: 768px) {
+    .header-LP3-container {
+        padding: 1.75rem 1.5rem !important;
+
+
+        .header-LP3 {
+            .quote-cta {
+                color: #FFF;
+                font-family: "Helvetica Neue";
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+}

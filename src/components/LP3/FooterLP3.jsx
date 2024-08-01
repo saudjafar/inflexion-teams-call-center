@@ -21,9 +21,12 @@ const FooterLP3 = () => {
                 </div>
                 <div className='watermark-container'>
                     <img src={waterMarkImg} alt='watermark' />
-                    <span style={{ cursor: 'auto' }}>© 2024 Inflexion.AI</span>
 
                 </div>
+            </div>
+            <div className='copyright-text-container'>
+                <span style={{ cursor: 'auto' }}>© 2024 Inflexion.AI</span>
+
             </div>
         </section>
     )

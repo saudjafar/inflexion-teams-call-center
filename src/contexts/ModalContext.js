@@ -79,11 +79,10 @@ export const ModalProvider = ({ children }) => {
         footer={null}
         closeIcon={<img src={ModalCloseIcon} />}
       >
-        {/* <span>ello</span> */}
         {currentPage != 5 && (
 
           <div style={{ width: '560px', position: 'absolute', top: '4.5rem', left: '39rem' }}>
-            <Progress percent={progressPercentage} showInfo={false} size={[560, 14]} />
+            <Progress percent={progressPercentage} showInfo={false} size={{ height: 14 }} />
           </div>
 
         )}

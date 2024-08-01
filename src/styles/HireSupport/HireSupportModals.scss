@@ -1090,3 +1090,67 @@
 
     }
 }
+
+
+@media (max-width: 1250px) {
+    .modal-container {
+        flex-direction: column;
+
+        .modal123-left {
+            width: auto !important;
+            border-radius: 2rem;
+            border-top-left-radius: 0rem;
+            border-top-right-radius: 0rem;
+            order: 2;
+            padding: 4rem 1.5rem 7.5rem;
+        }
+
+        .modal1-right {
+            border-radius: 2rem;
+            padding: 8.5rem 1.5rem 10rem;
+            width: auto !important;
+        }
+
+        .modal2-right {
+            border-radius: 2rem;
+            padding: 8.5rem 1.5rem 10rem;
+            width: auto !important;
+        }
+
+        .modal3-right {
+            border-radius: 2rem;
+            padding: 8.5rem 1.5rem 10rem;
+            width: auto !important;
+        }
+
+        .modal4-left {
+            width: auto !important;
+            border-radius: 2rem;
+            border-top-left-radius: 0rem;
+            border-top-right-radius: 0rem;
+            order: 2;
+            padding: 4rem 1.5rem 7.5rem;
+        }
+
+        .modal4-right {
+            border-radius: 2rem;
+            padding: 8.5rem 1.5rem 10rem;
+            width: auto !important;
+        }
+
+        .modal5-left {
+            width: auto !important;
+            border-radius: 2rem;
+            border-top-left-radius: 0rem;
+            border-top-right-radius: 0rem;
+            order: 2;
+            padding: 4rem 1.5rem 7.5rem;
+        }
+
+        .modal5-right {
+            border-radius: 2rem;
+            padding: 8.5rem 1.5rem 10rem;
+            width: auto !important;
+        }
+    }
+}

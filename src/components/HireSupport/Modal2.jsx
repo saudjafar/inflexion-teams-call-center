@@ -71,7 +71,12 @@ const Modal2 = ({ nextPage, previousPage }) => {
                 <div className='company-val-grid' style={{ marginTop: '3.37rem' }}>
                     <Row gutter={[16, 16]}>
                         {companySizeArray.map((companySize, index) => (
-                            <Col key={index} span={8} onClick={() => handleCellClick(index)}>
+                            <Col key={index} xs={12}
+                                sm={12}
+                                md={12}
+                                lg={8}
+                                xl={12}
+                                xxl={8} onClick={() => handleCellClick(index)}>
                                 <div style={companyValCellStyle(index)} className='company-val-cell'>
                                     {companySize}
                                 </div>

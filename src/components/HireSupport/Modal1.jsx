@@ -56,7 +56,14 @@ const Modal1 = ({ nextPage, previousPage }) => {
                 <div className='agent-val-grid' style={{ marginTop: '2.56rem' }}>
                     <Row gutter={[16, 16]}>
                         {agentSizeArray.map((agentSize, index) => (
-                            <Col key={index} span={8} onClick={() => handleCellClick(index)} >
+                            <Col key={index}
+                                xs={12}
+                                sm={12}
+                                md={12}
+                                lg={8}
+                                xl={12}
+                                xxl={8}
+                                onClick={() => handleCellClick(index)} >
                                 <div style={agentValCellStyle(index)} className='agent-val-cell'>
                                     {agentSize}
                                 </div>

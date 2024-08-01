@@ -164,6 +164,11 @@
             margin-top: 1rem;
             display: flex;
             justify-content: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
 }
@@ -417,7 +422,7 @@
                 letter-spacing: 0.025rem;
                 font-family: "Helvetica Now Display";
 
-                text-transform: capitalize;
+                // text-transform: capitalize;
             }
 
             .free-quote-cta {
@@ -448,8 +453,7 @@
 
         .stats-metric {
             & {
-                display: flex;
-                flex-direction: column;
+                display: grid;
                 gap: 3rem;
                 width: 50%;
                 max-width: fit-content;
@@ -458,6 +462,8 @@
                 border-radius: 2.125rem;
                 border: 1px solid #4D4D4D;
                 background: rgba(255, 255, 255, 0.05);
+                grid-template-columns: repeat(1, 4fr);
+
             }
 
 
@@ -531,6 +537,7 @@
             }
 
             .header {
+                margin: 0;
                 color: #FFF;
                 font-size: 4rem;
                 font-style: normal;
@@ -540,6 +547,7 @@
                 text-transform: capitalize;
                 max-width: 55rem;
                 text-align: center;
+                font-family: 'Helvetica Now Display';
             }
 
             .get-started-details {
@@ -564,17 +572,20 @@
                         background: rgba(255, 255, 255, 0.15);
                         display: flex;
                         flex-direction: column;
+                        font-family: 'Helvetica Now Display';
                     }
 
                     .text-1 {
                         & {
                             gap: 3rem;
                             position: relative;
+                            background: #FFF;
+                            color: #111;
                         }
 
                         .heading {
                             margin: 0;
-                            color: #FFF;
+                            color: #111;
                             font-size: 2.25rem;
                             font-style: normal;
                             font-weight: 700;
@@ -586,13 +597,13 @@
 
                         .sub-text {
                             margin: 0;
-                            color: #FFF;
+                            color: #5d5d5d;
                             font-size: 1.25rem;
                             font-style: normal;
                             font-weight: 500;
                             line-height: 2rem;
                             /* 160% */
-                            text-transform: capitalize;
+                            // text-transform: capitalize;
                             max-width: 45ch;
 
                         }
@@ -612,6 +623,8 @@
                             line-height: 4.75rem;
                             /* 281.481% */
                             text-transform: capitalize;
+                            font-family: 'Helvetica Now Display';
+
                         }
 
                         .list-container {
@@ -633,6 +646,8 @@
                                 line-height: 2.125rem;
                                 /* 170% */
                                 max-width: 45ch;
+                                font-family: 'Helvetica Now Display';
+
                             }
                         }
                     }
@@ -660,6 +675,7 @@
                         line-height: 4.75rem;
                         /* 135.714% */
                         text-transform: capitalize;
+                        font-family: 'Helvetica Now Display';
                     }
 
                     .outsource-img-container {
@@ -680,7 +696,7 @@
                         font-weight: 600;
                         line-height: 125%;
                         margin: 0;
-
+                        font-family: 'Helvetica Now Display';
                     }
 
                     .start-cta {
@@ -726,21 +742,6 @@
         position: absolute;
         right: 1.81rem;
         top: 1.56rem;
-        // transition: all ease-in-out 0.3ms;
-
-
-        // .ant-modal-close-x {
-        //     border-radius: 2rem;
-        //     width: 2.5rem;
-        //     transition: all ease-in-out 0.3ms;
-
-        // }
-
-        // .ant-modal-close-x:hover {
-        //     background: #CECECE;
-        //     transition: all ease-in-out 0.3ms;
-
-        // }
     }
 
     .ant-modal-close:hover {
@@ -756,7 +757,6 @@
 .ant-modal-root .ant-modal-centered .ant-modal {
     width: 80rem !important;
     // scale: 0.85;
-
 }
 
 .footer {
@@ -775,4 +775,422 @@
 .footer.show {
     display: block;
     /* Show the footer when the class 'show' is added */
+}
+
+
+@media (max-width: 1400px) {
+
+    .stats-section .stats .stats-metric {
+        padding-right: 4.5rem !important;
+    }
+
+    .hire-support-features-section .hire-support-features .feature1 .feature1-cards-container {
+        max-width: 100% !important;
+    }
+
+    // .hire-support-section .get-started-section .get-started .get-started-details .popup-cta-container .outsource-img-container .agent-val-grid .agent-val-cell {
+    //     font-size: 1rem !important;
+    //     padding: 1rem !important;
+    // }
+
+    .hire-support-hero-section {
+        .hire-support-hero {
+            .hero-hire-support {
+                .left {
+                    & {
+                        gap: 3.25rem;
+                    }
+
+                    .pre-header {
+                        font-size: 1rem;
+                    }
+
+                    .header {
+                        font-size: 3.5rem;
+                    }
+
+                    .sub-headline {
+                        font-size: 1.25rem;
+                        max-width: 48ch;
+                    }
+
+                    .what-you-recieve {
+                        .text {
+                            font-size: 1.25rem;
+                        }
+
+                        .list-container {
+                            padding-top: 2rem;
+
+                            .list-item {
+                                font-size: 1.1rem;
+                                line-height: 150%;
+                            }
+                        }
+                    }
+
+                    .get-started-cta {
+                        padding: 2rem 1.625rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .hire-support-hero {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .hire-support-hero-section .hire-support-hero .hero-hire-support {
+        flex-direction: column;
+        gap: 6rem;
+        align-items: center;
+
+        .left {
+            padding-left: 0;
+        }
+
+        .right {
+            margin-right: 0;
+        }
+    }
+
+    .hire-support-features-section .hire-support-features {
+        & {
+            padding: 7.5rem 1.5rem 8.5rem;
+            gap: 9rem !important;
+        }
+
+        .feature1 {
+            gap: 6rem !important;
+        }
+
+        .header {
+            font-size: 3.25rem !important;
+            line-height: 127.5% !important;
+        }
+
+        .feature1-cards-container {
+            flex-direction: column;
+        }
+
+        .ant-card-body {
+            .feature-header {
+                max-width: 24ch !important;
+            }
+
+            .feature-subtext {
+                max-width: 42ch !important;
+            }
+        }
+
+        .feature2 {
+            .header {
+                font-size: 3.25rem !important;
+                line-height: 127.5% !important;
+            }
+
+            .subtext {
+                max-width: 48ch;
+            }
+
+            .feature2-cards-container {
+                & {
+                    margin-top: 2rem;
+                    align-items: center;
+                }
+
+                .feature2-card {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+                }
+
+
+                .card1,
+                .card3 {
+                    .left {
+                        width: 100% !important;
+                        justify-content: center;
+                    }
+
+                    .right {
+                        width: 80% !important;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                .card2 {
+                    .left {
+                        order: 2;
+                        width: 80% !important;
+                        justify-content: center;
+
+                    }
+
+                    .right {
+                        width: 100% !important;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .stats-section .stats {
+        & {
+            flex-direction: column;
+            padding: 8rem 1.5rem;
+            gap: 6rem;
+        }
+
+        .stats-text {
+            width: 80%;
+            gap: 4rem;
+
+            .header {
+                font-size: 3.5rem;
+            }
+        }
+
+        .stats-metric {
+            width: 80%;
+            max-width: 100%;
+            align-items: center;
+            // align-items: center;
+            grid-template-columns: repeat(2, 2fr);
+            padding-left: 2.5rem;
+            padding-right: 2.5rem !important;
+        }
+    }
+
+    .hire-support-section .get-started-section .get-started {
+        & {
+            padding: 7rem 1.5rem !important;
+        }
+
+        .header {
+            font-size: 3.5rem;
+            max-width: 20ch;
+        }
+
+        .get-started-details {
+            & {
+                flex-direction: column;
+            }
+
+            .details-text .text-2 .list-container .list-item {
+                max-width: none;
+            }
+
+            .popup-cta-container {
+                // padding: 3rem 2rem;
+                gap: 5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .ant-modal-root .ant-modal-centered .ant-modal {
+        width: 30rem !important;
+        // scale: 0.85;
+    }
+
+
+    .hire-support-hero-section .hire-support-hero .hero-hire-support {
+        .left {
+            .pre-header {
+                line-height: 168%;
+            }
+
+            .header {
+                font-size: 3rem;
+                line-height: 122.97%;
+            }
+
+
+        }
+    }
+
+    .hire-support-features-section .hire-support-features {
+        & {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .feature1 {
+            & {
+                gap: 5rem;
+            }
+
+            .header {
+                font-size: 2.5rem !important;
+                line-height: 127.5% !important;
+            }
+
+            .feature1-cards-container {
+                .feature-header {
+                    font-size: 1.75rem !important;
+                    line-height: 155% !important;
+                    max-width: none !important;
+                }
+
+                .feature-subtext {
+                    font-size: 1rem !important;
+                    line-height: 193.5% !important;
+                    max-width: none !important;
+                }
+            }
+        }
+
+        .feature2 {
+            .header {
+                font-size: 2.5rem !important;
+                line-height: 133.33% !important;
+                max-width: none;
+            }
+
+            .subtext {
+                font-size: 1rem !important;
+                line-height: 150% !important;
+                padding: 0 0.75rem;
+            }
+
+            .feature2-cards-container {
+
+                .card1,
+                .card3 {
+                    .right {
+                        width: 95% !important;
+
+                        h2 {
+                            font-size: 2rem !important;
+                            line-height: 150% !important;
+                        }
+
+                        p {
+                            font-size: 1rem !important;
+                            line-height: 150% !important;
+                        }
+                    }
+                }
+
+                .card2 {
+                    .left {
+                        width: 95% !important;
+
+                        h2 {
+                            font-size: 2rem !important;
+                            line-height: 150% !important;
+                        }
+
+                        p {
+                            font-size: 1rem !important;
+                            line-height: 150% !important;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .stats-section .stats {
+        .stats-text {
+            width: 100% !important;
+
+            .header {
+                font-size: 2.625rem;
+                line-height: 133.33%;
+            }
+
+            .subtext {
+                font-size: 1rem !important;
+                line-height: 150%;
+            }
+        }
+
+        .stats-metric {
+            grid-template-columns: repeat(1, 4fr);
+            align-items: center;
+        }
+    }
+
+    .hire-support-section .get-started-section .get-started {
+        .header {
+            font-size: 2.625rem !important;
+            line-height: 133.33% !important;
+        }
+
+        .get-started-details {
+            .details-text {
+                .text-1 {
+                    gap: 2rem;
+
+                    .heading {
+                        font-size: 1.75rem !important;
+                        line-height: 103% !important;
+                    }
+
+                    .sub-text {
+                        font-size: 1rem !important;
+                        line-height: 150%;
+                    }
+
+                    img {
+                        scale: 0.75;
+                        right: -1rem !important;
+                    }
+                }
+
+                .text-2 {
+                    gap: 2.25rem;
+
+                    .heading {
+                        font-size: 1.3125rem !important;
+                        line-height: 150% !important;
+                    }
+
+                    .list-container .list-item {
+                        font-size: 1rem !important;
+                        line-height: 150% !important;
+                    }
+
+                }
+
+
+            }
+
+            .popup-cta-container {
+                padding: 3rem 2rem 2rem;
+
+                .heading {
+                    font-size: 2.2395rem;
+                    line-height: 3.03931rem;
+                    /* 135.714% */
+
+                }
+
+                .outsource-img-container {
+
+                    .outsource-img-text {
+                        font-size: 1rem;
+                        line-height: 150%;
+                    }
+
+                    .agent-val-cell {
+                        font-size: 0.8rem !important;
+                        padding: 0.84rem !important;
+
+                    }
+                }
+            }
+        }
+    }
+
 }
