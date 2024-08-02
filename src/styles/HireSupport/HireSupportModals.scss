@@ -854,7 +854,7 @@
             line-height: 1.625rem;
             /* 162.5% */
             letter-spacing: 0.02rem;
-            max-width: 50ch;
+            // max-width: 50ch;
             display: flex;
             gap: 0.75rem;
             align-items: flex-start;
@@ -1103,12 +1103,26 @@
             border-top-right-radius: 0rem;
             order: 2;
             padding: 4rem 1.5rem 7.5rem;
+
+            .l-2 .l2-text {
+                max-width: none !important;
+            }
+
+            .l-2 .l2-grid .ant-row {
+                justify-content: flex-start;
+            }
         }
 
         .modal1-right {
             border-radius: 2rem;
             padding: 8.5rem 1.5rem 10rem;
             width: auto !important;
+
+            .modal1-r-heading,
+            .modal1-r-subtext {
+                max-width: none;
+            }
+
         }
 
         .modal2-right {
@@ -1151,6 +1165,208 @@
             border-radius: 2rem;
             padding: 8.5rem 1.5rem 10rem;
             width: auto !important;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .modal-container {
+        .modal1-right {
+            .modal1-r-heading {
+                font-size: 1.75rem;
+                line-height: 160%;
+            }
+
+            .modal1-r-subtext {
+                margin-top: 3rem;
+                font-size: 1rem;
+                line-height: 193.5%;
+            }
+
+            .agent-val-grid .agent-val-cell {
+                padding: 1.25rem 1.5rem !important;
+                font-size: 1rem !important;
+
+            }
+
+            .cta-container {
+                .begin-cta {
+                    margin-top: 5rem;
+                }
+            }
+        }
+
+        .modal123-left {
+            .l-1 {
+                .l1-list-container {
+
+                    .list-item {
+                        align-items: flex-start;
+                        font-size: 1rem;
+                        line-height: 150%;
+                        max-width: none;
+                    }
+                }
+            }
+
+            .l-2 {
+                .l2-grid {
+                    .grid-row {
+                        .grid-col {
+                            gap: 1.25rem;
+
+                            .metric-text {
+                                font-size: 1.09094rem;
+                            }
+
+                            .metric-val {
+                                font-size: 2.291rem;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal2-right {
+            .modal2-r-heading {
+                font-size: 1.75rem;
+                line-height: 150%;
+                max-width: 18ch;
+            }
+
+            .modal2-r-subtext {
+                margin-top: 3rem;
+            }
+
+            .company-val-grid {
+                margin-top: 2.5rem !important;
+            }
+
+            .modal2-dropdown-container {
+                margin-top: 4.5rem !important;
+
+                .dropdown-heading {
+                    font-size: 1rem;
+                    line-height: 200%;
+                }
+            }
+        }
+
+        .modal3-right {
+            .modal3-r-heading {
+                font-size: 1.75rem;
+                line-height: 200%;
+            }
+
+            .modal3-input-container {
+
+                .ip1,
+                .ip2,
+                .ip3 {
+                    .input-header {
+                        font-size: 1rem;
+                        line-height: 150%;
+                    }
+
+                    .ant-input {
+                        padding: 0.75rem 1rem;
+                    }
+                }
+            }
+
+        }
+
+        .modal4-right {
+            .modal4-r-heading {
+                font-size: 1.75rem;
+                line-height: 150%;
+            }
+
+            .modal4-input-container {
+
+                .ip1,
+                .ip2,
+                .ip3 {
+                    .input-header {
+                        font-size: 1rem;
+                        line-height: 150%;
+                    }
+
+                    .ant-input {
+                        padding: 0.75rem 1rem;
+                    }
+                }
+            }
+
+            .disclaimer-container {
+                .disclaimer-text {
+                    font-size: 0.875rem;
+                    line-height: 150%;
+                }
+            }
+        }
+
+        .modal4-left {
+            .l2-list-container {
+                .list-item {
+                    justify-content: flex-start !important;
+                    font-size: 1rem !important;
+                    line-height: 165% !important;
+
+                }
+            }
+        }
+
+
+        .modal5-right {
+
+            .header {
+                font-size: 1.75rem;
+                line-height: 150%;
+                max-width: none;
+            }
+
+            .whats-next-container {
+                .header {
+                    font-size: 1.25rem;
+                    line-height: 150%;
+                }
+
+                .list-container {
+                    padding-left: 1.5rem;
+
+                    .list-item {
+                        font-size: 1rem;
+                        line-height: 168.75%;
+
+                    }
+                }
+            }
+        }
+
+        .modal5-left {
+            .l-2 {
+                .l2-grid {
+                    .grid-row {
+                        .grid-col {
+                            gap: 1.25rem;
+
+                            .metric-text {
+                                font-size: 1.09094rem;
+                            }
+
+                            .metric-val {
+                                font-size: 2.291rem;
+                            }
+
+                        }
+                    }
+                }
+            }
         }
     }
 }

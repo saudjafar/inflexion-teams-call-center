@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import { Modal } from 'antd';
 import ModalCloseIcon from '../assets/svgs/modal-close-icon.svg'
 import Modal1 from '../components/HireSupport/Modal1';
@@ -10,6 +10,20 @@ import { Progress } from 'antd'
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [progressPercentage, setProgressPercentage] = useState(25);
   const [currentPage, setCurrentPage] = useState(1);
@@ -79,13 +93,20 @@ export const ModalProvider = ({ children }) => {
         footer={null}
         closeIcon={<img src={ModalCloseIcon} />}
       >
-        {currentPage != 5 && (
+        <>
+          {currentPage !== 5 && windowWidth > 1250 && (
+            <div style={{ width: '560px', position: 'absolute', top: '4.5rem', left: '48%' }}>
+              <Progress percent={progressPercentage} showInfo={false} size={{ height: 14 }} />
+            </div>
+          )}
 
-          <div style={{ width: '560px', position: 'absolute', top: '4.5rem', left: '39rem' }}>
-            <Progress percent={progressPercentage} showInfo={false} size={{ height: 14 }} />
-          </div>
-
-        )}
+          {currentPage !== 5 && windowWidth <= 1250 && (
+            <div style={{ width: '80%', position: 'relative', top: '6rem', left: '50%', transform: 'translateX(-50%)' }}>
+              {/* Adjust the styling as per your requirement for window width <= 1250px */}
+              <Progress percent={progressPercentage} showInfo={false} size={{ height: 14 }} />
+            </div>
+          )}
+        </>
         {/* <iframe
           src="https://www.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG"
           style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem" }}

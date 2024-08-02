@@ -61,7 +61,7 @@ const Modal1 = ({ nextPage, previousPage }) => {
                                 sm={12}
                                 md={12}
                                 lg={8}
-                                xl={12}
+                                xl={8}
                                 xxl={8}
                                 onClick={() => handleCellClick(index)} >
                                 <div style={agentValCellStyle(index)} className='agent-val-cell'>

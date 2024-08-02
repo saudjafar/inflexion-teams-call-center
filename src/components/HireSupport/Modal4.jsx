@@ -65,25 +65,47 @@ const Modal4 = ({ nextPage, previousPage }) => {
 
                     <div className='l1-grid-container'>
                         <Row gutter={[28, 28]} className='grid-row'>
-                            <Col className='grid-col' span={12} >
+                            <Col className='grid-col'
+                                xs={24}
+                                sm={24}
+                                md={12}
+                                lg={12}
+                                xl={12}
+                                xxl={12}
+                            >
                                 <div className='grid-cell'>
                                     <img src={checkIcon} />
                                     <span className='text'>Exceptional Quality</span>
                                 </div>
                             </Col>
-                            <Col className='grid-col' span={12} >
+                            <Col className='grid-col' xs={24}
+                                sm={24}
+                                md={12}
+                                lg={12}
+                                xl={12}
+                                xxl={12} >
                                 <div className='grid-cell'>
                                     <img src={checkIcon} />
                                     <span className='text'>End-to-End Service</span>
                                 </div>
                             </Col>
-                            <Col className='grid-col' span={12} >
+                            <Col className='grid-col' xs={24}
+                                sm={24}
+                                md={12}
+                                lg={12}
+                                xl={12}
+                                xxl={12} >
                                 <div className='grid-cell'>
                                     <img src={checkIcon} />
                                     <span className='text'>AI-Powered</span>
                                 </div>
                             </Col>
-                            <Col className='grid-col' span={12} >
+                            <Col className='grid-col' xs={24}
+                                sm={24}
+                                md={12}
+                                lg={12}
+                                xl={12}
+                                xxl={12} >
                                 <div className='grid-cell'>
                                     <img src={checkIcon} />
                                     <span className='text'>Cost-Effective</span>
