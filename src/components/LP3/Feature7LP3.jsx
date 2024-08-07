@@ -3,6 +3,8 @@ import '../../styles/LP3/FeaturesLP3.scss';
 import arrowWhite from '../../assets/svgs/arrow-white.svg';
 import arrowRightBlue from '../../assets/svgs/arrow-blue.svg';
 import lines from '../../assets/svgs/lines-F7LP3.svg';
+import linesMobile from '../../assets/svgs/lines-img-mobile.svg';
+
 import { Button } from 'antd';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -40,6 +42,8 @@ const Feature7LP3 = () => {
     return (
         <section className='feature-7-LP3-section'>
             <img className='lines-img' src={lines} />
+            <img className='lines-img-mobile' src={linesMobile} />
+
             <motion.div
                 ref={refFeature7}
                 initial="hidden"

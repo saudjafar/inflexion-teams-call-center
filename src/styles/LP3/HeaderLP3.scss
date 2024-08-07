@@ -13,6 +13,10 @@
     }
 
     .header-LP3 {
+        .mobile-hamburger-container {
+            display: none;
+        }
+
         & {
             // max-width: 84rem;
             margin: 0 auto;
@@ -20,7 +24,6 @@
             align-items: center;
             justify-content: space-between;
         }
-
 
 
         .quote-cta {
@@ -41,6 +44,8 @@
             text-transform: none;
         }
     }
+
+
 
     .desktop-navbar-container {
         & {
@@ -67,6 +72,42 @@
             color: #2A71FA;
         }
 
+    }
+
+}
+
+.hamburger-drawer {
+
+
+    .ant-drawer-body .mobile-navbar-container {
+        & {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    font-family: "Helvetica Neue Light";
+    font-size: 1.125rem;
+
+
+}
+
+@media (max-width: 1200px) {
+    .header-LP3-container {
+        padding-bottom: 1.5rem;
+
+        .header-LP3 .quote-cta {
+            display: none;
+        }
+
+        .desktop-navbar-container {
+            display: none;
+        }
+
+        .header-LP3 .mobile-hamburger-container {
+            display: block;
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import '../../styles/LP3/FeaturesLP3.scss';
 import F3L from '../../assets/svgs/LP3F3Dots-left.svg';
 import F3R from '../../assets/svgs/LP3F3Dots-right.svg';
@@ -11,8 +11,20 @@ import iconMessage from '../../assets/svgs/icon-message-lp3.svg';
 import arrowBlue from '../../assets/svgs/arrow-blue.svg';
 import { Card } from 'antd';
 import ScrollAnimation from 'react-animate-on-scroll';
+import mobArrowL from '../../assets/svgs/mob-arrow-l.svg';
+import mobArrowR from '../../assets/svgs/mob-arrow-r.svg';
 
 const Feature3LP3 = () => {
+
+    const scrollRef = useRef(null);
+
+    const scrollLeft = () => {
+        scrollRef.current.scrollBy({ left: -150, behavior: 'smooth' });
+    };
+
+    const scrollRight = () => {
+        scrollRef.current.scrollBy({ left: 150, behavior: 'smooth' });
+    };
 
     const F3LP3CardData = [
         {
@@ -63,11 +75,11 @@ const Feature3LP3 = () => {
 
     return (
         <section className='feature-3-LP3-section'>
+            <div className='dots-svg-container'>
+                <img className='f3l' src={F3L} style={{ maxWidth: '100%', height: 'auto' }} />
+                <img className='f3r' src={F3R} style={{ maxWidth: '100%', height: 'auto' }} />
+            </div>
             <div className='feature-3-LP3'>
-                <div className='dots-svg-container'>
-                    <img src={F3L} />
-                    <img src={F3R} />
-                </div>
 
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true} >
                     <div className='header-container'>
@@ -81,7 +93,7 @@ const Feature3LP3 = () => {
                     </div>
                 </ScrollAnimation>
                 <ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
-                    <div className='feature-3-cards-container'>
+                    <div className='feature-3-cards-container' ref={scrollRef}>
                         {/* <ScrollAnimation animateIn="fadeInUp" initiallyVisible={false} animateOnce={true}> */}
 
                         <div className='feature-3-row feature-3-row-top'>
@@ -109,6 +121,10 @@ const Feature3LP3 = () => {
                             ))}
                         </div>
                         {/* </ScrollAnimation> */}
+                    </div>
+                    <div className='mobile-arrows-container'>
+                        <img src={mobArrowL} onClick={scrollLeft} />
+                        <img src={mobArrowR} onClick={scrollRight} />
                     </div>
                 </ScrollAnimation>
 

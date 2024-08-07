@@ -30,7 +30,7 @@ const FaqClpsPanel = () => {
                     className='faq-collapse-panel'
                     showArrow={false}
                     header={
-                        <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div className='faq-collapse-header' style={{ width: '100%', display: 'flex', justifyContent: 'space-between', gap: '1.05rem', alignItems: 'center' }}>
                             {item.header}
                             {activeKey.includes(index.toString()) ? <img src={MinusOutlined} /> : <img src={PlusOutlined} />}
                         </div>

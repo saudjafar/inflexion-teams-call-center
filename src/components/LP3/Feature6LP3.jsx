@@ -67,7 +67,7 @@ const Feature6LP3 = () => {
                             Global Talent With AI
                         </span>
                         <h1 className='header'>
-                            Premium Customer Support <br /> for Any Company Size
+                            Premium Customer Support for any Company Size
                         </h1>
                     </div>
                     <div className='feature-6-cards-container'>

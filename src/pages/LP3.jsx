@@ -15,9 +15,11 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ScrollToTop from "react-scroll-to-top";
 import arrowTop from '../assets/svgs/arrow-top.svg';
+import { useModal } from '../contexts/ModalContext';
 
 const LP3 = () => {
     const controls = useAnimation();
+    const { showModal } = useModal();
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.1,

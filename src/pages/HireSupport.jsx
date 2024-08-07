@@ -12,7 +12,7 @@ import Modal4 from '../components/HireSupport/Modal4'
 import Modal5 from '../components/HireSupport/Modal5'
 import HeaderHireSupport from '../components/HireSupport/HeaderHireSupport'
 import dotsSVG from '../assets/svgs/216.light.svg'
-import heroImg from '../assets/imgs/how-it-works-hero.png'
+import heroImg from '../assets/imgs/landing-page-hero.png'
 import LogoSliderLP3 from '../components/LP3/LogoSliderLP3';
 import gridSVG from '../assets/svgs/LP3-grid.svg'
 import logo1 from '../assets/svgs/icon-google.svg';

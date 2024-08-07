@@ -23,7 +23,7 @@ const Feature5LP3 = () => {
                             </p>
                         </div>
                         <div className='right'>
-                            <img src={toprightF5LP3} />
+                            <img src={toprightF5LP3} style={{ maxWidth: '100%', height: 'auto' }} />
                         </div>
                     </div>
                 </ScrollAnimation>

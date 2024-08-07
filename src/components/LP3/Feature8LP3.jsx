@@ -13,7 +13,7 @@ const Feature8LP3 = () => {
 
                 <div className="input-container">
                     <input type="email" placeholder="your@email.com" className="custom-input" />
-                    <img src={arrowSVG} alt="Arrow" className="input-arrow" />
+                    <img src={arrowSVG} alt="Arrow" className="input-arrow" style={{ maxWidth: '100%', height: 'auto' }} />
                 </div>
             </div>
         </section>

@@ -18,6 +18,7 @@ import arrowTop from '../assets/svgs/arrow-top.svg';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { useModal } from '../contexts/ModalContext';
 
 import "animate.css/animate.compat.css"
 
@@ -203,6 +204,8 @@ import "animate.css/animate.compat.css"
 //     )
 // }
 const HowItWorks = () => {
+    const { showModal } = useModal();
+
     const leftAnimation = {
         hidden: { opacity: 0, y: 100 },
         visible: {
@@ -300,7 +303,7 @@ const HowItWorks = () => {
                 <HeaderLP3 />
                 <section className='hero-how-it-works-section'>
                     <div className='hero-how-it-works'>
-                        <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', zIndex: '1' }} />
+                        <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', zIndex: '1', maxWidth: '100%', height: 'auto', left: '0' }} />
                         <motion.div
                             initial="hidden"
                             animate="visible"
@@ -317,7 +320,8 @@ const HowItWorks = () => {
                                 Inflexion Teams leverages cutting-edge AI technology and extensively trained agents to provide exceptional customer service solutions, acting as a seamless extension of your company's support team.
                             </span>
 
-                            <Button className='get-started-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Get Started</Button>
+                            {/* <Button className='get-started-cta' onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}>Get Started</Button> */}
+                            <Button className='get-started-cta' onClick={showModal}>Get Started</Button>
 
                         </motion.div>
                         <motion.div
@@ -327,7 +331,7 @@ const HowItWorks = () => {
                             className='right'
                         >
                             {/* <div className='right'> */}
-                            <img src={heroImg} />
+                            <img src={heroImg} style={{ maxWidth: '100%', height: 'auto' }} />
                             {/* </div> */}
                         </motion.div>
                     </div>
@@ -337,7 +341,7 @@ const HowItWorks = () => {
                             <h1 className='carousel-header'>We’ve hired talent from</h1>
                             <LogoSliderLP3 />
                         </ScrollAnimation>
-                        <div className='LP3-gridSVG-container'>
+                        <div className='how-it-works-gridImg-container'>
                             <img src={gridSVG} />
                         </div>
                     </>
@@ -353,8 +357,8 @@ const HowItWorks = () => {
                         className='scalable-teams'
                     >
                         <div className='header-container'>
-                            <img className='img-l' src={scalableTeamsL} />
-                            <img className='img-r' src={scalableTeamsR} />
+                            <img className='img-l' src={scalableTeamsL} style={{ maxWidth: '100%', height: 'auto' }} />
+                            <img className='img-r' src={scalableTeamsR} style={{ maxWidth: '100%', height: 'auto' }} />
                             <span className='pre-header'>
                                 SCALABLE TEAMS
                             </span>
@@ -451,6 +455,7 @@ const HowItWorks = () => {
             <div className='footer'>
                 <Feature8LP3 />
                 <FooterLP3 />
+
             </div>
         </>
     )

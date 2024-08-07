@@ -99,7 +99,7 @@ const LogoSliderLP3 = () => {
                 {logos.concat(logos).map((logo, index) => (
                     <div className="logo-slide" key={index} style={logoSlideStyle}>
                         <div className='logo-img-container' style={logoImgContainerStyle}>
-                            <img src={logo} alt={`Logo ${index}`} />
+                            <img src={logo} alt={`Logo ${index}`} style={{ maxWidth: '100%', height: 'auto' }} />
                         </div>
                     </div>
                 ))}

@@ -30,8 +30,8 @@ const HeroLP3 = () => {
 
     return (
         <section className='hero-LP3-section'>
+            <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', left: '0', zIndex: '1', maxWidth: '100%', height: 'auto' }} />
             <div className='hero-LP3'>
-                <img src={dotsSVG} style={{ position: 'absolute', top: '-12rem', zIndex: '1' }} />
                 {/* <div className='left'> */}
                 <motion.div
                     initial="hidden"
@@ -71,7 +71,7 @@ const HeroLP3 = () => {
                     <LogoSliderLP3 />
                 </ScrollAnimation>
                 <div className='LP3-gridSVG-container'>
-                    <img src={gridSVG} />
+                    <img src={gridSVG} style={{ maxWidth: '100%', height: 'auto' }} />
                 </div>
             </>
         </section>

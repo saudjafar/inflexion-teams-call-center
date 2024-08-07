@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { Menu, Dropdown, Button } from 'antd';
+import downArrow from '../assets/svgs/down-arrow-white.svg';
 import '../styles/HowItWorks/OurProcessScrollMenu.scss';
 import scrollImg1 from '../assets/imgs/process1.png';
 import scrollImg2 from '../assets/imgs/process2.png';
@@ -54,6 +56,17 @@ const data = [
 ];
 
 const OurProcessScrollMenu = () => {
+    const [isMobile, setIsMobile] = useState(false);
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 1200);
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     useEffect(() => {
         Events.scrollEvent.register('begin', function () { });
         Events.scrollEvent.register('end', function () { });
@@ -65,28 +78,61 @@ const OurProcessScrollMenu = () => {
         };
     }, []);
 
-    return (
-        // gap: '12.75rem' in below div
-        <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '130rem', height: '600px' }}>
-            <div className='scroll-links-container'>
-                {data.map(item => (
+    const menu = (
+        <Menu>
+            {data.map(item => (
+                <Menu.Item key={item.id}>
                     <Link
                         className='scroll-link'
-                        key={item.id}
                         to={item.id}
                         spy={true}
                         smooth={true}
                         duration={750}
                         containerId="panel-right-container"
                         offset={-7}
-
-
+                        onClick={() => setDropdownVisible(false)}
                     >
-                        <div className='index-container'><span className='index'>{item.id}</span></div>
-                        <span className='title'>{item.title}</span>
+                        {item.title}
                     </Link>
-                ))}
-            </div>
+                </Menu.Item>
+            ))}
+        </Menu>
+    );
+
+
+    return (
+        <div className='scroll-links-parent-container'>
+            {isMobile ? (
+                <Dropdown
+                    overlay={menu}
+                    trigger={['click']}
+                    className='dropdown-menu'
+                    open={dropdownVisible}
+                    onOpenChange={(flag) => setDropdownVisible(flag)}
+                >
+                    <Button onClick={() => setDropdownVisible(!dropdownVisible)}>
+                        Jump to <img src={downArrow} />
+                    </Button>
+                </Dropdown>
+            ) : (
+                <div className='scroll-links-container'>
+                    {data.map(item => (
+                        <Link
+                            className='scroll-link'
+                            key={item.id}
+                            to={item.id}
+                            spy={true}
+                            smooth={true}
+                            duration={750}
+                            containerId="panel-right-container"
+                            offset={-7}
+                        >
+                            <div className='index-container'><span className='index'>{item.id}</span></div>
+                            <span className='title'>{item.title}</span>
+                        </Link>
+                    ))}
+                </div>
+            )}
             <div className='panel-right-container' id="panel-right-container">
                 {data.map(item => (
                     <Element className='panel-right' key={item.id} name={item.id}>
@@ -96,9 +142,8 @@ const OurProcessScrollMenu = () => {
                     </Element>
                 ))}
             </div>
-        </div >
+        </div>
     );
 };
-
 
 export default OurProcessScrollMenu;

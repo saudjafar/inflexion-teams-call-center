@@ -65,13 +65,14 @@ const Feature4LP3 = () => {
         >
             <motion.img
                 src={F4LP3SVG}
+                style={{ overflow: 'hidden' }}
                 className='header-svg'
                 variants={childVariants}
             />
             <motion.div className='feature-4-LP3' variants={childVariants}>
                 <motion.div className='header-container' variants={childVariants}>
                     <span className='pre-header'>BENEFITS</span>
-                    <h1 className='header'>Increase Your NPS & Slash Costs</h1>
+                    <h1 className='header'>Increase Your <span style={{ color: '#FFF' }}>NPS & Slash Costs</span></h1>
                     <p className='subtext'>We help reduce costs by up to 70% compared to on-shore hires while enhancing quality. Our flexible, scalable solutions eliminate fixed overheads and lower non-essential expenditures, making your company more agile, profitable, and customer-focused.</p>
                 </motion.div>
                 <motion.div className='points-container' variants={containerVariants}>

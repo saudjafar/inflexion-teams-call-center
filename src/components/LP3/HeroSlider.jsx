@@ -116,4 +116,6 @@ const cardStyle = {
   overflow: "hidden" // Ensure the img fits within the card's rounded corners
 };
 
+
+
 export default HeroSlider;

@@ -117,6 +117,11 @@
         margin-top: 1rem;
         display: flex;
         justify-content: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -420,3 +425,207 @@
     display: block;
     /* Show the footer when the class 'show' is added */
 }
+
+
+@media (max-width: 1200px) {
+    .hero-how-it-works-section {
+        .hero-how-it-works {
+            & {
+                flex-direction: column;
+                align-items: center;
+                gap: 5rem;
+            }
+
+            .left {
+                margin-top: 0;
+                padding-left: 0;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+
+                .pre-header {
+                    font-size: 1rem;
+
+                }
+
+                .header {
+                    font-size: 3rem;
+                    line-height: 122.5%;
+                    max-width: 80%;
+                }
+
+                .sub-headline {
+                    font-size: 1rem;
+                    line-height: 1.625rem;
+                    /* 162.5% */
+
+                }
+            }
+
+            .right {
+                margin: 0;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+    }
+
+    .scalable-teams-section {
+        .scalable-teams {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            .header-container {
+                & {
+                    gap: 2.5rem;
+                    padding-bottom: 3.5rem;
+                }
+
+                .img-l,
+                .img-r {
+                    z-index: 1;
+                    display: none;
+                }
+
+                .pre-header {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                .header {
+                    font-size: 2.25rem;
+                    line-height: 132.5%;
+                }
+
+                .sub-header {
+                    font-size: 1rem;
+                    line-height: 150%;
+                }
+            }
+
+            .scalable-teams-cards-container {
+                & {
+                    flex-direction: column;
+                    padding: 0rem;
+                }
+
+                .card {
+                    padding: 2.5rem 2rem 3rem;
+                    gap: 2.5rem;
+
+                    .pre-header {
+                        font-size: 0.78744rem;
+
+                    }
+
+                    .header {
+                        font-size: 2rem;
+                        line-height: 130%;
+                    }
+
+                    .sub-text {
+                        font-size: 1rem;
+                        line-height: 150%;
+                        min-height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .our-process-section {
+        padding: 8rem 1.5rem;
+
+        .process-container {
+            .header-container {
+                gap: 2.5rem;
+                padding-bottom: 5rem;
+
+                .header {
+                    font-size: 2.625rem;
+                    line-height: 133%;
+                    max-width: 80%;
+                }
+
+                .sub-text {
+                    margin: 0;
+                    font-size: 1rem;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+
+    .faqs-section {
+        & {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-bottom: 9rem;
+        }
+
+        .faqs-container {
+            & {}
+
+            .header-container {
+                & {
+                    align-items: flex-start;
+                    gap: 3rem;
+
+                }
+
+                .pre-header {
+                    font-size: 1.25rem;
+                }
+
+                .header {
+                    font-size: 2.625rem;
+                    line-height: 133.33%;
+                }
+            }
+
+            .faqs-collapse-container {
+                .ant-collapse {
+                    & {
+                        padding: 4rem 1.5rem;
+
+                    }
+
+
+                    .faq-collapse-panel {
+                        .ant-collapse-header {
+                            padding: 3rem 0rem;
+
+                            .ant-collapse-header-text {
+                                font-size: 1.25rem;
+                                line-height: 150%;
+                            }
+                        }
+
+                        .ant-collapse-content-box {
+                            padding-left: 0rem;
+                            padding-right: 0rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .feature-7-LP3-section {
+        & {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .feature-7-LP3 {
+            .header-container {
+                .header {
+                    font-size: 2.625rem;
+                    line-height: 133.33%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {}

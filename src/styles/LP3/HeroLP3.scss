@@ -133,3 +133,43 @@
         padding-right: 6rem;
     }
 }
+
+
+@media (max-width:1200px) {
+    .hero-LP3-section {
+        .hero-LP3 {
+            flex-direction: column;
+            gap: 5rem;
+
+            .left {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+
+                .pre-header {
+                    font-size: 1rem;
+
+                }
+
+                .header {
+                    font-size: 3rem;
+                    line-height: 125%;
+                    max-width: 90%;
+                }
+
+                .sub-headline {
+                    font-size: 1rem;
+                    line-height: 168.75%;
+                }
+            }
+
+            .right {
+                // padding-left: 1.5rem;
+                // padding-right: 1.5rem;
+                padding: 0;
+                scale: 0.875;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {}

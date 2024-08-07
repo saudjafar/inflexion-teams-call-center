@@ -91,8 +91,10 @@ export const ModalProvider = ({ children }) => {
         onOk={() => setIsModalVisible(false)}
         onCancel={handleCancel}
         footer={null}
-        closeIcon={<img src={ModalCloseIcon} />}
+        closeIcon={<img src={ModalCloseIcon} style={{ position: 'relative', zIndex: '100' }} />}
       >
+
+
         <>
           {currentPage !== 5 && windowWidth > 1250 && (
             <div style={{ width: '560px', position: 'absolute', top: '4.5rem', left: '48%' }}>
@@ -102,17 +104,21 @@ export const ModalProvider = ({ children }) => {
 
           {currentPage !== 5 && windowWidth <= 1250 && (
             <div style={{ width: '80%', position: 'relative', top: '6rem', left: '50%', transform: 'translateX(-50%)' }}>
-              {/* Adjust the styling as per your requirement for window width <= 1250px */}
               <Progress percent={progressPercentage} showInfo={false} size={{ height: 14 }} />
             </div>
           )}
         </>
+        {/* Adjust the styling as per your requirement for window width <= 1250px */}
+        {renderPageContent(currentPage)}
+
         {/* <iframe
           src="https://www.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG"
           style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem" }}
           id="DQoQteMGz1DcQmJgX0A1_1722264306880"
         ></iframe> */}
-        {renderPageContent(currentPage)}
+        {/* <iframe src="https://engage.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG"
+          style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem" }}
+          id="DQoQteMGz1DcQmJgX0A1_1722891192297"></iframe> */}
       </Modal>
     </ModalContext.Provider>
   );
