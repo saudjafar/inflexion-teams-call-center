@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../styles/HireSupport/HireSupportModals.scss';
 import arrowWhite from '../../assets/svgs/arrow-white.svg';
 import arrowRightBlue from '../../assets/svgs/arrow-blue.svg';
@@ -6,7 +6,10 @@ import { Button, Input, Row, Col, Tooltip } from 'antd';
 import checkIcon from '../../assets/svgs/check-whiteblu.svg'
 import helpIcon from '../../assets/svgs/help-icon.svg'
 import { Checkbox } from 'antd';
+import useTrackButtonClick from '../../contexts/useTrackButtonClick';
+
 const { TextArea } = Input;
+
 
 const Modal4 = ({ nextPage, previousPage }) => {
     const [firstName, setFirstName] = useState('');
@@ -21,9 +24,16 @@ const Modal4 = ({ nextPage, previousPage }) => {
         cellNumber: '',
         disclaimer: ''
     });
+    const [isFormCompleted, setIsFormCompleted] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleNextPage = () => {
+    const trackFormSubmission = useTrackButtonClick('Free quote form submitted');
+    const trackFormCompletion = useTrackButtonClick('Free quote form completed');
+
+    const validateForm = () => {
         const newErrors = {};
+        const emailRegex = /\S+@\S+\.\S+/;
+        const cellNumberRegex = /^\+?[1-9]\d{1,14}$/; // E.164 format for international phone numbers
 
         if (!firstName) {
             newErrors.firstName = 'Please enter your first name.';
@@ -35,25 +45,76 @@ const Modal4 = ({ nextPage, previousPage }) => {
 
         if (!email) {
             newErrors.email = 'Please enter your email address.';
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
+        } else if (!emailRegex.test(email)) {
             newErrors.email = 'Please enter a valid email address.';
         }
 
         if (!cellNumber) {
             newErrors.cellNumber = 'Please enter your cell number.';
+        } else if (!cellNumberRegex.test(cellNumber)) {
+            newErrors.cellNumber = 'Please enter a valid cell number.';
         }
 
         if (!disclaimer) {
             newErrors.disclaimer = 'Please accept the terms & conditions.';
-
         }
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-        } else {
-            setErrors({});
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleNextPage = () => {
+        setIsSubmitted(true);
+        if (validateForm()) {
+            trackFormSubmission();  // Track the form submission
             nextPage();
         }
     };
+
+    useEffect(() => {
+        if (validateForm() && !isFormCompleted && isSubmitted) {
+            setIsFormCompleted(true);
+            trackFormCompletion();  // Track the form completion
+        }
+    }, [firstName, lastName, email, cellNumber, disclaimer, isSubmitted]);
+
+    // const handleNextPage = () => {
+    //     const newErrors = {};
+    //     const emailRegex = /\S+@\S+\.\S+/;
+    //     const cellNumberRegex = /^\+?[1-9]\d{1,14}$/;
+
+    //     if (!firstName) {
+    //         newErrors.firstName = 'Please enter your first name.';
+    //     }
+
+    //     if (!lastName) {
+    //         newErrors.lastName = 'Please enter your last name.';
+    //     }
+
+    //     if (!email) {
+    //         newErrors.email = 'Please enter your email address.';
+    //     } else if (!emailRegex.test(email)) {
+    //         newErrors.email = 'Please enter a valid email address.';
+    //     }
+
+    //     if (!cellNumber) {
+    //         newErrors.cellNumber = 'Please enter your cell number.';
+    //     } else if (!cellNumberRegex.test(cellNumber)) {
+    //         newErrors.cellNumber = 'Please enter a valid cell number.';
+    //     }
+
+    //     if (!disclaimer) {
+    //         newErrors.disclaimer = 'Please accept the terms & conditions.';
+
+    //     }
+    //     if (Object.keys(newErrors).length > 0) {
+    //         setErrors(newErrors);
+    //     } else {
+    //         setErrors({});
+    //         trackFormSubmission();
+    //         nextPage();
+    //     }
+    // };
 
     return (
         <div className='modal-container modal-4-container'>
@@ -145,7 +206,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
                             />
-                            {errors.firstName && <div className='error-text'>{errors.firstName}</div>}
+                            {isSubmitted && errors.firstName && <div className='error-text'>{errors.firstName}</div>}
                         </div>
                         <div className='ip1'>
                             <h1 className='input-header'>
@@ -158,7 +219,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                             />
-                            {errors.lastName && <div className='error-text'>{errors.lastName}</div>}
+                            {isSubmitted && errors.lastName && <div className='error-text'>{errors.lastName}</div>}
                         </div>
                     </div>
                     <div className='ip2'>
@@ -172,7 +233,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        {errors.email && <div className='error-text'>{errors.email}</div>}
+                        {isSubmitted && errors.email && <div className='error-text'>{errors.email}</div>}
                     </div>
 
                     <div className='ip3'>
@@ -186,7 +247,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
                             value={cellNumber}
                             onChange={(e) => setCellNumber(e.target.value)}
                         />
-                        {errors.cellNumber && <div className='error-text'>{errors.cellNumber}</div>}
+                        {isSubmitted && errors.cellNumber && <div className='error-text'>{errors.cellNumber}</div>}
                     </div>
 
                 </div>
@@ -199,7 +260,7 @@ const Modal4 = ({ nextPage, previousPage }) => {
                             use your information to reach out about our services.
                         </span>
                     </p>
-                    {errors.disclaimer && <div className='error-text' style={{ marginTop: '0.5rem', marginLeft: '1.75rem' }}>{errors.disclaimer}</div>}
+                    {isSubmitted && errors.disclaimer && <div className='error-text' style={{ marginTop: '0.5rem', marginLeft: '1.75rem' }}>{errors.disclaimer}</div>}
 
                 </div>
 

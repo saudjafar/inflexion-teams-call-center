@@ -38,10 +38,17 @@ import { useInView } from 'react-intersection-observer'
 import "animate.css/animate.compat.css"
 
 import { useModal } from '../contexts/ModalContext';
+import useTrackButtonClick from '../contexts/useTrackButtonClick';
+
 import StatsMiniSlider from '../components/HireSupport/StatsMiniSlider'
 
 const HireSupport = () => {
     const { showModal } = useModal();
+    const trackBookTrialClick = useTrackButtonClick('Book your free trial');
+    const trackGetFreeQuoteClick = useTrackButtonClick('Get your free quote');
+    const trackOpenFormClick = useTrackButtonClick('Opened Free Quote Form');
+    const trackFormSubmittedClick = useTrackButtonClick('Submitted Free Quote Form');
+
 
     const agentSizeArray = ['1 - 2 Staff', '3 - 10 Staff', '11 - 20 Staff', '21 - 50 Staff', '50+ Staff', 'Other']
 
@@ -251,7 +258,7 @@ const HireSupport = () => {
                             <Button
                                 className='get-started-cta'
                                 // onClick={() => window.open('https://calendly.com/james-inflexion/inflexion-teams-call', '_blank')}
-                                onClick={showModal}
+                                onClick={() => { showModal(); trackBookTrialClick(); }}
                             >
                                 Book Your Free Trial
                             </Button>
@@ -512,7 +519,7 @@ const HireSupport = () => {
                             <img src={logo4} /> */}
                             <StatsMiniSlider />
                         </div>
-                        <Button className='free-quote-cta' onClick={showModal}>
+                        <Button className='free-quote-cta' onClick={() => { showModal(); trackGetFreeQuoteClick(); }}>
                             Get Your Free Quote
                         </Button>
                     </div>
@@ -578,7 +585,7 @@ const HireSupport = () => {
                                                     xl={12}
                                                     xxl={8}
                                                     onClick={() => handleCellClick(index)} >
-                                                    <div onClick={showModal} style={agentValCellStyle(index)} className='agent-val-cell'>
+                                                    <div onClick={() => { showModal(); trackOpenFormClick(); }} style={agentValCellStyle(index)} className='agent-val-cell'>
                                                         {agentSize}
                                                     </div>
                                                 </Col>
@@ -587,7 +594,7 @@ const HireSupport = () => {
                                     </div>
                                 </div>
                                 <Button className="start-cta"
-                                    onClick={showModal}
+                                    onClick={() => { showModal(); trackOpenFormClick(); }}
                                 >
                                     Start
                                 </Button>
