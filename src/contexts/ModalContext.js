@@ -6,12 +6,12 @@ import Modal2 from '../components/HireSupport/Modal2';
 import Modal3 from '../components/HireSupport/Modal3';
 import Modal4 from '../components/HireSupport/Modal4';
 import Modal5 from '../components/HireSupport/Modal5';
+import '../styles/ModalContext.scss'
 import { Progress } from 'antd'
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -25,6 +25,20 @@ export const ModalProvider = ({ children }) => {
 
 
   const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+  useEffect(() => {
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://engage.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG";
+    iframe.style.display = 'none';
+    iframe.onload = () => setIframeLoaded(true);
+    document.body.appendChild(iframe);
+
+    return () => {
+      document.body.removeChild(iframe);
+    };
+  }, []);
+
   const [progressPercentage, setProgressPercentage] = useState(25);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 5;
@@ -91,10 +105,10 @@ export const ModalProvider = ({ children }) => {
         onOk={() => setIsModalVisible(false)}
         onCancel={handleCancel}
         footer={null}
-        closeIcon={<img src={ModalCloseIcon} style={{ position: 'relative', zIndex: '100' }} />}
+        closeIcon={<img src={ModalCloseIcon} style={{ position: 'relative' }} />}
       >
-
-
+        {/* CUSTOM FORM  */}
+        {/* 
         <>
           {currentPage !== 5 && windowWidth > 1250 && (
             <div style={{ width: '560px', position: 'absolute', top: '4.5rem', left: '48%' }}>
@@ -107,18 +121,26 @@ export const ModalProvider = ({ children }) => {
               <Progress percent={progressPercentage} showInfo={false} size={{ height: 14 }} />
             </div>
           )}
-        </>
+        </> */}
         {/* Adjust the styling as per your requirement for window width <= 1250px */}
-        {renderPageContent(currentPage)}
+        {/* {renderPageContent(currentPage)} */}
 
-        {/* <iframe
-          src="https://www.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG"
-          style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem" }}
-          id="DQoQteMGz1DcQmJgX0A1_1722264306880"
-        ></iframe> */}
+        {iframeLoaded ? (
+          <iframe
+            src="https://engage.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG"
+            title='Managed CX Form'
+            style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem" }}
+            id="ID_HERE"
+          ></iframe>
+        ) : (
+          <p>Loading...</p>
+        )}
+
         {/* <iframe src="https://engage.inflexionteams.com/widget/booking/lMSeODtAYjcbBcyn9NfG"
-          style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem" }}
-          id="DQoQteMGz1DcQmJgX0A1_1722891192297"></iframe> */}
+          title='Managed CX Form'
+          style={{ width: '100%', height: '800px', border: 'none', overflow: 'hidden', borderRadius: "2rem", zIndex: '10', position: 'relative' }}
+          id="DQoQteMGz1DcQmJgX0A1_1722891192297">
+        </iframe> */}
       </Modal>
     </ModalContext.Provider>
   );

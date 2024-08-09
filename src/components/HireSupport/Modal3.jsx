@@ -16,6 +16,9 @@ const Modal3 = ({ nextPage, previousPage }) => {
         primaryGoal: ''
     });
 
+
+
+
     const handleNextPage = () => {
         const newErrors = {};
 
@@ -49,6 +52,7 @@ const Modal3 = ({ nextPage, previousPage }) => {
                         <h1 className='input-header'>
                             What type of customer support are you seeking?
                         </h1>
+
                         <Input
                             className='input-element'
                             type='text'
